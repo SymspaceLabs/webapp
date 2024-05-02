@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import LogoImg from '@/public/images/symspace Logo 256.png'
+import LogoImg from '@/public/images/logo.svg'
 
 export default function Logo() {
   return (

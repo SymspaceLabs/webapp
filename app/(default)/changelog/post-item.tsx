@@ -7,7 +7,7 @@ export default function PostItem({ ...props }) {
     <article className="pt-12 first-of-type:pt-0 group">
       <div className="md:flex">
         <div className="w-48 shrink-0">
-          <time className="text-sm inline-flex items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-200 md:leading-8 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue-500 before:ring-4 before:ring-blue-500/30 mb-3">
+          <time className="text-sm inline-flex items-center bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 md:leading-8 before:w-1.5 before:h-1.5 before:rounded-full before:bg-purple-500 before:ring-4 before:ring-purple-500/30 mb-3">
             <span className="ml-[1.625rem] md:ml-5"><PostDate dateString={props.publishedAt} /></span>
           </time>
         </div>
