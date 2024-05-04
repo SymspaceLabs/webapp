@@ -19,8 +19,8 @@ export default function SignUp() {
     email:'',
     password:'',
     confirmPassword:'',
-    height:'',
-    weight:'',
+    height:0.0,
+    weight:0.0,
     preferredSizeTops:'',
     preferredSizeBottoms:'',
     preferredSizeShoes:'',
@@ -50,17 +50,17 @@ export default function SignUp() {
           {
             email: formData.email,
             password: formData.password,
-            // options: {
-            //   data: {
-              //   firstName: formData.firstName,
-              //   lastName: formData.firstName,
-              //   height: formData.height,
-              //   weight: formData.weight,
-              //   preferredSizeTops: formData.preferredSizeTops,
-              //   preferredSizeBottoms: formData.preferredSizeBottoms,
-              //   preferredSizeShoes: formData.preferredSizeShoes,
-              // }
-            // }
+            options: {
+              data: {
+                firstName: formData.firstName,
+                lastName: formData.firstName,
+                height: formData.height,
+                weight: formData.weight,
+                preferredSizeTops: formData.preferredSizeTops,
+                preferredSizeBottoms: formData.preferredSizeBottoms,
+                preferredSizeShoes: formData.preferredSizeShoes,
+              }
+            }
           }
         )
         if (error) throw error

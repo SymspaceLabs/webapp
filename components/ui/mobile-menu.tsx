@@ -31,7 +31,7 @@ export default function MobileMenu() {
   })
 
   return (
-    <div className="md:hidden flex items-center ml-4">
+    <div className="2xl:hidden flex items-center ml-4">
       {/* Hamburger button */}
       <button
         ref={trigger}
@@ -57,19 +57,31 @@ export default function MobileMenu() {
       >
         <ul className="border border-transparent [background:linear-gradient(theme(colors.slate.900),_theme(colors.slate.900))_padding-box,_conic-gradient(theme(colors.slate.400),_theme(colors.slate.700)_25%,_theme(colors.slate.700)_75%,_theme(colors.slate.400)_100%)_border-box] rounded-lg px-4 py-1.5">
           <li>
-            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/about">About</Link>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/about">Sym-Ai</Link>
           </li>
           <li>
-            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/integrations">Integrations</Link>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/integration">AR for Business</Link>
           </li>
           <li>
-            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/pricing">Pricing</Link>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/pricing">AR Visuals</Link>
           </li>
           <li>
-            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/customers">Customers</Link>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/customers">Symspace App</Link>
           </li>
           <li>
-            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/changelog">Changelog</Link>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/changelog">AR Marketplace</Link>
+          </li>
+          <li>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/changelog">Global Impact</Link>
+          </li>
+          <li>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/changelog">Offers Page</Link>
+          </li>
+          <li>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/changelog">Contact</Link>
+          </li>
+          <li>
+            <Link className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/changelog">Partners</Link>
           </li>
         </ul>
       </nav>
