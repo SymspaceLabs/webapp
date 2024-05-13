@@ -1,6 +1,9 @@
 import IndexPageView from "pages-sections/landing/page-view";
+import FurnitureTwoPageView from "pages-sections/furniture-2/page-view";
+import ShopLayout3 from "components/layouts/shop-layout-3";
+
 export const metadata = {
-  title: "Bazaar - Next.js E-commerce Template",
+  title: "Furniture Shop - Bazaar Next.js E-commerce Template",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",
@@ -9,5 +12,12 @@ export const metadata = {
   keywords: ["e-commerce", "e-commerce template", "next.js", "react"]
 };
 export default function IndexPage() {
-  return <IndexPageView />;
+  // return <IndexPageView />;
+  return (
+    <ShopLayout3>
+      <FurnitureTwoPageView />
+    </ShopLayout3>
+  )
+
+
 }
