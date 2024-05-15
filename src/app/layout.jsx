@@ -3,16 +3,16 @@ export const openSans = Open_Sans({
   subsets: ["latin"]
 }); // THEME PROVIDER
 
-import ThemeProvider from "theme/theme-provider"; // PRODUCT CART PROVIDER
+import ThemeProvider from "../theme/theme-provider"; // PRODUCT CART PROVIDER
 
-import CartProvider from "contexts/CartContext"; // SITE SETTINGS PROVIDER
+import CartProvider from "../contexts/CartContext"; // SITE SETTINGS PROVIDER
 
-import SettingsProvider from "contexts/SettingContext"; // GLOBAL CUSTOM COMPONENTS
+import SettingsProvider from "../contexts/SettingContext"; // GLOBAL CUSTOM COMPONENTS
 
-import RTL from "components/rtl";
-import ProgressBar from "components/progress"; // IMPORT i18n SUPPORT FILE
+import RTL from "../components/rtl";
+import ProgressBar from "../components/progress"; // IMPORT i18n SUPPORT FILE
 
-import "i18n";
+import "../i18n";
 export default function RootLayout({
   children
 }) {

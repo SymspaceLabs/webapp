@@ -1,4 +1,4 @@
-import { openSans } from "app/layout";
+import { openSans } from "../app/layout";
 export const fontSize = 14;
 export const typography = {
   fontSize,
