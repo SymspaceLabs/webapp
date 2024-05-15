@@ -1,6 +1,6 @@
-import IndexPageView from "pages-sections/landing/page-view";
-import FurnitureTwoPageView from "pages-sections/furniture-2/page-view";
-import ShopLayout3 from "components/layouts/shop-layout-3";
+import IndexPageView from "../pages-sections/landing/page-view";
+import FurnitureTwoPageView from "../pages-sections/furniture-2/page-view";
+import ShopLayout3 from "../components/layouts/shop-layout-3";
 
 export const metadata = {
   title: "Furniture Shop - Bazaar Next.js E-commerce Template",
