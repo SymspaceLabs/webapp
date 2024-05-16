@@ -13,7 +13,7 @@ import FormControlLabel from "@mui/material/FormControlLabel"; // FORMIK
 // LOCAL CUSTOM COMPONENT
 import Heading from "./heading"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
+import LazyImage from "../../../components/LazyImage";
 import { FlexBox } from "components/flex-box";
 import { Paragraph } from "components/Typography"; // DATA
 

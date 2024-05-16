@@ -8,10 +8,10 @@ import Add from "@mui/icons-material/Add";
 import Close from "@mui/icons-material/Close";
 import Remove from "@mui/icons-material/Remove"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { H6, Tiny } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
+import { FlexBox } from "../../../components/flex-box";
+import { H6, Tiny } from "../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../../lib"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function MiniCartItem({

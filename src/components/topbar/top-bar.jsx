@@ -15,9 +15,9 @@ import Facebook from "@mui/icons-material/Facebook";
 import Instagram from "@mui/icons-material/Instagram";
 import ExpandMore from "@mui/icons-material/ExpandMore"; // GLOBAL CUSTOM COMPONENTS
 
-import { Span } from "components/Typography";
-import BazaarMenu from "components/BazaarMenu";
-import { FlexBetween, FlexBox } from "components/flex-box"; // STYLED COMPONENTS
+import { Span } from "../../components/Typography";
+import BazaarMenu from "../../components/BazaarMenu";
+import { FlexBetween, FlexBox } from "../../components/flex-box"; // STYLED COMPONENTS
 
 import { StyledContainer, StyledRoot } from "./styles"; // ==============================================================
 

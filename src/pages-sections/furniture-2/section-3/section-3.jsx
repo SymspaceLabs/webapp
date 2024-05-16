@@ -2,10 +2,10 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3, Paragraph } from "components/Typography";
-import ProductCard12 from "components/product-cards/product-card-12"; // API FUNCTIONS
+import { H3, Paragraph } from "../../../components/Typography";
+import ProductCard12 from "../../../components/product-cards/product-card-12"; // API FUNCTIONS
 
-import api from "utils/__api__/furniture-2";
+import api from "../../../utils/__api__/furniture-2";
 export default async function Section3() {
   const products = await api.getNewArrivalProducts();
   return <Container>

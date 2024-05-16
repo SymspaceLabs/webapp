@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "@mui/material/styles/styled";
-import { layoutConstant } from "utils/constants";
+import { layoutConstant } from "../../utils/constants";
 export const ContentWrapper = styled("div")(({
   theme
 }) => ({

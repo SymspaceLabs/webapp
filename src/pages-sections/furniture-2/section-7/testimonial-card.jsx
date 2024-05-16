@@ -1,7 +1,7 @@
-import LazyImage from "components/LazyImage"; // GLOBAL CUSTOM COMPONENTS
+import LazyImage from "../../../components/LazyImage"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { H6, Paragraph } from "components/Typography"; // STYLED COMPONENTS
+import { FlexBox } from "../../../components/flex-box";
+import { H6, Paragraph } from "../../../components/Typography"; // STYLED COMPONENTS
 
 import { ImageWrapper, Wrapper } from "./styles"; // ==============================================================
 

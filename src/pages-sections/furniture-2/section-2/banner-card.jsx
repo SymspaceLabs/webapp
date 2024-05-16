@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button"; // GLOBAL CUSTOM COMPONENTS
 
-import { H6, Paragraph, Span } from "components/Typography"; // STYLED COMPONENTS
+import { H6, Paragraph, Span } from "../../../components/Typography"; // STYLED COMPONENTS
 
 import { BannerCardWrapper } from "./styles"; // ==============================================================
 

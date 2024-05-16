@@ -1,8 +1,8 @@
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import { H2, Paragraph } from "components/Typography";
-import SubscribeInput from "components/subscribe-input"; // STYLED COMPONENT
+import LazyImage from "../../../components/LazyImage";
+import { H2, Paragraph } from "../../../components/Typography";
+import SubscribeInput from "../../../components/subscribe-input"; // STYLED COMPONENT
 
 import { RootStyle } from "./styles"; // IMPORT IMAGES
 

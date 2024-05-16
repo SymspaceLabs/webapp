@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENTS
 import Menu from "@mui/icons-material/Menu";
 import Clear from "@mui/icons-material/Clear"; // GLOBAL CUSTOM COMPONENT
 
-import Scrollbar from "components/scrollbar"; // RENDER MENU LEVEL FUNCTION
+import Scrollbar from "../../../components/scrollbar"; // RENDER MENU LEVEL FUNCTION
 
 import { renderLevels } from "./render-levels"; // NAVIGATION DATA LIST
 

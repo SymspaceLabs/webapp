@@ -7,17 +7,17 @@ import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENT
 
 import Clear from "@mui/icons-material/Clear"; // CUSTOM ICON COMPONENTS
 
-import Icon from "icons"; // LOCAL CUSTOM COMPONENTS
+import Icon from "../../../icons"; // LOCAL CUSTOM COMPONENTS
 
 import DialogDrawer from "./dialog-drawer"; // GLOBAL CUSTOM COMPONENTS
 
-import Image from "components/BazaarImage";
-import { Paragraph } from "components/Typography";
-import { SearchInput } from "components/search-box";
-import { MobileMenu } from "components/navbar/mobile-menu";
-import { FlexBetween, FlexBox } from "components/flex-box"; // GLOBAL CUSTOM HOOK
+import Image from "../../../components/BazaarImage";
+import { Paragraph } from "../../../components/Typography";
+import { SearchInput } from "../../../components/search-box";
+import { MobileMenu } from "../../../components/navbar/mobile-menu";
+import { FlexBetween, FlexBox } from "../../../components/flex-box"; // GLOBAL CUSTOM HOOK
 
-import useCart from "hooks/useCart"; // LOCAL CUSTOM HOOK
+import useCart from "../../../hooks/useCart"; // LOCAL CUSTOM HOOK
 
 import useHeader from "../hooks/use-header";
 export default function MobileHeader() {

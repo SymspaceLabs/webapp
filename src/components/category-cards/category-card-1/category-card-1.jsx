@@ -1,6 +1,6 @@
 // GLOBAL CUSTOM COMPONENTS
 import { H4 } from "components/Typography";
-import LazyImage from "components/LazyImage"; // STYLED COMPONENTS
+import LazyImage from "../../../../components/LazyImage"; // STYLED COMPONENTS
 
 import { CategoryTitle, Wrapper } from "./styles"; // ============================================================
 

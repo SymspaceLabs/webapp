@@ -12,11 +12,11 @@ import EyeToggleButton from "../components/eye-toggle-button"; // LOCAL CUSTOM H
 import BoxLink from "../components/box-link";
 import usePasswordVisible from "../use-password-visible"; // GLOBAL CUSTOM COMPONENTS
 
-import { Span } from "components/Typography";
-import { FlexBox } from "components/flex-box";
-import BazaarTextField from "components/BazaarTextField";
+import { Span } from "../../../components/Typography";
+import { FlexBox } from "../../../components/flex-box";
+import BazaarTextField from "../../../components/BazaarTextField";
 
-import { FlexRowCenter } from "components/flex-box"; // ==============================================================
+import { FlexRowCenter } from "../../../components/flex-box"; // ==============================================================
 
 const RegisterPageView = () => {
   const {
@@ -57,7 +57,7 @@ const RegisterPageView = () => {
     }
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/auth/signup`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/signup`,
         // 'http://154.53.63.170:3000/auth/signup',
         {
         method: 'POST',

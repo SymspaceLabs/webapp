@@ -1,5 +1,5 @@
 // GLOBAL CUSTOM COMPONENT
-import FlexRowCenter from "components/flex-box/flex-row-center"; // STYLED COMPONENT
+import FlexRowCenter from "../../../../components/flex-box/flex-row-center"; // STYLED COMPONENT
 
 import { CountBoxWrapper } from "../styles"; // ==============================================================
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link"; // LOCAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
+import LazyImage from "../../../../components/LazyImage";
 import ProductViewDialog from "components/products-view/product-view-dialog"; // LOCAL CUSTOM HOOK
 
 import useProduct from "../use-product"; // LOCAL CUSTOM COMPONENTS

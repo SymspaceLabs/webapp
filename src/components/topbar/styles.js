@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import styled from "@mui/material/styles/styled";
-import { layoutConstant } from "utils/constants";
+import { layoutConstant } from "../../utils/constants";
 export const StyledRoot = styled(Box, {
   shouldForwardProp: props => props !== "bgColor"
 })(({

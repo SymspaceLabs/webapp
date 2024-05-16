@@ -5,8 +5,8 @@ import Grid from "@mui/material/Grid"; // LOCAL CUSTOM COMPONENTS
 import AppStore from "./components/app-store";
 import SocialLinks from "./components/social-links"; // GLOBAL CUSTOM COMPONENTS
 
-import BazaarImage from "components/BazaarImage";
-import { Paragraph } from "components/Typography"; // DATA
+import BazaarImage from "../../components/BazaarImage";
+import { Paragraph } from "../../components/Typography"; // DATA
 
 import { CUSTOMER_CARE_LINKS } from "./data"; // STYLED COMPONENTS
 

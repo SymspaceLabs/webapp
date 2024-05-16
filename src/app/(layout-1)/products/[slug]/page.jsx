@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation"; // PAGE VIEW COMPONENT
 
-import { ProductDetailsPageView } from "pages-sections/product-details/page-view"; // API FUNCTIONS
+import { ProductDetailsPageView } from "../../../../pages-sections/product-details/page-view"; // API FUNCTIONS
 
-import api from "utils/__api__/products";
-import { getFrequentlyBought, getRelatedProducts } from "utils/__api__/related-products";
+import api from "../../../../utils/__api__/products";
+import { getFrequentlyBought, getRelatedProducts } from "../../../../utils/__api__/related-products";
 export const metadata = {
   title: "Product Details - Bazaar Next.js E-commerce Template",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,

@@ -4,12 +4,12 @@ import MenuItem from "@mui/material/MenuItem"; // MUI ICON COMPONENTS
 import ArrowLeft from "@mui/icons-material/ArrowLeft";
 import ArrowRight from "@mui/icons-material/ArrowRight"; // GLOBAL CUSTOM HOOKS
 
-import useOverflowDetect from "hooks/useOverflowDetect"; // GLOBAL CUSTOM COMPONENTS
+import useOverflowDetect from "../../../hooks/useOverflowDetect"; // GLOBAL CUSTOM COMPONENTS
 
-import { Span } from "components/Typography";
-import BazaarCard from "components/BazaarCard"; // GLOBAL CUSTOM HOOK
+import { Span } from "../../../components/Typography";
+import BazaarCard from "../../../components/BazaarCard"; // GLOBAL CUSTOM HOOK
 
-import useSettings from "hooks/useSettings"; // STYLED COMPONENTS
+import useSettings from "../../../hooks/useSettings"; // STYLED COMPONENTS
 
 import { ParentNav, ParentNavItem } from "../styles";
 // ==============================================================

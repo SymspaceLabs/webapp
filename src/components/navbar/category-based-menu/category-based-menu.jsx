@@ -1,7 +1,7 @@
 import { useState } from "react";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown"; // GLOBAL CUSTOM COMPONENT
 
-import FlexRowCenter from "components/flex-box/flex-row-center"; // LOCAL CUSTOM COMPONENTS
+import FlexRowCenter from "../../../components/flex-box/flex-row-center"; // LOCAL CUSTOM COMPONENTS
 
 import Categories from "./components/categories";
 import ChildCategories from "./components/child-categories"; // STYLED COMPONENTS

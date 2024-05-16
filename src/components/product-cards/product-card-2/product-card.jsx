@@ -9,7 +9,7 @@ import FavoriteButton from "./components/favorite-button"; // GLOBAL CUSTOM COMP
 
 import HoverBox from "components/HoverBox";
 import { H6 } from "components/Typography";
-import LazyImage from "components/LazyImage";
+import LazyImage from "../../../../components/LazyImage";
 import { FlexBetween } from "components/flex-box"; // ========================================================
 
 // ========================================================

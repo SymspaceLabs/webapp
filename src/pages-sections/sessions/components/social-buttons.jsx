@@ -5,13 +5,17 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider"; // CUSTOM COMPONENTS
 
-import { Span } from "components/Typography"; // IMPORT IMAGES
+import { Span } from "../../../components/Typography"; // IMPORT IMAGES
 
 import googleLogo from "../../../../public/assets/images/icons/google-1.svg";
 import facebookLogo from "../../../../public/assets/images/icons/facebook-filled-white.svg"; // =======================================
 
 // =======================================
 export default function SocialButtons(props) {
+  const onSubmit = async () => {
+    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/callback/google`
+  };
+  
   return <Fragment>
       {
       /* DIVIDER */
@@ -36,7 +40,7 @@ export default function SocialButtons(props) {
       {
       /* GOOGLE BUTTON */
     }
-      <Button fullWidth size="large" className="googleButton" sx={{
+      <Button onClick={onSubmit} fullWidth size="large" className="googleButton" sx={{
       fontSize: 12
     }} startIcon={<Image alt="google" src={googleLogo} />}>
         Continue with Google

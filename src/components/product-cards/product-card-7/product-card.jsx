@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 // GLOBAL CUSTOM COMPONENTS
-import LazyImage from "components/LazyImage";
+import LazyImage from "../../../../components/LazyImage";
 import { H3, Span } from "components/Typography"; // LOCAL CUSTOM HOOK
 
 import useProduct from "../use-product"; // LOCAL CUSTOM COMPONENTS

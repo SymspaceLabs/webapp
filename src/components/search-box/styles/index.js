@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import styled from "@mui/material/styles/styled";
 import SearchOutlined from "@mui/icons-material/SearchOutlined"; // GLOBAL CUSTOM COMPONENT
 
-import FlexBox from "components/flex-box/flex-box";
+import FlexBox from "../../../components/flex-box/flex-box";
 export const SearchOutlinedIcon = styled(SearchOutlined)(({
   theme
 }) => ({

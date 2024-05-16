@@ -1,6 +1,6 @@
 import ChevronRight from "@mui/icons-material/ChevronRight"; // GLOBAL CUSTOM HOOK
 
-import useSettings from "hooks/useSettings"; // STYLED COMPONENTS
+import useSettings from "../../../../hooks/useSettings"; // STYLED COMPONENTS
 
 import { CategoryList, CategoryListItem } from "../styles"; // ==============================================================
 

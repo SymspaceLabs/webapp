@@ -1,6 +1,6 @@
 // GLOBAL CUSTOM COMPONENTS
-import { H6, Paragraph } from "components/Typography";
-import { FlexBox, FlexRowCenter } from "components/flex-box"; // LOCAL CUSTOM COMPONENTS
+import { H6, Paragraph } from "../../../components/Typography";
+import { FlexBox, FlexRowCenter } from "../../../components/flex-box"; // LOCAL CUSTOM COMPONENTS
 
 import IconComponent from "../icon-component"; // ==============================================================
 

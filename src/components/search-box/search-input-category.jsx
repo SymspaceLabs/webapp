@@ -6,7 +6,7 @@ import CategoryDropdown from "./components/category-dropdown"; // LOCAL CUSTOM H
 
 import useSearch from "./hooks/use-search"; // CUSTOM ICON COMPONENT
 
-import Search from "icons/Search";
+import Search from "../../icons/Search";
 export default function SearchInputWithCategory() {
   const {
     categoryTitle,

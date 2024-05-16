@@ -7,7 +7,7 @@ import AboutLinks from "./components/about-links";
 import SocialLinks from "./components/social-links";
 import CustomerCareLinks from "./components/customer-care-links"; // GLOBAL CUSTOM COMPONENTS
 
-import { Paragraph } from "components/Typography"; // STYLED COMPONENTS
+import { Paragraph } from "../Typography"; // STYLED COMPONENTS
 
 import { Heading } from "./styles";
 export default function Footer1() {

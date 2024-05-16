@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENT
 
-import LazyImage from "components/LazyImage"; // LOCAL CUSTOM COMPONENTS
+import LazyImage from "../../../components/LazyImage"; // LOCAL CUSTOM COMPONENTS
 
 import Banner1 from "./banner-1";
 import Banner2 from "./banner-2"; // IMPORT IMAGES

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Box from "@mui/material/Box"; // GLOBAL CUSTOM COMPONENTS
 
 import HoverBox from "components/HoverBox";
-import LazyImage from "components/LazyImage";
+import LazyImage from "../../../../components/LazyImage";
 import BazaarCard from "components/BazaarCard";
 import { H6, Span } from "components/Typography";
 import FlexBox from "components/flex-box/flex-box"; // CUSTOM UTILS LIBRARY FUNCTIONS

@@ -6,8 +6,8 @@ import clsx from "clsx"; // LOCAL CUSTOM HOOKS
 
 import useHeader from "./hooks/use-header"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import FlexBox from "components/flex-box/flex-box"; // LOCAL CUSTOM COMPONENTS
+import LazyImage from "../../components/LazyImage";
+import FlexBox from "../../components/flex-box/flex-box"; // LOCAL CUSTOM COMPONENTS
 
 import MobileHeader from "./components/mobile-header";
 import DialogDrawer from "./components/dialog-drawer";

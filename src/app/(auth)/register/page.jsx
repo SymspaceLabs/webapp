@@ -1,4 +1,4 @@
-import { RegisterPageView } from "pages-sections/sessions/page-view";
+import { RegisterPageView } from "../../../pages-sections/sessions/page-view";
 export const metadata = {
   title: "Register - Bazaar Next.js E-commerce Template",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,

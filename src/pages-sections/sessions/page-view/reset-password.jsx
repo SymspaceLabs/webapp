@@ -9,8 +9,8 @@ import * as yup from "yup"; // LOCAL CUSTOM COMPONENT
 
 import BoxLink from "../components/box-link"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3 } from "components/Typography";
-import { FlexRowCenter } from "components/flex-box";
+import { H3 } from "../../../components/Typography";
+import { FlexRowCenter } from "../../../components/flex-box";
 
 const ResetPassword = () => {
   // FORM FIELD INITIAL VALUE

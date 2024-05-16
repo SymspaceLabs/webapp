@@ -1,4 +1,4 @@
-import AuthLayout from "pages-sections/sessions/layout";
+import AuthLayout from "../../pages-sections/sessions/layout";
 export default function Layout({
   children
 }) {

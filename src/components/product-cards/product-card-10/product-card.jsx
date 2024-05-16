@@ -11,7 +11,7 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder"; // LOCAL CUSTOM
 
 import useProduct from "../use-product"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
+import LazyImage from "../../../../components/LazyImage";
 import { FlexRowCenter } from "components/flex-box";
 import { H4, Paragraph, Small } from "components/Typography";
 import ProductViewDialog from "components/products-view/product-view-dialog"; // STYLED COMPONENTS

@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box"; // LOCAL CUSTOM COMPONENTS
 
-import { H6 } from "components/Typography";
-import Scrollbar from "components/scrollbar"; // LOCAL CUSTOM COMPONENT
+import { H6 } from "../../../../components/Typography";
+import Scrollbar from "../../../../components/scrollbar"; // LOCAL CUSTOM COMPONENT
 
 import CategoryItem from "./category-item"; // STYLED COMPONENT
 

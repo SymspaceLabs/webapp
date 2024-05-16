@@ -7,7 +7,7 @@ import LogoWithTitle from "./components/logo-title";
 import LoginBottom from "./components/login-bottom";
 import SocialButtons from "./components/social-buttons"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexRowCenter } from "components/flex-box"; // COMMON STYLED COMPONENT
+import { FlexRowCenter } from "../../components/flex-box"; // COMMON STYLED COMPONENT
 
 import { Wrapper } from "./styles";
 export default function AuthLayout({

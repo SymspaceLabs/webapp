@@ -2,10 +2,10 @@ import Link from "next/link"; // LOCAL CUSTOM COMPONENTS
 
 import DiscountChip from "../discount-chip"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import { H3, Paragraph } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTIONS
+import LazyImage from "../../../../components/LazyImage";
+import { H3, Paragraph } from "../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTIONS
 
-import { calculateDiscount, currency } from "lib"; // STYLED COMPONENTS
+import { calculateDiscount, currency } from "../../../lib"; // STYLED COMPONENTS
 
 import { CardRoot, PriceText } from "./styles"; // CUSTOM DATA MODEL
 

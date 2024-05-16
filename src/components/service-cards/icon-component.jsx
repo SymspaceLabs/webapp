@@ -1,7 +1,7 @@
 "use client";
 
 // CUSTOM ICON COMPONENTS
-import appIcons from "icons"; // ==============================================================
+import appIcons from "../../icons"; // ==============================================================
 
 // ==============================================================
 export default function IconComponent({

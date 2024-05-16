@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { H3, Paragraph } from "components/Typography"; // STYLED COMPONENTS
+import { H3, Paragraph } from "../../../../components/Typography"; // STYLED COMPONENTS
 
 import { BannerWrapper, ContentWrapper } from "../styles"; // ==============================================================
 

@@ -1,7 +1,7 @@
 "use client";
 
 import CountBox from "./count-box";
-import { useCountDown } from "components/countdown";
+import { useCountDown } from "../../../../components/countdown";
 export default function CountDown() {
   const {
     timeLeft

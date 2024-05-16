@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
+import LazyImage from "../../../../components/LazyImage";
 import { H3, Paragraph } from "components/Typography";
 import { FlexBetween, FlexRowCenter } from "components/flex-box"; // STYLED COMPONENTS
 

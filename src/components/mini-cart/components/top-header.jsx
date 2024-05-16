@@ -1,10 +1,10 @@
 import IconButton from "@mui/material/IconButton";
 import Clear from "@mui/icons-material/Clear"; // LOCAL CUSTOM COMPONENTS
 
-import { Paragraph } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box"; // CUSTOM ICON COMPONENT
+import { Paragraph } from "../../../components/Typography";
+import { FlexBetween, FlexBox } from "../../../components/flex-box"; // CUSTOM ICON COMPONENT
 
-import CartBag from "icons/CartBag"; // ==============================================================
+import CartBag from "../../../icons/CartBag"; // ==============================================================
 
 // ==============================================================
 export default function TopHeader({

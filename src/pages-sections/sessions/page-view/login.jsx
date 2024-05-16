@@ -8,7 +8,7 @@ import EyeToggleButton from "../components/eye-toggle-button"; // LOCAL CUSTOM H
 
 import usePasswordVisible from "../use-password-visible"; // GLOBAL CUSTOM COMPONENTS
 
-import BazaarTextField from "components/BazaarTextField"; // ==============================================================
+import BazaarTextField from "../../../components/BazaarTextField"; // ==============================================================
 
 // ==============================================================
 const LoginPageView = ({
@@ -38,7 +38,7 @@ const LoginPageView = ({
     }
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/auth/login`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`,
         {
         method: 'POST',
         headers: {

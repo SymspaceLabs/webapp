@@ -4,7 +4,7 @@ import useTheme from "@mui/material/styles/useTheme"; // MUI ICON COMPONENT
 
 import KeyboardArrowDownOutlined from "@mui/icons-material/KeyboardArrowDownOutlined"; // GLOBAL CUSTOM COMPONENT
 
-import BazaarMenu from "components/BazaarMenu"; // STYLED COMPONENT
+import BazaarMenu from "../../../components/BazaarMenu"; // STYLED COMPONENT
 
 import { DropDownHandler } from "../styles"; // DATA
 
