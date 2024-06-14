@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation"; // LOCAL CUSTOM COMPONENTS
+import { usePathname, useSearchParams } from "next/navigation"; // LOCAL CUSTOM COMPONENTS
 
 import BoxLink from "./components/box-link";
 import LogoWithTitle from "./components/logo-title";
@@ -14,6 +14,9 @@ export default function AuthLayout({
   children
 }) {
   const pathname = usePathname();
+
+  const searchParams = useSearchParams();
+
   let BOTTOM_CONTENT = null; // APPLIED FOR ONLY LOGIN PAGE
 
   if (pathname === "/login") {
@@ -35,27 +38,33 @@ export default function AuthLayout({
       </FlexRowCenter>;
   }
 
-  return <FlexRowCenter flexDirection="column" minHeight="100vh" px={2}>
-      <Wrapper elevation={3}>
-        {
-        /* LOGO WITH TITLE AREA */
-      }
-        <LogoWithTitle />
+  if (pathname === "/forgot-password") {
+    return <FlexRowCenter flexDirection="column" minHeight="100vh" px={2}>
+        <Wrapper elevation={3}>{children}</Wrapper>
+      </FlexRowCenter>;
+  }
 
-        {
-        /* FORM AREA */
-      }
-        {children}
+  // return <FlexRowCenter flexDirection="column" minHeight="100vh" px={2}>
+  //     <Wrapper elevation={3}>
+  //       {
+  //       /* LOGO WITH TITLE AREA */
+  //     }
+  //       <LogoWithTitle />
 
-        {
-        /* SOCIAL BUTTON AREA */
-      }
-        <SocialButtons />
+  //       {
+  //       /* FORM AREA */
+  //     }
+  //       {children}
 
-        {
-        /* RENDER BOTTOM CONTENT BASED ON CONDITION */
-      }
-        {BOTTOM_CONTENT}
-      </Wrapper>
-    </FlexRowCenter>;
+  //       {
+  //       /* SOCIAL BUTTON AREA */
+  //     }
+  //       <SocialButtons />
+
+  //       {
+  //       /* RENDER BOTTOM CONTENT BASED ON CONDITION */
+  //     }
+  //       {BOTTOM_CONTENT}
+  //     </Wrapper>
+  //   </FlexRowCenter>;
 }

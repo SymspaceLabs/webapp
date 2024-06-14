@@ -16,7 +16,7 @@ export default function LoginBottom() {
     }
       <FlexBox gap={1} py={2} borderRadius={1} justifyContent="center" bgcolor="grey.200">
         Forgot your password?
-        <BoxLink title="Reset It" href="/reset-password" />
+        <BoxLink title="Reset It" href="/forgot-password" />
       </FlexBox>
     </Fragment>;
 }

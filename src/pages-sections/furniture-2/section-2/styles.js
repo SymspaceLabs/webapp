@@ -1,9 +1,8 @@
 "use client";
 
 import styled from "@mui/material/styles/styled";
-export const BannerCardWrapper = styled("div")(({
-  theme
-}) => ({
+
+export const BannerCardWrapper = styled("div")(({ theme }) => ({
   height: "100%",
   minHeight: 220,
   maxHeight: 300,
@@ -12,20 +11,42 @@ export const BannerCardWrapper = styled("div")(({
   overflow: "hidden",
   position: "relative",
   img: {
-    objectFit: "cover"
+    objectFit: "cover",
+    height: "100%",
+    width: "auto",
+    flexShrink: 0,
   },
   ".content": {
     zIndex: 1,
-    right: 50,
+    left: 50,
     top: "50%",
-    textAlign: "right",
+    textAlign: "left",
     position: "absolute",
     transform: "translateY(-50%)",
     [theme.breakpoints.down(574)]: {
-      right: 35,
+      left: 35,
       h6: {
-        fontSize: 27
-      }
-    }
-  }
+        fontSize: 27,
+      },
+    },
+  },
+  ".image": {
+    flex: 1,
+  },
+  ".content-wrapper": {
+    flex: 1,
+    position: "relative",
+  },
+  [theme.breakpoints.down(768)]: {
+    flexDirection: "column",
+    alignItems: "center",
+    ".content": {
+      position: "relative",
+      transform: "none",
+      left: 0,
+      top: 0,
+      textAlign: "center",
+      marginBottom: 20,
+    },
+  },
 }));

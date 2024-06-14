@@ -8,6 +8,10 @@ const googleStyle = {
   background: "#4285F4",
   color: "white"
 };
+const githubStyle = {
+  background: "#24292e",
+  color: "white"
+};
 export const Wrapper = styled(Card)(({
   theme
 }) => ({
@@ -21,8 +25,15 @@ export const Wrapper = styled(Card)(({
     ...fbStyle,
     "&:hover": fbStyle
   },
-  ".googleButton": { ...googleStyle,
+  ".googleButton": { 
+    marginBottom: 10,
+    ...googleStyle,
     "&:hover": googleStyle
+  },
+  ".githubButton": { 
+    marginBottom: 10,
+    ...githubStyle,
+    "&:hover": githubStyle
   },
   ".agreement": {
     marginTop: 12,

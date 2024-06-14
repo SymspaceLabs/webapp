@@ -3,7 +3,7 @@ export default function FlexBox({
   children,
   ...props
 }) {
-  return <Box display="flex" {...props}>
+  return <Box display="flex" justifyContent="center" {...props}>
       {children}
     </Box>;
 }

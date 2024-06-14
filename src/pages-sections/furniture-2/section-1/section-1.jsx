@@ -1,37 +1,60 @@
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
+// import Button from "@mui/material/Button";
+// import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "../../../components/LazyImage";
-import { H2, Paragraph, Span } from "../../../components/Typography"; // STYLED COMPONENT
+// import LazyImage from "../../../components/LazyImage";
+// import { H2, Paragraph, Span } from "../../../components/Typography"; // STYLED COMPONENT
 
-import { RootStyle } from "./styles"; // IMPORT IMAGES
+// import { RootStyle } from "./styles"; // IMPORT IMAGES
 
-import headerImg from "../../../../public/assets/images/headers/furniture-2.jpg";
+// import headerImg from "../../../../public/assets/images/headers/furniture-2.jpg";
+// export default function Section1() {
+//   return <Container>
+//       <RootStyle>
+//         <LazyImage className="banner" alt="furniture shop" src={headerImg} />
+
+//         <div className="content">
+//           <Paragraph textTransform="uppercase" fontSize={28} fontWeight={600}>
+//             Spring
+//           </Paragraph>
+
+//           <H2 lineHeight={1} textTransform="uppercase" fontSize={{
+//           sm: 60,
+//           xs: 48
+//         }}>
+//             Collection
+//           </H2>
+
+//           <Paragraph fontSize={18} mt={1} mb={3}>
+//             Start from <Span fontWeight={700}>$40.45</Span>
+//           </Paragraph>
+
+//           <Button variant="contained" color="orange" size="large">
+//             Shop Now
+//           </Button>
+//         </div>
+//       </RootStyle>
+//     </Container>;
+// }
+
+import React from 'react';
+import { Box, Container, Typography, Button, Grid } from '@mui/material';
+
 export default function Section1() {
-  return <Container>
-      <RootStyle>
-        <LazyImage className="banner" alt="furniture shop" src={headerImg} />
-
-        <div className="content">
-          <Paragraph textTransform="uppercase" fontSize={28} fontWeight={600}>
-            Spring
-          </Paragraph>
-
-          <H2 lineHeight={1} textTransform="uppercase" fontSize={{
-          sm: 60,
-          xs: 48
-        }}>
-            Collection
-          </H2>
-
-          <Paragraph fontSize={18} mt={1} mb={3}>
-            Start from <Span fontWeight={700}>$40.45</Span>
-          </Paragraph>
-
-          <Button variant="contained" color="orange" size="large">
-            Shop Now
+  return (
+    <Grid sx={{background:'#EDEDED', py:10}}>
+      <Container maxWidth="md">
+        <Box sx={{ textAlign: 'center', py: 8 }}>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Future of Retail
+          </Typography>
+          <Typography variant="body1" color="textSecondary" paragraph>
+            In the rapidly advancing era of XR hardware, Symspace is at the forefront of empowering brands for the future. By creating highly accurate, detailed, realistic 3D models, we enable seamless integration into the upcoming AR ecosystem. We imagine a world where individuals can effortlessly explore and purchase products remotely by immersing themselves in digital and virtual experiences. With Symspace, brands are prepared to spearhead the AR revolution and redefine the shopping experience. Embrace the future and shape the landscape of retail with us.
+          </Typography>
+          <Button sx={{ color:'#fff', background:'#000', borderRadius:'50px', py:2, px:7.5,}}>
+            Partner
           </Button>
-        </div>
-      </RootStyle>
-    </Container>;
+        </Box>
+      </Container>
+    </Grid>
+  );
 }

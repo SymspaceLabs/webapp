@@ -1,22 +1,49 @@
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container"; // LOCAL CUSTOM COMPONENT
+import React from 'react';
+import { Box, Container, Typography, Button, Grid } from '@mui/material';
+import Image from 'next/image';
 
-import BannerCard from "./banner-card"; // GLOBAL CUSTOM COMPONENT
-
-import LazyImage from "../../../components/LazyImage"; // IMPORT IMAGES
-
-import bannerOne from "../../../../public/assets/images/banners/banner-28.jpg";
-import bannerTwo from "../../../../public/assets/images/banners/banner-29.jpg";
 export default function Section2() {
-  return <Container>
-      <Grid container spacing={3} pt={3}>
-        <Grid item lg={7} md={6} xs={12}>
-          <BannerCard tag="Modern" title="Furniture" ImageComponent={<LazyImage alt="Banner" src={bannerOne} />} />
-        </Grid>
+  return (
+    <Grid sx={{background:'#1F1F1F'}}>
+      <Container maxWidth="lg">
+        <Box sx={{ flexGrow: 1, py: 8 }}>
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={6}>
+              <Typography sx={{color:'#fff'}} variant="h6" color="textSecondary" paragraph>
+                AI Powered AR Commerce
+              </Typography>
+              <Typography sx={{color:'#fff'}} variant="h3" component="h1" gutterBottom>
+                SYMSPACE
+              </Typography>
+              <Typography sx={{color:'#fff'}} variant="h6" color="textSecondary" paragraph>
+                Revolutionize your shopping experience through Augmented Reality.
+              </Typography>
+              <Box sx={{ display:'flex', gap:'15px'}}>
+                <Button variant="outlined" sx={{ color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
+                  Get Started
+                </Button>
+                <Button variant="contained" color="primary" sx={{ color:'#fff', borderRadius:'50px', py:2, px:7.5, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
+                  Learn More
+                </Button>
+              </Box>
+                
 
-        <Grid item lg={5} md={6} xs={12}>
-          <BannerCard tag="New" title="Lighting" ImageComponent={<LazyImage alt="Banner" src={bannerTwo} />} />
-        </Grid>
-      </Grid>
-    </Container>;
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box sx={{ textAlign: 'center' }}>
+                <Image
+                  width={100}
+                  height={100}
+                  src="https://cdn-images-1.medium.com/max/750/1*1rolXkSG1SbBKlGndKrxIA.png"
+                  alt="iphone"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+    </Grid>
+
+  );
 }

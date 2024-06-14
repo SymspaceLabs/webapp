@@ -38,11 +38,11 @@ export function middleware(req: NextRequest) {
   }
 
   // Define public paths
-  const publicPaths = ["/", "/login", "/signup", "/public-page"]; // Add your public paths here
+  const publicPaths = ["/", "/login", "/signup", "/public-page", "/reset-password"]; // Add your public paths here
   const isPublicPath = publicPaths.includes(req.nextUrl.pathname);
 
-  // If token is found in query parameters, set it as a cookie and redirect to root
-  if (tokenFromQuery) {
+  // If token is found in query parameters and the path is not /reset-password, set it as a cookie and redirect to root
+  if (tokenFromQuery && req.nextUrl.pathname !== "/reset-password") {
     const response = NextResponse.redirect(new URL("/", req.url));
     response.cookies.set("token", tokenFromQuery, {
       maxAge: 60 * 60 * 24 * 7,
@@ -53,10 +53,10 @@ export function middleware(req: NextRequest) {
   }
 
   // If no token is present and the path is not public, redirect to the login page
-  // if (!tokenFromCookie && !tokenFromOauth && !isPublicPath) {
-  //   console.log("Redirecting to login because no token is found...");
-  //   return NextResponse.redirect(new URL("/login", req.url));
-  // }
+  if (!tokenFromCookie && !tokenFromOauth && !isPublicPath) {
+    console.log("Redirecting to login because no token is found...");
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
 
   // Proceed with the request if no redirection is needed
   console.log("Proceeding to next response...");

@@ -9,8 +9,9 @@ import BazaarCard from "../../components/BazaarCard"; // COMMON STYLED OBJECT
 export const NAV_LINK_STYLES = {
   cursor: "pointer",
   transition: "color 150ms ease-in-out",
+  color: "#4C4C4C",
   "&:hover": {
-    color: "primary.main"
+    color: "#fff"
   },
   "&:last-child": {
     marginRight: 0
@@ -26,13 +27,13 @@ export const ParentNav = styled(Box, {
 }) => ({
   position: "relative",
   "&:hover": {
-    color: theme.palette.primary.main,
+    color: '#fff',
     "& > .parent-nav-item": {
       display: "block"
     }
   },
   ...(active && {
-    color: theme.palette.primary.main
+    color: '#fff'
   })
 }));
 export const ParentNavItem = styled("div", {
@@ -94,7 +95,7 @@ export const CategoryMenuButton = styled(Button)(({
     flex: 1,
     display: "flex",
     alignItems: "center",
-    color: theme.palette.grey[800]
+    color: '#fff'
   }
 }));
 export const ChildNavListWrapper = styled("div")({

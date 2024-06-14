@@ -13,6 +13,7 @@ import MobileHeader from "./components/mobile-header";
 import DialogDrawer from "./components/dialog-drawer";
 import CategoriesMenu from "./components/categories-menu";
 import LoginCartButtons from "./components/login-cart-buttons"; // STYLED COMPONENTS
+import Image from 'next/image';
 
 import { HeaderWrapper, StyledContainer } from "./styles"; // ==============================================================
 
@@ -31,33 +32,24 @@ export default function Header({
     toggleSidenav
   } = useHeader();
   const CONTENT_FOR_LARGE_DEVICE = <Fragment>
-      {
-      /* LEFT CONTENT - LOGO AND CATEGORY */
-    }
       <FlexBox minWidth={100} alignItems="center">
-        <Link href="/">
-          <LazyImage src={require("../../../public/assets/images/logo2.svg")} alt="logo" />
+        <Link href="/" >
+          <Image
+            alt="Image" 
+            width={172}
+            height={40}
+            style={{ display: 'block' }}
+            src="https://cdn-images-1.medium.com/max/750/1*borOwjJZuGASVPyE_Jl6aA.png"
+          />
         </Link>
 
-        {
-        /* SHOW DROP DOWN CATEGORY BUTTON WHEN HEADER FIXED */
-      }
         {isFixed ? <CategoriesMenu /> : null}
       </FlexBox>
 
-      {
-      /* SEARCH FORM | NAVIGATION */
-    }
-      {midSlot}
+        {midSlot}
 
-      {
-      /* LOGIN AND CART BUTTON */
-    }
       <LoginCartButtons toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
 
-      {
-      /* LOGIN FORM DIALOG AND CART SIDE BAR  */
-    }
       <DialogDrawer dialogOpen={dialogOpen} sidenavOpen={sidenavOpen} toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
     </Fragment>;
   return <HeaderWrapper className={clsx(className)}>

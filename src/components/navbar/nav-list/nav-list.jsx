@@ -21,9 +21,9 @@ export default function NavigationList() {
         // SHOW MEGA MENU
         if (nav.megaMenu) {
           return <MegaMenu key={nav.title} title={nav.title} menuList={nav.child} />;
-        } // SHOW MEGA MENU WITH SUB ITEMS
+        }
 
-
+        // SHOW MEGA MENU WITH SUB ITEMS
         if (nav.megaMenuWithSub) {
           return <CategoryBasedMenu key={nav.title} title={nav.title} menuList={nav.child} />;
         }
@@ -76,5 +76,5 @@ export default function NavigationList() {
     });
   };
 
-  return <FlexBox gap={4}>{renderNestedNav(navigation, true)}</FlexBox>;
+  return <FlexBox gap={4} >{renderNestedNav(navigation, true)}</FlexBox>;
 }
