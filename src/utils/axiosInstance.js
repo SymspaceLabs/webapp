@@ -1,6 +1,6 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import { MockEndPoints } from '__server__'; // Axios instance
+import { MockEndPoints } from '../__server__'; // Axios instance
 
 const axiosInstance = axios.create({// baseURL: "http://localhost:3000",
   // Axios configuration options here

@@ -2,9 +2,9 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown"; // GLOBAL CUSTOM COMPONENTS
 
-import FlexRowCenter from "components/flex-box/flex-row-center"; // GLOBAL CUSTOM HOOKS
+import FlexRowCenter from "../../../components/flex-box/flex-row-center"; // GLOBAL CUSTOM HOOKS
 
-import useOverflowDetect from "hooks/useOverflowDetect"; // LOCAL CUSTOM COMPONENT
+import useOverflowDetect from "../../../hooks/useOverflowDetect"; // LOCAL CUSTOM COMPONENT
 
 import CategoryList from "./category-list"; // STYLED COMPONENTS
 

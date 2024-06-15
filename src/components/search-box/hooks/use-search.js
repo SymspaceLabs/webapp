@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useTransition } from "react";
-import api from "utils/__api__/products";
+import api from "../../../utils/__api__/products";
 export default function useSearch() {
   const parentRef = useRef();
   const [_, startTransition] = useTransition();

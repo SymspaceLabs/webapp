@@ -11,9 +11,9 @@ import Menu from "@mui/icons-material/Menu";
 import { Link as Scroll } from "react-scroll";
 import clsx from "clsx"; // CUSTOM COMPONENT
 
-import SideNav from "components/side-nav";
-import Image from "components/BazaarImage";
-import FlexBox from "components/flex-box/flex-box"; // HOOKS
+import SideNav from "../../../components/side-nav";
+import Image from "../../../components/BazaarImage";
+import FlexBox from "../../../components/flex-box/flex-box"; // HOOKS
 
 import useHeader from "./use-header";
 const headerHeight = 72; // STYLED COMPONENT

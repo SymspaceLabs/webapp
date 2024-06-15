@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Drawer from "@mui/material/Drawer"; // GLOBAL CUSTOM COMPONENT
 
-import Scrollbar from "components/scrollbar"; // ================================================================
+import Scrollbar from "../../components/scrollbar"; // ================================================================
 
 // ================================================================
 export default function SideNav(props) {

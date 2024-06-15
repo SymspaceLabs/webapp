@@ -1,7 +1,7 @@
 import ListItem from "@mui/material/ListItem";
 import styled from "@mui/material/styles/styled"; // GLOBAL CUSTOM COMPONENTS
 
-import { NavLink } from "components/nav-link"; // STYLED COMPONENTS
+import { NavLink } from "../../../components/nav-link"; // STYLED COMPONENTS
 
 export const Wrapper = styled("div")(({
   theme

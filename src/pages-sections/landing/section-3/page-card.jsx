@@ -8,8 +8,8 @@ import IconButton from "@mui/material/IconButton"; // MUI ICON
 
 import Visibility from "@mui/icons-material/Visibility"; // CUSTOM COMPONENTS
 
-import { H3 } from "components/Typography";
-import FlexBox from "components/flex-box/flex-box"; // STYLED COMPONENTS
+import { H3 } from "../../../components/Typography";
+import FlexBox from "../../../components/flex-box/flex-box"; // STYLED COMPONENTS
 
 const Wrapper = styled("div")(({
   theme

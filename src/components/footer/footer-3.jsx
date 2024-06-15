@@ -6,8 +6,8 @@ import Container from "@mui/material/Container"; // LOCAL CUSTOM COMPONENT
 import AppStore from "./components/app-store";
 import SocialLinks from "./components/social-links"; // GLOBAL CUSTOM COMPONENTS
 
-import BazaarImage from "components/BazaarImage";
-import { Paragraph } from "components/Typography"; // DATA
+import BazaarImage from "../BazaarImage";
+import { Paragraph } from "../Typography"; // DATA
 
 import { CUSTOMER_CARE_LINKS } from "./data"; // STYLED COMPONENTS
 

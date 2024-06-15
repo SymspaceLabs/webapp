@@ -1,6 +1,6 @@
 import { uniq } from "lodash";
-import products from "data/product-database";
-import bazaarReactDatabase from "data/bazaar-react-database";
+import products from "../../../data/product-database";
+import bazaarReactDatabase from "../../../data/bazaar-react-database";
 import { products as gift } from "../gift/data";
 import { products as gadget1 } from "../gadget-1/data";
 import { products as gadget2 } from "../gadget-2/data";

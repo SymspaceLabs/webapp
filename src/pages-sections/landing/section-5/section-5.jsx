@@ -2,10 +2,10 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Done from "@mui/icons-material/Done"; // CUSTOM COMPONENTS
+import LazyImage from "../../../components/LazyImage";
+import { FlexBox } from "../../../components/flex-box";
 
-import LazyImage from "components/LazyImage";
-import { FlexBox } from "components/flex-box";
-import { H2, Paragraph, Span } from "components/Typography"; // IMAGES
+import { H2, Paragraph, Span } from "../../../components/Typography"; // IMAGES
 
 import productModelImage from "../../../../public/assets/images/landing/product-model.png";
 import restApiImage from "../../../../public/assets/images/landing/rest-api-endpoint.png"; // STYLED COMPONENT

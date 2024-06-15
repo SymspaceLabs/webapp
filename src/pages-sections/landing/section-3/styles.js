@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button";
 import styled from "@mui/material/styles/styled";
-import { Span } from "components/Typography"; // STYLED COMPONENTS
+import { Span } from "../../../components/Typography"; // STYLED COMPONENTS
 
 export const FilterButton = styled(Button, {
   shouldForwardProp: prop => prop !== "selected"

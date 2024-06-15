@@ -5,8 +5,8 @@ import Avatar from "@mui/material/Avatar";
 import Container from "@mui/material/Container";
 import { scroller } from "react-scroll"; // CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { H2, Paragraph } from "components/Typography";
+import { FlexBox } from "../../../components/flex-box";
+import { H2, Paragraph } from "../../../components/Typography";
 const list = [{
   title: "Niche Demos",
   thumbnail: "/assets/images/landing/niche-demos.png",

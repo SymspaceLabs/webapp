@@ -3,7 +3,7 @@
 import IconButton from "@mui/material/IconButton";
 import styled from "@mui/material/styles/styled"; // GLOBAL CUSTOM COMPONENT
 
-import FlexBox from "components/flex-box/flex-box"; // DATA
+import FlexBox from "../../flex-box/flex-box"; // DATA
 
 import { SOCIAL_ICON_LINKS } from "../data"; // STYLED COMPONENTS
 

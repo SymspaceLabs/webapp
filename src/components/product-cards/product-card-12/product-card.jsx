@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Rating from "@mui/material/Rating"; // GLOBAL CUSTOM COMPONENTS
 
-import { H6 } from "components/Typography";
-import LazyImage from "components/LazyImage";
-import { FlexBox } from "components/flex-box"; // CUSTOM UTILS LIBRARY FUNCTIONS
+import { H6 } from "../../../components/Typography";
+import LazyImage from "../../../components/LazyImage";
+import { FlexBox } from "../../../components/flex-box"; // CUSTOM UTILS LIBRARY FUNCTIONS
 
-import { calculateDiscount, currency } from "lib"; // STYLED COMPONENTS
+import { calculateDiscount, currency } from "../../../lib"; // STYLED COMPONENTS
 
 import { PriceText } from "./styles"; // CUSTOM DATA MODEL
 

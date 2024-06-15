@@ -1,6 +1,6 @@
 import Link from "next/link"; // GLOBAL CUSTOM COMPONENT
 
-import { Small } from "components/Typography"; // ==============================================================
+import { Small } from "../../components/Typography"; // ==============================================================
 
 // ==============================================================
 export default function NavLink2({

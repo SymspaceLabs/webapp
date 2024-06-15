@@ -6,7 +6,7 @@ import Facebook from "@mui/icons-material/Facebook";
 import Favorite from "@mui/icons-material/Favorite";
 import Instagram from "@mui/icons-material/Instagram"; // CUSTOM COMPONENT
 
-import FlexBox from "components/flex-box/flex-box";
+import FlexBox from "../../../components/flex-box/flex-box";
 const iconList = [{
   icon: Facebook,
   url: "https://www.facebook.com/UILibOfficial"

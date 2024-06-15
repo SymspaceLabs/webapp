@@ -2,16 +2,16 @@ import { useRouter } from "next/navigation";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider"; // GLOBAL CUSTOM HOOK
 
-import useCart from "hooks/useCart"; // LOCAL CUSTOM COMPONENTS
+import useCart from "../../hooks/useCart"; // LOCAL CUSTOM COMPONENTS
 
 import TopHeader from "./components/top-header";
 import MiniCartItem from "./components/cart-item";
 import EmptyCartView from "./components/empty-view";
 import BottomActions from "./components/bottom-actions"; // GLOBAL CUSTOM COMPONENT
 
-import Scrollbar from "components/scrollbar"; // CUSTOM UTILS LIBRARY FUNCTION
+import Scrollbar from "../../components/scrollbar"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../lib"; // CUSTOM DATA MODEL
 
 // =========================================================
 export default function MiniCart({

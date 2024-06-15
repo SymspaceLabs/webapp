@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider"; // CUSTOM COMPONENTS
 
-import { Span } from "components/Typography"; // IMPORT IMAGES
+import { Span } from "../../../components/Typography"; // IMPORT IMAGES
 
 import googleLogo from "../../../../public/assets/images/icons/google-1.svg";
 import facebookLogo from "../../../../public/assets/images/icons/facebook-filled-white.svg"; // =======================================

@@ -3,8 +3,8 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import { H3, H4 } from "components/Typography"; // STYLED COMPONENTS
+import LazyImage from "../../../components/LazyImage";
+import { H3, H4 } from "../../../components/Typography"; // STYLED COMPONENTS
 
 import { StyledContent } from "./styles";
 export default function Section4() {

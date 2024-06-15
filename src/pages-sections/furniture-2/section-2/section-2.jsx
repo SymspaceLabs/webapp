@@ -3,7 +3,7 @@ import Container from "@mui/material/Container"; // LOCAL CUSTOM COMPONENT
 
 import BannerCard from "./banner-card"; // GLOBAL CUSTOM COMPONENT
 
-import LazyImage from "components/LazyImage"; // IMPORT IMAGES
+import LazyImage from "../../../components/LazyImage"; // IMPORT IMAGES
 
 import bannerOne from "../../../../public/assets/images/banners/banner-28.jpg";
 import bannerTwo from "../../../../public/assets/images/banners/banner-29.jpg";

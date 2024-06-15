@@ -8,10 +8,10 @@ import ArrowForward from "@mui/icons-material/ArrowForward"; // LOCAL CUSTOM HOO
 
 import useCarousel from "./useCarousel"; // GLOBAL CUSTOM COMPONENTS
 
-import { Carousel } from "components/carousel";
-import { FlexBetween } from "components/flex-box";
-import { H3, Paragraph } from "components/Typography";
-import ProductCard12 from "components/product-cards/product-card-12"; // CUSTOM DATA MODEL
+import { Carousel } from "../../../components/carousel";
+import { FlexBetween } from "../../../components/flex-box";
+import { H3, Paragraph } from "../../../components/Typography";
+import ProductCard12 from "../../../components/product-cards/product-card-12"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function Content({

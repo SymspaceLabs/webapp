@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button"; // CUSTOM GLOBAL COMPONENTS
 
-import { FlexBox, FlexRowCenter } from "components/flex-box";
+import { FlexBox, FlexRowCenter } from "../../components/flex-box";
 export default function NotFound() {
   const router = useRouter();
   return <FlexRowCenter px={2} minHeight="100vh" flexDirection="column">

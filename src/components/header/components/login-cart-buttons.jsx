@@ -3,9 +3,9 @@ import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENT
 
 import PersonOutline from "@mui/icons-material/PersonOutline"; // CUSTOM ICON COMPONENT
 
-import ShoppingBagOutlined from "icons/ShoppingBagOutlined"; // GLOBAL CUSTOM HOOK
+import ShoppingBagOutlined from "../../../icons/ShoppingBagOutlined"; // GLOBAL CUSTOM HOOK
 
-import useCart from "hooks/useCart"; // ==============================================================
+import useCart from "../../../hooks/useCart"; // ==============================================================
 
 // ==============================================================
 export default function LoginCartButtons({

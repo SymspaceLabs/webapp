@@ -1,4 +1,4 @@
-import Icons from "icons/duotone";
+import Icons from "../icons/duotone";
 const categoriesMegaMenu = [{
   title: "Fashion",
   child: [{

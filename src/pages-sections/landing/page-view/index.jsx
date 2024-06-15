@@ -10,7 +10,7 @@ import Section3 from "../section-3";
 import Section4 from "../section-4";
 import Section5 from "../section-5";
 import Section6 from "../section-6";
-import Setting from "components/settings";
+import Setting from "../../../components/settings";
 export default function IndexPageView() {
   const [filterDemo, setFilterDemo] = useState("");
 

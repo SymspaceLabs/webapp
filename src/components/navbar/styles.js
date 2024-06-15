@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 import styled from "@mui/material/styles/styled";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import { NavLink } from "components/nav-link";
-import BazaarCard from "components/BazaarCard"; // COMMON STYLED OBJECT
+import { NavLink } from "../../components/nav-link";
+import BazaarCard from "../../components/BazaarCard"; // COMMON STYLED OBJECT
 
 export const NAV_LINK_STYLES = {
   cursor: "pointer",

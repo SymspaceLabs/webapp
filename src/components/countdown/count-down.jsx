@@ -1,6 +1,6 @@
 "use client"; // GLOBAL CUSTOM COMPONENT
 
-import FlexBetween from "components/flex-box/flex-between"; // Local CUSTOM COMPONENT
+import FlexBetween from "../../components/flex-box/flex-between"; // Local CUSTOM COMPONENT
 
 import CountBox from "./count-box";
 import useCountDown from "./useCountDown"; // ==============================================================

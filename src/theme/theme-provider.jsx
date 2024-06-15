@@ -8,7 +8,7 @@ import createTheme from "@mui/material/styles/createTheme";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
 import merge from "lodash/merge";
-import useSettings from "hooks/useSettings";
+import useSettings from "../hooks/useSettings";
 import customThemeOptions from "./theme-options";
 import NextAppDirEmotionCacheProvider from "./emotion-cache";
 

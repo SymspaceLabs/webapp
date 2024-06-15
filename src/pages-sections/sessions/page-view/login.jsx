@@ -8,7 +8,7 @@ import EyeToggleButton from "../components/eye-toggle-button"; // LOCAL CUSTOM H
 
 import usePasswordVisible from "../use-password-visible"; // GLOBAL CUSTOM COMPONENTS
 
-import BazaarTextField from "components/BazaarTextField"; // ==============================================================
+import BazaarTextField from "../../../components/BazaarTextField"; // ==============================================================
 
 // ==============================================================
 const LoginPageView = ({

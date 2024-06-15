@@ -4,12 +4,12 @@ import { Fragment, useCallback, useState } from "react";
 import { usePathname } from "next/navigation";
 import Divider from "@mui/material/Divider"; // GLOBAL CUSTOM COMPONENTS
 
-import Sticky from "components/sticky";
-import Topbar from "components/topbar";
-import { Footer4 } from "components/footer";
-import Header from "components/header";
-import NavigationList from "components/navbar/nav-list/nav-list";
-import { MobileNavigationBar } from "components/mobile-navigation";
+import Sticky from "../../sticky";
+import Topbar from "../../topbar";
+import { Footer4 } from "../../footer";
+import Header from "../../header";
+import NavigationList from "../../navbar/nav-list/nav-list";
+import { MobileNavigationBar } from "../../mobile-navigation";
 /**
  *  USED IN:
  *  1. GADGET-2 | FURNITURE-2 | MEDICAL | GROCERY-1

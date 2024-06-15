@@ -3,9 +3,9 @@ import Link from "next/link"; // MUI
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import { FlexBox } from "components/flex-box";
-import { NavLink } from "components/nav-link"; // STYLED COMPONENTS
+import LazyImage from "../../../components/LazyImage";
+import { FlexBox } from "../../../components/flex-box";
+import { NavLink } from "../../../components/nav-link"; // STYLED COMPONENTS
 
 import { StyledRoot } from "./styles"; // DATA TYPES
 

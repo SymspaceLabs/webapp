@@ -1,6 +1,6 @@
 // GLOBAL CUSTOM COMPONENTS
-import LazyImage from "components/LazyImage";
-import { H3, H6, Paragraph, Span } from "components/Typography"; // LOCAL CUSTOM COMPONENT
+import LazyImage from "../../../../components/LazyImage";
+import { H3, H6, Paragraph, Span } from "../../../../components/Typography"; // LOCAL CUSTOM COMPONENT
 
 import CountDown from "./count-down"; // STYLED COMPONENTS
 

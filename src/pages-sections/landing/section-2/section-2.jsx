@@ -1,8 +1,8 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // CUSTOM COMPONENTS
 
-import { H2, H4 } from "components/Typography";
-import BazaarImage from "components/BazaarImage"; // STYLED COMPONENTS
+import { H2, H4 } from "../../../components/Typography";
+import BazaarImage from "../../../components/BazaarImage"; // STYLED COMPONENTS
 
 import { StyledCard, StyledContent } from "./styles"; // LIST DATA
 

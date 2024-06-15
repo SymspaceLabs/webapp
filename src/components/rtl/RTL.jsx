@@ -6,7 +6,7 @@ import { CacheProvider } from "@emotion/react";
 import stylisRTLPlugin from "stylis-plugin-rtl";
 import { prefixer } from "stylis"; // GLOBAL CUSTOM HOOKS
 
-import useSettings from "hooks/useSettings";
+import useSettings from "../../hooks/useSettings";
 export default function RTL({
   children
 }) {

@@ -1,6 +1,6 @@
 import List from "@mui/material/List"; // GLOBAL CUSTOM COMPONENTS
 
-import { H6 } from "components/Typography"; // STYLED COMPONENTS
+import { H6 } from "../../../components/Typography"; // STYLED COMPONENTS
 
 import { MenuListItem, StyledNavLink } from "./styles"; // DATA TYPES
 

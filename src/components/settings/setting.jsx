@@ -15,7 +15,7 @@ import { H6 } from "../Typography";
 import Scrollbar from "../scrollbar/scrollbar";
 import FlexBox from "../flex-box/flex-box"; // GLOBAL CUSTOM HOOK
 
-import useSettings from "hooks/useSettings"; // STYLED COMPONENTS
+import useSettings from "../../hooks/useSettings"; // STYLED COMPONENTS
 
 import { BodyWrapper, MainContainer, StyledAvatar, StyledIconButton } from "./styles";
 export default function Setting() {

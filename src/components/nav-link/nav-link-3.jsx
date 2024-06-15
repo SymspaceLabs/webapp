@@ -4,7 +4,7 @@ import Link from "next/link"; // MUI ICON COMPONENT
 
 import ArrowForward from "@mui/icons-material/ArrowForward"; // GLOBAL CUSTOM COMPONENTS
 
-import { Span } from "components/Typography"; //   ==========================================
+import { Span } from "../../components/Typography"; //   ==========================================
 
 //   ==========================================
 export default function NavLink3({

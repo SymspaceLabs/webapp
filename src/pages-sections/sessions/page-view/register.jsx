@@ -12,11 +12,11 @@ import EyeToggleButton from "../components/eye-toggle-button"; // LOCAL CUSTOM H
 import BoxLink from "../components/box-link";
 import usePasswordVisible from "../use-password-visible"; // GLOBAL CUSTOM COMPONENTS
 
-import { Span } from "components/Typography";
-import { FlexBox } from "components/flex-box";
-import BazaarTextField from "components/BazaarTextField";
+import { Span } from "../../../components/Typography";
+import { FlexBox } from "../../../components/flex-box";
+import BazaarTextField from "../../../components/BazaarTextField";
 
-import { FlexRowCenter } from "components/flex-box"; // ==============================================================
+import { FlexRowCenter } from "../../../components/flex-box"; // ==============================================================
 
 const RegisterPageView = () => {
   const {

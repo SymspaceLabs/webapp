@@ -3,7 +3,7 @@ import MegaMenu1 from "../mega-menu/mega-menu-1";
 import MegaMenu2 from "../mega-menu/mega-menu-2";
 import CategoryListItem from "../category-list-item"; // NAVIGATION DATA
 
-import { categoryMenus } from "data/navigations"; // STYLED COMPONENT
+import { categoryMenus } from "../../../data/navigations"; // STYLED COMPONENT
 
 import { StyledRoot } from "./styles"; // PROPS TYPE
 

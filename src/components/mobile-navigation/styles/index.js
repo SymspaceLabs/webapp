@@ -1,7 +1,7 @@
 import Drawer from "@mui/material/Drawer";
 import styled from "@mui/material/styles/styled";
-import { NavLink } from "components/nav-link";
-import { layoutConstant } from "utils/constants"; // STYLED COMPONENTS
+import { NavLink } from "../../../components/nav-link";
+import { layoutConstant } from "../../../utils/constants"; // STYLED COMPONENTS
 
 const Wrapper = styled("div")(({
   theme

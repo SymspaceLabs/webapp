@@ -2,11 +2,11 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3, Paragraph } from "components/Typography"; // LOCAL CUSTOM COMPONENT
+import { H3, Paragraph } from "../../../components/Typography"; // LOCAL CUSTOM COMPONENT
 
 import TestimonialCard from "./testimonial-card"; // API FUNCTIONS
 
-import api from "utils/__api__/furniture-2";
+import api from "../../../utils/__api__/furniture-2";
 export default async function Section7() {
   const testimonials = await api.getTestimonial();
   return <Box bgcolor="grey.50" mt={10} pt={8} pb={30}>

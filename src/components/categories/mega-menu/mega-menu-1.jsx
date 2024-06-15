@@ -2,7 +2,7 @@ import Link from "next/link"; // MUI
 
 import Box from "@mui/material/Box"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage"; // LOCAL CUSTOM COMPONENTS
+import LazyImage from "../../../components/LazyImage"; // LOCAL CUSTOM COMPONENTS
 
 import ColumnList from "./column-list"; // DATA TYPE
 

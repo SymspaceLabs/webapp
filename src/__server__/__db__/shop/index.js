@@ -3,7 +3,7 @@
 // IF YOU NEED HELP ABOUT SERVER SIDE IMPLEMENTATION
 // CONTACT US AT support@ui-lib.com
 import shops from "./data";
-import products from "data/product-database";
+import products from "../../../data/product-database";
 export const ShopEndpoints = Mock => {
   const getProducts = slug => products.filter(item => item.shop.slug === slug);
 

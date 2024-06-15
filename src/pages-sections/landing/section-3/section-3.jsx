@@ -5,8 +5,8 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexRowCenter } from "components/flex-box";
-import { H2, H4, Paragraph } from "components/Typography"; // LOCAL CUSTOM COMPONENT
+import { FlexRowCenter } from "../../../components/flex-box";
+import { H2, H4, Paragraph } from "../../../components/Typography"; // LOCAL CUSTOM COMPONENT
 
 import PageCard from "./page-card"; // STYLED COMPONENTS
 
