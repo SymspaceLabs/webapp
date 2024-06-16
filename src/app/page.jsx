@@ -1,4 +1,4 @@
-import IndexPageView from "../pages-sections/landing/page-view";
+// import IndexPageView from "../pages-sections/landing/page-view";
 import FurnitureTwoPageView from "../pages-sections/furniture-2/page-view";
 import ShopLayout3 from "../components/layouts/shop-layout-3";
 

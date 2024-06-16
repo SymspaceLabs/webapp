@@ -2,6 +2,7 @@ import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENT
 
 import PersonOutline from "@mui/icons-material/PersonOutline"; // CUSTOM ICON COMPONENT
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import ShoppingBagOutlined from "../../../icons/ShoppingBagOutlined"; // GLOBAL CUSTOM HOOK
 
@@ -20,7 +21,7 @@ export default function LoginCartButtons({
   };
   return <div>
       <IconButton onClick={toggleDialog}>
-        <PersonOutline sx={ICON_COLOR} />
+        <FavoriteBorderIcon sx={ICON_COLOR} />
       </IconButton>
 
       <Badge badgeContent={state.cart.length} color="primary">
@@ -28,5 +29,11 @@ export default function LoginCartButtons({
           <ShoppingBagOutlined sx={ICON_COLOR} />
         </IconButton>
       </Badge>
+
+      <IconButton onClick={toggleDialog}>
+        <PersonOutline sx={ICON_COLOR} />
+      </IconButton>
+
+
     </div>;
 }

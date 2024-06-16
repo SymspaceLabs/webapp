@@ -8,51 +8,21 @@ import Section6 from "../section-6";
 import Section7 from "../section-7";
 import Section8 from "../section-8";
 import Section9 from "../section-9";
+import Section12 from "../section-12";
+
 export default function FurnitureTwoPageView() {
-  return <div className="bg-white pt-2">
-      {
-      /* TOP BANNER SECTION */
-    }
-      <Section1 />
+  return <div className="bg-white">
 
-      {
-      /* BANNER GRID SECTION */
-    }
+      <Section1 />  
       <Section2 />
-
-      {
-      /* NEW ARRIVALS PRODUCTS SECTION */
-    }
       <Section3 />
-
-      {
-      /* BED ROOM & DINNING DEAL SECTION */
-    }
       <Section4 />
-
-      {
-      /* TRENDING PRODUCTS SECTION */
-    }
       <Section5 />
-
-      {
-      /* GRID BANNERS SECTION */
-    }
       <Section6 />
-
-      {
-      /* TESTIMONIAL SECTION */
-    }
       <Section7 />
-
-      {
-      /* NEWSLETTER BANNER SECTION */
-    }
       <Section8 />
-
-      {
-      /* SERVICES SECTION */
-    }
       <Section9 />
+      <Section12 />
+      
     </div>;
 }

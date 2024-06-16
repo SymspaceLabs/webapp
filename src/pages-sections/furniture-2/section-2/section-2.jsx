@@ -1,22 +1,26 @@
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container"; // LOCAL CUSTOM COMPONENT
+// 
+import React from 'react';
+import { Box, Container, Typography, Button, Grid } from '@mui/material';
 
-import BannerCard from "./banner-card"; // GLOBAL CUSTOM COMPONENT
+export default function Section1() {
+  return (
+    <Grid sx={{background:'#EDEDED', py:10}}>
+      <Container maxWidth="md">
+        <Box sx={{ textAlign: 'center', py: 8, display:'flex', flexDirection:'column', gap:5 }}>
+          <Typography sx={{ fontFamily:'Helvetica', color:'#4E4E4E', fontSize: 72, fontWeight:'bold' }} >
+            Future of Retail
+          </Typography>
+          <Typography sx={{ fontFamily:'Helvetica', color:'#909090', fontSize: 16 }}>
+            In the rapidly advancing era of XR hardware, Symspace is at the forefront of empowering brands for the future. By creating highly accurate, detailed, realistic 3D models, we enable seamless integration into the upcoming AR ecosystem. We imagine a world where individuals can effortlessly explore and purchase products remotely by immersing themselves in digital and virtual experiences. With Symspace, brands are prepared to spearhead the AR revolution and redefine the shopping experience. Embrace the future and shape the landscape of retail with us.
+          </Typography>
+          <Box>
+            <Button sx={{ color:'#fff', background:'#000', borderRadius:'50px', py:2, px:7.5,}}>
+              Partner
+            </Button>
+          </Box>
 
-import LazyImage from "../../../components/LazyImage"; // IMPORT IMAGES
-
-import bannerOne from "../../../../public/assets/images/banners/banner-28.jpg";
-import bannerTwo from "../../../../public/assets/images/banners/banner-29.jpg";
-export default function Section2() {
-  return <Container>
-      <Grid container spacing={3} pt={3}>
-        <Grid item lg={7} md={6} xs={12}>
-          <BannerCard tag="Modern" title="Furniture" ImageComponent={<LazyImage alt="Banner" src={bannerOne} />} />
-        </Grid>
-
-        <Grid item lg={5} md={6} xs={12}>
-          <BannerCard tag="New" title="Lighting" ImageComponent={<LazyImage alt="Banner" src={bannerTwo} />} />
-        </Grid>
-      </Grid>
-    </Container>;
+        </Box>
+      </Container>
+    </Grid>
+  );
 }

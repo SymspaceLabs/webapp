@@ -45,17 +45,17 @@ export default function Section2() {
       <Container maxWidth="lg">
         <Box sx={{ flexGrow: 1, py: 8 }}>
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Typography sx={{color:'#fff'}} variant="h6" color="textSecondary" paragraph>
+            <Grid item xs={12} md={6} sx={{ display:'flex', flexDirection:'column' }}>
+              <Typography  sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >
                 AI Powered AR Commerce
               </Typography>
-              <Typography sx={{color:'#fff'}} variant="h3" component="h1" gutterBottom>
+              <Typography sx={{ fontFamily:'Elemental End', color:'#fff', fontSize: 80, fontWeight:'bold' }} >
                 SYMSPACE
               </Typography>
-              <Typography sx={{color:'#fff'}} variant="h6" color="textSecondary" paragraph>
+              <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 18, fontWeight:'bold' }} >
                 Revolutionize your shopping experience through Augmented Reality.
               </Typography>
-              <Box sx={{ display:'flex', gap:'15px'}}>
+              <Box sx={{ display:'flex', gap:'15px', pt:5}}>
                 <Button variant="outlined" sx={{ color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
                   Get Started
                 </Button>
@@ -63,8 +63,6 @@ export default function Section2() {
                   Learn More
                 </Button>
               </Box>
-                
-
             </Grid>
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: 'center' }}>

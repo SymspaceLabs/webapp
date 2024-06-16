@@ -22,13 +22,13 @@ export default function ShopLayout3({
   const [isFixed, setIsFixed] = useState(false);
   const toggleIsFixed = useCallback(fixed => setIsFixed(fixed), []);
   const CENTERED = ["/medical", "/gift-shop", "/grocery-1"];
-  const STYLE = CENTERED.includes(pathname) ? {
-    marginInline: "auto"
-  } : {
-    marginRight: "auto",
-    marginLeft: "2rem"
-  };
-  const HEADER_SLOT = <div style={STYLE}>
+  // const STYLE = CENTERED.includes(pathname) ? {
+  //   marginInline: "auto"
+  // } : {
+  //   marginRight: "auto",
+  //   marginLeft: "2rem"
+  // };
+  const HEADER_SLOT = <div>
       <NavigationList />
     </div>;
   return <Fragment>
