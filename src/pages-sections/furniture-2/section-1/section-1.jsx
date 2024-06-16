@@ -56,10 +56,10 @@ export default function Section2() {
                 Revolutionize your shopping experience through Augmented Reality.
               </Typography>
               <Box sx={{ display:'flex', gap:'15px', pt:5}}>
-                <Button variant="outlined" sx={{ color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
+                <Button variant="outlined" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
                   Get Started
                 </Button>
-                <Button variant="contained" color="primary" sx={{ color:'#fff', borderRadius:'50px', py:2, px:7.5, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
+                <Button variant="contained" color="primary" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
                   Learn More
                 </Button>
               </Box>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 
-export default function Section1() {
+export default function Section2() {
   return (
     <Grid sx={{background:'#EDEDED', py:10}}>
       <Container maxWidth="md">
