@@ -23,7 +23,7 @@ export default function Content({
     handleNext,
     handlePrev
   } = useCarousel();
-  return <Container>
+  return <Container sx={{ py:10 }}>
       <FlexBetween mt={10} mb={5}>
         <div>
           <H3 fontSize={{
