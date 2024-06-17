@@ -29,7 +29,7 @@ export default function Content({
           <H3 fontSize={{
           sm: 30,
           xs: 27
-        }}>Trending Items</H3>
+        }}>Augmented Reality Marketplace</H3>
           <Paragraph color="grey.600" fontSize={{
           sm: 16,
           xs: 14
@@ -53,7 +53,7 @@ export default function Content({
         </div>
       </FlexBetween>
 
-      <Carousel ref={carouselRef} slidesToShow={4} responsive={responsive} arrows={false}>
+      <Carousel ref={carouselRef} slidesToShow={6} responsive={responsive} arrows={false}>
         {products.map(product => <ProductCard12 product={product} key={product.id} />)}
       </Carousel>
     </Container>;
