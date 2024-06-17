@@ -1,6 +1,6 @@
 import FurnitureTwoPageView from "pages-sections/furniture-2/page-view";
 export const metadata = {
-  title: "Furniture Shop - Bazaar Next.js E-commerce Template",
+  title: "Symspacelabs",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

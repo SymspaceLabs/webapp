@@ -9,6 +9,8 @@ import Section7 from "../section-7";
 import Section8 from "../section-8";
 import Section9 from "../section-9";
 import Section12 from "../section-12";
+import Section14 from "../section-14";
+
 
 export default function FurnitureTwoPageView() {
   return <div className="bg-white">
@@ -23,6 +25,7 @@ export default function FurnitureTwoPageView() {
       <Section8 />
       <Section9 />
       <Section12 />
+      <Section14 />
       
     </div>;
 }

@@ -27,7 +27,7 @@ import { Box, Container, Typography, Button, Grid } from '@mui/material';
 export default function Section2() {
   return (
     <Grid sx={{background:'#EDEDED', py:10}}>
-      <Container maxWidth="md">
+      <Container>
         <Box sx={{ textAlign: 'center', py: 8, display:'flex', flexDirection:'column', gap:5 }}>
           <Typography sx={{ fontFamily:'Helvetica', color:'#4E4E4E', fontSize: 72, fontWeight:'bold' }} >
           Convenient & Comfortable

@@ -61,7 +61,7 @@ import LazyImage from "../../../components/LazyImage"; // LOCAL CUSTOM COMPONENT
 export default function Section6() {
   return (
     <Grid sx={{ background:'#1F1F1F', py:10}}>
-      <Box sx={{ maxWidth:'1440px', m:'0 auto' }}>
+      <Container>
         <Box sx={{ flexGrow: 1, py: 8 }}>
           <Grid container alignItems="center" spacing={2}>
             <Grid item s={12} md={6}>
@@ -148,7 +148,7 @@ export default function Section6() {
             </Grid>
           </Grid>
         </Box>
-      </Box>
+      </Container>
     </Grid>
   );
 }

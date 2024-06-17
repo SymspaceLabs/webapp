@@ -17,16 +17,15 @@ export default function ProductCard12({
     slug,
     title,
     thumbnail,
-    // price,
-    // discount,
-    // rating
+    price,
+    discount,
+    rating
   } = product || {};
   return <Link href={`/products/${slug}`}>
-      <FlexBox sx={{ py:5 }} bgcolor="#353535" borderRadius={3} alignItems="center" flexDirection="column" justifyContent="center" height="calc(100% - 74px)">
-        <LazyImage alt={title} width={10} height={10} sx={{ width:'40px', height:'40px'}} src={thumbnail} />
-        <H6 sx={{ color:'#fff' }}>{title}</H6>
+      <FlexBox bgcolor="grey.50" borderRadius={3} mb={2}>
+        <LazyImage alt={title} width={380} height={379} src={thumbnail} />
       </FlexBox>
-      {/* 
+
       <div>
         <Rating readOnly value={rating} size="small" precision={0.5} />
         <H6 fontSize={17} fontWeight={700}>
@@ -38,6 +37,5 @@ export default function ProductCard12({
           {calculateDiscount(price, discount)}
         </PriceText>
       </div>
-      */}
     </Link>;
 }

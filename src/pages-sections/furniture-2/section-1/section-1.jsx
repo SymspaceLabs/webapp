@@ -42,7 +42,7 @@ import headerImg from "../../../../public/assets/images/headers/furniture-2.jpg"
 export default function Section2() {
   return (
     <Grid sx={{background:'#1F1F1F'}}>
-      <Container maxWidth="lg">
+      <Container>
         <Box sx={{ flexGrow: 1, py: 8 }}>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6} sx={{ display:'flex', flexDirection:'column' }}>

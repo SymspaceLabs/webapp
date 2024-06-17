@@ -1,7 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENTS
+import { FlexBox } from "../../../components/flex-box"; // CUSTOM UTILS LIBRARY FUNCTIONS
+import LazyImage from "../../../components/LazyImage";
+import { H6 } from "../../../components/Typography";
 
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward"; // LOCAL CUSTOM HOOK
@@ -11,7 +15,6 @@ import useCarousel from "./useCarousel"; // GLOBAL CUSTOM COMPONENTS
 import { Carousel } from "../../../components/carousel";
 import { FlexBetween } from "../../../components/flex-box";
 import { H3, Paragraph } from "../../../components/Typography";
-import ProductCard12 from "../../../components/product-cards/product-card-12"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function Content({
@@ -54,7 +57,14 @@ export default function Content({
       </FlexBetween>
 
       <Carousel ref={carouselRef} slidesToShow={6} responsive={responsive} arrows={false}>
-        {products.map(product => <ProductCard12 product={product} key={product.id} />)}
+        {products.map(product =>
+          <Link href={`/products/${product.slug}`} key={product.id}>
+            <FlexBox sx={{ py:5 }} bgcolor="#353535" borderRadius={3} alignItems="center" flexDirection="column" justifyContent="center" height="calc(100% - 74px)">
+              <LazyImage alt={product.title} width={10} height={10} sx={{ width:'40px', height:'40px'}} src={product.thumbnail} />
+              <H6 sx={{ color:'#fff' }}>{product.title}</H6>
+            </FlexBox>
+          </Link>
+        )}
       </Carousel>
     </Container>;
 }
