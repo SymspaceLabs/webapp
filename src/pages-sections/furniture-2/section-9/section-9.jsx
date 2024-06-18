@@ -24,7 +24,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import LazyImage from "../../../components/LazyImage";
-import headerImg from "../../../../public/assets/images/headers/furniture-2.jpg";
+import ThreeModel from '../../../components/ThreeModel';
 
 export default function Section9() {
   return (
@@ -33,17 +33,17 @@ export default function Section9() {
         <Box sx={{ flexGrow: 1, py: 8 }}>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6} sx={{ display:'flex', flexDirection:'column', gap:2  }}>
-              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:2, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
               </Box>
-              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:2, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
               </Box>
-              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:2, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
               </Box>
-              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:2, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -54,6 +54,7 @@ export default function Section9() {
                 width={200}
                 height={200}
               />
+              {/* <ThreeModel /> */}
               </Box>
             </Grid>
           </Grid>

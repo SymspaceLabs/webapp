@@ -8,14 +8,17 @@ import Section6 from "../section-6";
 import Section7 from "../section-7";
 import Section8 from "../section-8";
 import Section9 from "../section-9";
+import Section10 from "../section-10";
+import Section11 from "../section-11";
 import Section12 from "../section-12";
+import Section13 from "../section-13";
 import Section14 from "../section-14";
 
 
 export default function FurnitureTwoPageView() {
   return <div className="bg-white">
 
-      <Section1 />  
+      <Section1 /> {/*  Hero section   */}
       <Section2 />
       <Section3 />
       <Section4 />
@@ -24,7 +27,10 @@ export default function FurnitureTwoPageView() {
       <Section7 />
       <Section8 />
       <Section9 />
+      <Section10 />
+      <Section11 />
       <Section12 />
+      <Section13 />
       <Section14 />
       
     </div>;

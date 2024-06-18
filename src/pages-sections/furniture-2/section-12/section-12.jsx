@@ -6,18 +6,13 @@ import { H3, Paragraph } from "../../../components/Typography";
 import ProductCard12 from "../../../components/product-cards/product-card-12"; // API FUNCTIONS
 
 import api from "../../../utils/__api__/furniture-2";
-export default async function Section3() {
+export default async function Section12() {
   const products = await api.getNewArrivalProducts();
-  return <Container>
+  return <Grid sx={{background:'#1F1F1F'}}>
+    <Container>
       <Box mt={8} mb={4} textAlign="center">
-        <H3 fontSize={{
-        sm: 30,
-        xs: 27
-      }}>New Arrivals</H3>
-        <Paragraph color="grey.600" fontSize={{
-        sm: 16,
-        xs: 14
-      }}>
+        <H3 fontSize={{ sm: 30, xs: 27 }}>New Arrivals</H3>
+        <Paragraph color="grey.600" fontSize={{ sm: 16, xs: 14 }}>
           There are many variations passages
         </Paragraph>
       </Box>
@@ -27,5 +22,6 @@ export default async function Section3() {
             <ProductCard12 product={product} />
           </Grid>)}
       </Grid>
-    </Container>;
+    </Container>
+  </Grid>;
 }

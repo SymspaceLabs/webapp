@@ -44,19 +44,13 @@ export default function Section7() {
         <Box sx={{ flexGrow: 1, py: 8 }}>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
-              <Typography sx={{color:'#fff'}} variant="h6" color="textSecondary" paragraph>
-                AI Powered AR Commerce
+              <Typography sx={{ fontFamily:'Helvetica', color:'#fff', fontSize: 72, fontWeight:'bold' }} >
+                Realistic 3D Products
               </Typography>
-              <Typography sx={{color:'#fff'}} variant="h3" component="h1" gutterBottom>
-                SYMSPACE
+              <Typography sx={{ fontFamily:'Helvetica', color:'#fff', fontSize: 16 }}>
+                Generate high-quality 3D models of any dynamic or static product from text-prompts, images, weblinks, and object scans. These 3D products are then bridged to our immersive AR marketplace.
               </Typography>
-              <Typography sx={{color:'#fff'}} variant="h6" color="textSecondary" paragraph>
-                Revolutionize your shopping experience through Augmented Reality.
-              </Typography>
-              <Box sx={{ display:'flex', gap:'15px'}}>
-                <Button variant="outlined" sx={{ color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
-                  Get Started
-                </Button>
+              <Box sx={{ display:'flex', pt:5 }}>
                 <Button variant="outlined" sx={{ color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
                   Get Started
                 </Button>
