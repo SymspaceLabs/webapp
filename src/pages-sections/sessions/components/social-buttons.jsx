@@ -36,10 +36,19 @@ export default function SocialButtons(props) {
       {
       /* GOOGLE BUTTON */
     }
-      <Button fullWidth size="large" className="googleButton" sx={{
-      fontSize: 12
-    }} startIcon={<Image alt="google" src={googleLogo} />}>
+      <Button fullWidth size="large" className="googleButton" sx={{ fontSize: 12 }} startIcon={<Image alt="google" src={googleLogo} />}>
         Continue with Google
+      </Button>
+
+      <Button onClick={()=>onLogin("github")} fullWidth size="large" className="githubButton" sx={{ fontSize: 12 }} startIcon={<Image alt="github" src={githubLogo} />}>
+        Continue with Github
+      </Button>
+
+      {
+        /* APPLE BUTTON */
+      }
+      <Button onClick={()=>onLogin("apple")} fullWidth size="large" className="googleButton" sx={{ fontSize: 12 }} startIcon={<Image alt="apple" src={googleLogo} />}>
+        Continue with Apple
       </Button>
     </Fragment>;
 }
