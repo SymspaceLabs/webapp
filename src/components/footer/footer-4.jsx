@@ -13,41 +13,37 @@ import FlexBetween from "../flex-box/flex-between"; // STYLED COMPONENT
 
 import { Heading } from "./styles";
 export default function Footer4() {
-  return <Box component="footer" bgcolor="white" pt={12}>
+  return <Box component="footer" bgcolor="#000" pt={12}>
       <Container>
         <Grid container spacing={3}>
           <Grid item lg={4} md={4} sm={6} xs={12}>
             <Box maxWidth={100}>
-              <LazyImage src={require("../../../public/assets/images/logo2.svg")} alt="logo" />
+              <LazyImage src={require("../../../public/assets/images/logos/Logo.svg")} alt="logo" />
             </Box>
 
-            <Paragraph mb={2.5} maxWidth={{
-            xl: 400
-          }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in
-              gravida. Sit diam duis mauris nulla cursus. Erat et lectus vel ut sollicitudin elit at
-              amet.
+            <Paragraph sx={{color:'#fff'}} mb={2.5} maxWidth={{ xl: 400 }}>
+              Keep it simple
             </Paragraph>
           </Grid>
 
           {
           /* ABOUT US LINKS */
         }
-          <Grid item lg={2} md={2} sm={6} xs={12}>
-            <AboutLinks isDark />
+          <Grid sx={{color:'#fff'}} item lg={2} md={2} sm={6} xs={12}>
+            <AboutLinks isDark={false} />
           </Grid>
 
           {
           /* CUSTOMER CARE LINKS */
         }
-          <Grid item lg={3} md={3} sm={6} xs={12}>
-            <CustomerCareLinks isDark />
+          <Grid sx={{color:'#fff'}} item lg={3} md={3} sm={6} xs={12}>
+            <CustomerCareLinks isDark={false} />
           </Grid>
 
           {
           /* CONTACT INFORMATION */
         }
-          <Grid item lg={3} md={3} sm={6} xs={12}>
+          <Grid sx={{color:'#fff'}} item lg={3} md={3} sm={6} xs={12}>
             <Heading>Contact Us</Heading>
 
             <Paragraph py={0.6}>

@@ -9,8 +9,9 @@ import BazaarCard from "../../components/BazaarCard"; // COMMON STYLED OBJECT
 export const NAV_LINK_STYLES = {
   cursor: "pointer",
   transition: "color 150ms ease-in-out",
+  color:'#4C4C4C',
   "&:hover": {
-    color: "primary.main"
+    color: "#fff"
   },
   "&:last-child": {
     marginRight: 0

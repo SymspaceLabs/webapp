@@ -9,17 +9,11 @@ import TestimonialCard from "./testimonial-card"; // API FUNCTIONS
 import api from "../../../utils/__api__/furniture-2";
 export default async function Section7() {
   const testimonials = await api.getTestimonial();
-  return <Box bgcolor="grey.50" mt={10} pt={8} pb={30}>
+  return <Box bgcolor="grey.50" pt={30} pb={30}>
       <Container>
         <Box mb={5} textAlign="center">
-          <H3 fontSize={{
-          sm: 30,
-          xs: 27
-        }}>Testimonial</H3>
-          <Paragraph color="grey.600" fontSize={{
-          sm: 16,
-          xs: 14
-        }}>
+          <H3 fontSize={{ sm: 30, xs: 27 }}>Testimonial</H3>
+          <Paragraph color="grey.600" fontSize={{ sm: 16, xs: 14 }}>
             There are many variations passages
           </Paragraph>
         </Box>

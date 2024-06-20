@@ -8,7 +8,7 @@ import { RootStyle } from "./styles"; // IMPORT IMAGES
 
 import bgImage from "../../../../public/assets/images/banners/banner-37.jpg";
 export default function Section14() {
-  return <Container>
+  return <Container sx={{pb:25}}>
       <RootStyle>
         <LazyImage src={bgImage} alt="offer" />
 
