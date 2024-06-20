@@ -9,6 +9,7 @@ import { Span } from "../../../components/Typography"; // IMPORT IMAGES
 
 import googleLogo from "../../../../public/assets/images/icons/google-1.svg";
 import facebookLogo from "../../../../public/assets/images/icons/facebook-filled-white.svg"; // =======================================
+import githubLogo from "../../../../public/assets/images/icons/github-white.svg"; // =======================================
 
 // =======================================
 export default function SocialButtons(props) {
