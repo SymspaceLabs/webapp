@@ -97,6 +97,9 @@ const RegisterPageView = () => {
     onSubmit
   });
   return <form onSubmit={handleSubmit}>
+    
+    <BazaarTextField mb={1.5} fullWidth name="email" size="small" type="email" variant="outlined" onBlur={handleBlur} value={values.email} onChange={handleChange} label="Email" placeholder="exmple@mail.com" error={!!touched.email && !!errors.email} helperText={touched.email && errors.email} />
+
     <Box sx={{px:0, display:"flex", justifyContent: "space-between", gap:1}}>
       <BazaarTextField mb={1.5} fullWidth name="firstName" size="small" label="First Name" variant="outlined" onBlur={handleBlur} value={values.firstName} onChange={handleChange} placeholder="Ralph Awards" error={!!touched.name && !!errors.name} helperText={touched.firstName && errors.firstName} />
 
@@ -104,21 +107,14 @@ const RegisterPageView = () => {
     </Box>
 
 
-      <BazaarTextField mb={1.5} fullWidth name="email" size="small" type="email" variant="outlined" onBlur={handleBlur} value={values.email} onChange={handleChange} label="Email" placeholder="exmple@mail.com" error={!!touched.email && !!errors.email} helperText={touched.email && errors.email} />
 
       <BazaarTextField mb={1.5} fullWidth size="small" name="password" label="Password" variant="outlined" autoComplete="on" placeholder="*********" onBlur={handleBlur} onChange={handleChange} value={values.password} type={visiblePassword ? "text" : "password"} error={!!touched.password && !!errors.password} helperText={touched.password && errors.password} InputProps={inputProps} />
 
       <BazaarTextField fullWidth size="small" autoComplete="on" name="re_password" variant="outlined" label="Retype Password" placeholder="*********" onBlur={handleBlur} onChange={handleChange} value={values.re_password} type={visiblePassword ? "text" : "password"} error={!!touched.re_password && !!errors.re_password} helperText={touched.re_password && errors.re_password} InputProps={inputProps} />
 
       <FormControlLabel name="agreement" className="agreement" onChange={handleChange} control={<Checkbox size="small" color="secondary" checked={values.agreement || false} />} label={<FlexBox flexWrap="wrap" alignItems="center" justifyContent="flex-start" gap={1}>
-            <Span display={{
-        sm: "inline-block",
-        xs: "none"
-      }}>By signing up, you agree to</Span>
-            <Span display={{
-        sm: "none",
-        xs: "inline-block"
-      }}>Accept Our</Span>
+            <Span display={{ color:'#fff', sm: "inline-block", xs: "none"}}>By signing up, you agree to</Span>
+            <Span display={{ color:'#fff', sm: "none", xs: "inline-block" }}>Accept Our</Span>
             <BoxLink title="Terms & Condition" href="/" />
           </FlexBox>} />
 

@@ -66,7 +66,16 @@ export default function Section2() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: 'center' }}>
-              <LazyImage alt="furniture shop" src={headerImg} />
+                {/* <LazyImage alt="furniture shop" src={headerImg} /> */}
+                <video
+                  width="50%"
+                  height="auto"
+                  autoPlay
+                  loop
+                  muted
+                  src="https://uploads-ssl.webflow.com/64694132a19474ee2218a9e6/648a8e1d8d146c19eb799200_Prosthetic_CMP_black_trimeed-transcode.mp4"
+                  poster="https://uploads-ssl.webflow.com/64694132a19474ee2218a9e6/648a8e1d8d146c19eb799200_Prosthetic_CMP_black_trimeed-poster-00001.jpg"
+                />
               </Box>
             </Grid>
           </Grid>

@@ -6,7 +6,7 @@ export default function BoxLink({
   href,
   title
 }) {
-  return <Box href={href} component={Link} fontWeight={600} borderColor="grey.900" borderBottom="1px solid">
+  return <Box sx={{color:'#fff'}} href={href} component={Link} fontWeight={600} borderColor="#fff" borderBottom="1px solid">
       {title}
     </Box>;
 }

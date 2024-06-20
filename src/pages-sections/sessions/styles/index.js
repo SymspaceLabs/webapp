@@ -13,6 +13,11 @@ export const Wrapper = styled(Card)(({
 }) => ({
   width: 500,
   padding: "2rem 3rem",
+  background: 'rgba(188, 188, 188, 0.1)',
+  boxShadow: '0px 8px 6px rgba(0, 0, 0, 0.05), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)',
+  backdropFilter: 'blur(50px)', // Note: backdrop-filter has minimal browser support
+  borderRadius: '80px',
+  borderRadius:'80px',
   [theme.breakpoints.down("sm")]: {
     width: "100%"
   },

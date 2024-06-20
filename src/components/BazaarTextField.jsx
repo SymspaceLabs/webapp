@@ -17,19 +17,17 @@ export default function BazaarTextField({
   }
 
   return <Box {...boxProps}>
-      {
-      /* INPUT LEVEL TEXT */
-    }
-      {label ? <H6 mb={1} fontSize={13} color="grey.700">
-          {label}
-        </H6> : null}
 
-      {
-      /* INPUT FIELD SECTION */
-    }
+      {/* {label ? <H6 mb={1} fontSize={13} color="grey.700">
+          {label}
+        </H6> : null} 
+      */}
+
       <TextField InputProps={{ ...InputProps,
       style: { ...InputProps?.style,
-        height: 44
+        height: 44,
+        color:'#fff',
+        background:'#000'
       }
     }} {...textFieldProps} />
     </Box>;
