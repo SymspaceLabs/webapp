@@ -49,9 +49,22 @@ export default function Section2() {
               <Typography  sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >
                 AI Powered AR Commerce
               </Typography>
-              <Typography sx={{ fontFamily:'Elemental End', color:'#fff', fontSize: 80, fontWeight:'bold' }} >
-                SYMSPACE
-              </Typography>
+              <Typography
+                        sx={{
+                          fontFamily: 'Elemental End',
+                          color: '#fff',
+                          fontSize: {
+                            xs: 48, // for extra small screens and up
+                            sm: 60, // for small screens and up
+                            md: 80, // for medium screens and up
+                            lg: 100, // for large screens and up
+                            xl: 120, // for extra large screens
+                          },
+                          fontWeight: 'bold',
+                        }}
+                      >
+                        SYMSPACE
+                      </Typography>
               <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 18, fontWeight:'bold' }} >
                 Revolutionize your shopping experience through Augmented Reality.
               </Typography>

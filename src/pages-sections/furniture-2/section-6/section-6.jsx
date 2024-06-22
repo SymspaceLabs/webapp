@@ -55,100 +55,113 @@
 //     </Container>;
 // }
 
-import { Box, Typography, Button, Grid, Container } from '@mui/material';
+import { Box, Typography, Button, Grid, Container, Hidden } from '@mui/material';
 import LazyImage from "../../../components/LazyImage"; // LOCAL CUSTOM COMPONENTS
 
 export default function Section6() {
   return (
-    <Grid sx={{ background:'#1F1F1F', py:10}}>
-      <Container>
-        <Box sx={{ flexGrow: 1, py: 8 }}>
-          <Grid container alignItems="center" spacing={2}>
-            <Grid item s={12} md={6}>
-              <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', gap:'10px' }}>
-                <Box sx={{ width: '100%', height: 328, pr: 6, bgcolor: 'white', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', borderRadius:'50px'  }}>
+<Grid sx={{ background: '#1F1F1F', py: 25, height: '100%' }}>
+  <Container sx={{ height: '100%' }}>
+      <Grid container alignItems="stretch" spacing={2} sx={{ height: '100%' }}>
+        <Grid item xs={12} sm={12} md={6}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', gap: '10px' }}>
+            {/* CARD 1 */}
+            <Box sx={{ pt: 5.5, pb: 5.5, px: 4, pr: 6, width: '100%', height: '100%', bgcolor: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderRadius: '50px', gap:2 }}>
+              <Box sx={{ p: 0 }}>
+                <LazyImage
+                  alt="Image"
+                  width={150}
+                  height={150}
+                  src="/assets/images/card/tree.png"
+                />
+              </Box>
+              <Box sx={{ width: 200, height: 143, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', gap: 2 }}>
+                <Typography sx={{ lineHeight:1, alignSelf: 'stretch', color: 'black', fontSize: { xs: 20, sm: 32, md: 40, lg: 40, xl: 40 }, fontFamily: 'Helvetica', fontWeight: 700, wordWrap: 'break-word' }}>
+                  Environmental Impact
+                </Typography>
+                <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: 14, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
+                  Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.
+                </Typography>
+              </Box>
+            </Box>
+
+
+            <Box sx={{ width: '100%', display: { xs: 'block', md: 'flex' }, justifyContent: 'flex-start', alignItems: 'flex-start', gap: '10px', mt: { xs: 2, md: 0 } }}>
+              
+              {/* CARD 2 */}
+              <Box sx={{  pt: 5.5, pb: 5.5, px: 4, pr: 6, height: '100%', bgcolor: '#EDEDED', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 3, borderRadius: '50px', mb: { xs: 2, md: 0 } }}>
+
+                <Box sx={{ p: 0 }}>
                   <LazyImage
-                    alt="Image" 
-                    width={220}
-                    height={220}
-                    src="/assets/images/card/tree.png"
+                    alt="Image"
+                    width={94}
+                    height={94}
+                    src="/assets/images/card/cursor.png"
                   />
-                  <Box sx={{ flex: 1, pl: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', gap: 2 }}>
-                    <Typography sx={{ alignSelf: 'stretch', color: 'black', fontSize: 40, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '40px', wordWrap: 'break-word' }}>
-                      Environmental Impact
-                    </Typography>
-                    <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: 14, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
-                      Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.
-                    </Typography>
-                  </Box>
                 </Box>
-                <Box sx={{ width: '100%', height: 272, display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', gap:'10px' }}>
-                  <Box sx={{ flex: 1, height: '100%', pr: 6, bgcolor: '#EDEDED', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 3, borderRadius:'50px'  }}>
-                    <LazyImage 
-                      alt="Image" 
-                      width={94}
-                      height={94}
-                      src="/assets/images/card/cursor.png"
-                    />
-                    <Box sx={{ width: 160, height: 143, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 1 }}>
-                      <Typography sx={{ alignSelf: 'stretch', color: 'black', fontSize: 29, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '40px', wordWrap: 'break-word' }}>
-                        Website<br />Integration
-                      </Typography>
-                      <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: 14, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
-                        Computational audio. Listen, it's powerful
-                      </Typography>
-                    </Box>
-                  </Box>
-                  <Box sx={{ flex: 1, height: '100%', pr: 6, bgcolor: '#353535', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', borderRadius:'50px'  }}>
-                    <Box sx={{ width: 147.13, height: 158.26, position: 'relative' }}>
-                      <LazyImage
-                        alt="Image" 
-                        width={147.13}
-                        height={158.26}
-                        style={{ left: 0, top: 0, position: 'absolute' }} 
-                        src="/assets/images/card/mobile.png"
-                      />
-                    </Box>
-                    <Box sx={{ width: 160, height: 144, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 1 }}>
-                      <Typography sx={{ alignSelf: 'stretch', color: 'white', fontSize: 29, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '40px', wordWrap: 'break-word' }}>
-                        Application<br />Integration
-                      </Typography>
-                      <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: 14, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
-                        An immersive way to experience entertainment
-                      </Typography>
-                    </Box>
-                  </Box>
+                <Box sx={{ width: 160, height: 143, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 1 }}>
+                  <Typography sx={{ alignSelf: 'stretch', color: 'black', fontSize: 29, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '40px', wordWrap: 'break-word' }}>
+                    Website<br />Integration
+                  </Typography>
+                  <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: 14, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
+                    Computational audio. Listen, it's powerful
+                  </Typography>
                 </Box>
               </Box>
-            </Grid>
-            <Grid item s={12} md={6}>
-              <Box sx={{ height: 600, pt: 5.5, pb: 5.5, px: 4, bgcolor: '#EDEDED', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 1, borderRadius:'50px' }}>
-                  <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 2 }}>
-                    <Box sx={{ alignSelf: 'stretch', height: 200, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 2 }}>
-                      <Typography sx={{ alignSelf: 'stretch', color: 'black', fontSize: 48, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '56px', wordWrap: 'break-word' }}>
-                        Underserved Customers
-                      </Typography>
-                      <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: 14, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
-                        The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.
-                      </Typography>
-                    </Box>
-                    <Button sx={{ pl: 7, pr: 7, pt: 2, pb: 2, borderRadius: 50, border: '1px black solid', justifyContent: 'center', alignItems: 'center', gap: 1, display: 'inline-flex' }}>
-                      <Typography sx={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
-                        Learn More
-                      </Typography>
-                    </Button>
-                  </Box>
+              <Box sx={{  pt: 5.5, pb: 5.5, px: 4, pr: 6, height: '100%', bgcolor: '#353535', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50px' }}>
+                <Box sx={{ width: 147.13, height: 158.26, position: 'relative' }}>
                   <LazyImage
-                    alt="Image" 
-                    width={200}
-                    height={200}
-                    src="/assets/images/card/wheelchair.png"
+                    alt="Image"
+                    width={147.13}
+                    height={158.26}
+                    style={{ left: 0, top: 0, position: 'absolute' }}
+                    src="/assets/images/card/mobile.png"
                   />
+                </Box>
+                <Box sx={{ width: 160, height: 144, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 1 }}>
+                  <Typography sx={{ alignSelf: 'stretch', color: 'white', fontSize: 29, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '40px', wordWrap: 'break-word' }}>
+                    Application<br />Integration
+                  </Typography>
+                  <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: 14, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
+                    An immersive way to experience entertainment
+                  </Typography>
+                </Box>
               </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
-    </Grid>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <Box sx={{display:'flex', flexDirection:'column', height:'100%', bgcolor:'#fff', borderRadius: '50px', justifyContent:'center' }}>
+            <Box sx={{ pt: 5.5, pb: 5.5, px: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 1 }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start', gap: 2 }}>
+                <Box sx={{ alignSelf: 'stretch', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 2 }}>
+                  <Typography sx={{ lineHeight:1, alignSelf: 'stretch', color: 'black', fontSize: { xs: 20, sm: 32, md: 60, lg: 60, xl: 60 }, fontFamily: 'Helvetica', fontWeight: 700, wordWrap: 'break-word' }}>
+                    Underserved<br />Customers
+                  </Typography>
+                  <Typography sx={{ alignSelf: 'stretch', color: '#909090', fontSize: { xs: 8, sm: 10, md: 14, }, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
+                    The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.
+                  </Typography>
+                </Box>
+                <Button sx={{ pl: 7, pr: 7, pt: 2, pb: 2, borderRadius: 50, border: '1px black solid', justifyContent: 'center', alignItems: 'center', gap: 1, display: 'inline-flex' }}>
+                  <Typography sx={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
+                    Learn More
+                  </Typography>
+                </Button>
+              </Box>
+              <Box sx={{ display: 'flex', px:1, justifyContent: 'center', width: '100%' }}>
+                <LazyImage
+                  alt="Image"
+                  width={200}
+                  height={200}
+                  src="/assets/images/card/wheelchair.png"
+                />
+              </Box>
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+  </Container>
+</Grid>
+
   );
 }

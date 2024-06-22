@@ -29,9 +29,22 @@ export default function Section2() {
     <Grid sx={{background:'#EDEDED', py:10}}>
       <Container>
         <Box sx={{ textAlign: 'center', py: 8, display:'flex', flexDirection:'column', gap:5 }}>
-          <Typography sx={{ fontFamily:'Helvetica', color:'#4E4E4E', fontSize: 72, fontWeight:'bold' }} >
+        <Typography
+          sx={{
+            fontFamily: 'Helvetica',
+            color: '#4E4E4E',
+            fontSize: {
+              xs: 24, // for extra small screens and up
+              sm: 32, // for small screens and up
+              md: 48, // for medium screens and up
+              lg: 60, // for large screens and up
+              xl: 72, // for extra large screens
+            },
+            fontWeight: 'bold',
+          }}
+        >
           Convenient & Comfortable
-          </Typography>
+        </Typography>
           <Typography sx={{ fontFamily:'Helvetica', color:'#909090', fontSize: 16 }}>
           Explore products from the comfort of your home to conveniently and confidently shop through Augmented Reality          </Typography>
           <Box>

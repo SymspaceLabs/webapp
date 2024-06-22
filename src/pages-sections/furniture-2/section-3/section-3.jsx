@@ -38,7 +38,20 @@ export default function Section3() {
     <Grid sx={{background:'#1F1F1F'}}>
       <Container>
         <Box sx={{ display:'flex', flexDirection:'column', gap:3, textAlign: 'left', py: 8 }}>
-          <Typography sx={{ fontFamily:'Helvetica', color:'#fff', fontSize: 72, fontWeight:'bold' }} >
+        <Typography
+            sx={{
+              fontFamily: 'Helvetica',
+              color: '#fff',
+              fontSize: {
+                xs: 24, // for extra small screens and up
+                sm: 32, // for small screens and up
+                md: 48, // for medium screens and up
+                lg: 60, // for large screens and up
+                xl: 72, // for extra large screens
+              },
+              fontWeight: 'bold',
+            }}
+          >
             Application
           </Typography>
           <Typography sx={{ fontFamily:'Helvetica', color:'#fff', fontSize: 16 }}>

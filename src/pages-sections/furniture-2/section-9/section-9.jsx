@@ -33,28 +33,28 @@ export default function Section9() {
         <Box sx={{ flexGrow: 1, py: 8 }}>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6} sx={{ display:'flex', flexDirection:'column', gap:2  }}>
-              <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+              <Box sx={{ display:'flex', flexDirection:'column', background:'#D5D5D5', p:5, borderRadius:'25px'}}>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >Innovative and immersive experiences</Typography>
               </Box>
               <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >Improve consumer confidence and convenience</Typography>
+              </Box>
+              <Box sx={{ display:'flex', flexDirection:'column', background:'#D5D5D5', p:5, borderRadius:'25px'}}>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >Reduce manufacturing and inventory costs </Typography>
               </Box>
               <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >Customizable AR content for marketing purposes</Typography>
+              </Box>
+              <Box sx={{ display:'flex', flexDirection:'column', background:'#D5D5D5', p:5, borderRadius:'25px'}}>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >Awareness and assistance for underserved communities</Typography>
               </Box>
               <Box sx={{ display:'flex', flexDirection:'column', background:'#fff', p:5, borderRadius:'25px'}}>
-                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >AI Powered AR Commerce</Typography>
+                <Typography sx={{ fontFamily:'Helvetica', color:'#000', fontSize: 20, fontWeight:'bold' }} >Gauge consumer demand through AR Room</Typography>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: 'center' }}>
-              <LazyImage
-                alt="furniture shop"
-                src="/assets/images/t-shirt.png"
-                width={200}
-                height={200}
-              />
-              {/* <ThreeModel /> */}
+                <ThreeModel />
               </Box>
             </Grid>
           </Grid>
