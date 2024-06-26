@@ -18,17 +18,17 @@ import Section14 from "../section-14";
 export default function FurnitureTwoPageView() {
   return <div className="bg-white">
 
-      <Section1 /> {/*  Hero section   */}
+      <Section1 /> {/* Hero section */}
       <Section2 />
       <Section3 />
       <Section4 />
-      <Section5 />
+      <Section5 />  {/* Carousal section */}
       <Section6 />
-      <Section7 />
-      <Section8 />
-      <Section9 />
-      <Section10 />
-      <Section11 />
+      <Section7 />  {/* Bento Box section */}
+      <Section8 />  {/* SYM AI */}
+      <Section9 />  {/* 3D Model */}
+      <Section10 /> {/* Our Focus */}
+      <Section11 /> {/* Statistics */}
       <Section12 />
       <Section13 />
       <Section14 />

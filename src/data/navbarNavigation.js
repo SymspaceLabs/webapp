@@ -138,83 +138,83 @@ const megaMenus = [[{
 }]]; // MAIN NAVIGATION DATA
 
 const navbarNavigation = [
-  // {
-  // title: "Home",
-  // megaMenu: false,
-  // megaMenuWithSub: false,
-  // child: [// { title: "Market 1", url: "/market-1" },
-  // { title: "Market 2", url: "/market-2" },
-  // { title: "Gadget 1", url: "/gadget-1" },
-  // { title: "Gadget 2", url: "/gadget-2" },
-  // { title: "Grocery 1", url: "/grocery-1" },
-  // { title: "Grocery 2", url: "/grocery-2" },
-  // { title: "Grocery 3", url: "/grocery-3" },
-  // { title: "Fashion 1", url: "/fashion-1" },
-  // { title: "Fashion 2", url: "/fashion-2" },
-  // { title: "Fashion 3", url: "/fashion-3" },
-//   {
-//     title: "Market",
-//     child: [{
-//       title: "Market 1",
-//       url: "/market-1"
-//     }, {
-//       title: "Market 2",
-//       url: "/market-2"
-//     }]
-//   }, {
-//     title: "Gadget",
-//     child: [{
-//       title: "Gadget 1",
-//       url: "/gadget-1"
-//     }, {
-//       title: "Gadget 2",
-//       url: "/gadget-2"
-//     }]
-//   }, {
-//     title: "Grocery",
-//     child: [{
-//       title: "Grocery 1",
-//       url: "/grocery-1"
-//     }, {
-//       title: "Grocery 2",
-//       url: "/grocery-2"
-//     }, {
-//       title: "Grocery 3",
-//       url: "/grocery-3"
-//     }]
-//   }, {
-//     title: "Fashion",
-//     child: [{
-//       title: "Fashion 1",
-//       url: "/fashion-1"
-//     }, {
-//       title: "Fashion 2",
-//       url: "/fashion-2"
-//     }, {
-//       title: "Fashion 3",
-//       url: "/fashion-3"
-//     }]
-//   }, {
-//     title: "Medical",
-//     url: "/medical"
-//   }, {
-//     title: "Gift Store",
-//     url: "/gift-shop"
-//   }, {
-//     title: "Furniture 1",
-//     url: "/furniture-1"
-//   }, {
-//     title: "Furniture 2",
-//     url: "/furniture-2"
-//   }, {
-//     title: "Health and Beauty",
-//     url: "/health-beauty"
-//   }]
-// }, 
   {
     title: "Marketplace",
-    url: '/'
+    megaMenu: false,
+    megaMenuWithSub: false,
+    child: [// { title: "Market 1", url: "/market-1" },
+    { title: "Market 2", url: "/market-2" },
+    { title: "Gadget 1", url: "/gadget-1" },
+    { title: "Gadget 2", url: "/gadget-2" },
+    { title: "Grocery 1", url: "/grocery-1" },
+    { title: "Grocery 2", url: "/grocery-2" },
+    { title: "Grocery 3", url: "/grocery-3" },
+    { title: "Fashion 1", url: "/fashion-1" },
+    { title: "Fashion 2", url: "/fashion-2" },
+    { title: "Fashion 3", url: "/fashion-3" },
+    {
+      title: "Market",
+      child: [{
+        title: "Market 1",
+        url: "/market-1"
+      }, {
+        title: "Market 2",
+        url: "/market-2"
+      }]
+    }, {
+      title: "Gadget",
+      child: [{
+        title: "Gadget 1",
+        url: "/gadget-1"
+      }, {
+        title: "Gadget 2",
+        url: "/gadget-2"
+      }]
+    }, {
+      title: "Grocery",
+      child: [{
+        title: "Grocery 1",
+        url: "/grocery-1"
+      }, {
+        title: "Grocery 2",
+        url: "/grocery-2"
+      }, {
+        title: "Grocery 3",
+        url: "/grocery-3"
+      }]
+    }, {
+      title: "Fashion",
+      child: [{
+        title: "Fashion 1",
+        url: "/fashion-1"
+      }, {
+        title: "Fashion 2",
+        url: "/fashion-2"
+      }, {
+        title: "Fashion 3",
+        url: "/fashion-3"
+      }]
+    }, {
+      title: "Medical",
+      url: "/medical"
+    }, {
+      title: "Gift Store",
+      url: "/gift-shop"
+    }, {
+      title: "Furniture 1",
+      url: "/furniture-1"
+    }, {
+      title: "Furniture 2",
+      url: "/furniture-2"
+    }, {
+      title: "Health and Beauty",
+      url: "/health-beauty"
+    }]
   }, 
+  // {
+  //   title: "Marketplace",
+  //   url: '/'
+  // }, 
   {
     title: "AR for business",
     url: '/'
@@ -243,12 +243,13 @@ const navbarNavigation = [
     title: "Contact Us",
     url: '/'
   }, 
-//   {
-//   megaMenu: true,
-//   megaMenuWithSub: false,
-//   title: "Mega Menu",
-//   child: megaMenus
-//   }, {
+  // {
+  // megaMenu: true,
+  // megaMenuWithSub: false,
+  // title: "Mega Menu",
+  // child: megaMenus
+  // },
+// {
 //   megaMenu: false,
 //   megaMenuWithSub: true,
 //   title: "Full Screen Menu",

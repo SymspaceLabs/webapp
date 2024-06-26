@@ -6,6 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery"; // LOGIN FORM
 import { LoginPageView } from "../../../pages-sections/sessions/page-view"; // GLOBAL CUSTOM COMPONENTS
 
 import { MiniCart } from "../../../components/mini-cart"; // LOGIN PAGE SECTIONS
+import { Box } from '@mui/material';
 
 import { Wrapper } from "../../../pages-sections/sessions/styles";
 import LogoWithTitle from "../../../pages-sections/sessions/components/logo-title";
@@ -22,15 +23,17 @@ export default function DialogDrawer(props) {
   } = props;
   const isMobile = useMediaQuery(theme => theme.breakpoints.down("xs"));
   return <Fragment>
-      <Dialog scroll="body" open={dialogOpen} fullWidth={isMobile} onClose={toggleDialog} sx={{
-      zIndex: 9999
-    }}>
-        <Wrapper>
-          <LogoWithTitle />
-          <LoginPageView closeDialog={toggleDialog} />
-          <SocialButtons />
-          <LoginBottom />
-        </Wrapper>
+      <Dialog PaperProps={{ style: { backgroundColor: 'transparent', boxShadow: 'none', borderRadius: '80px', boxShadow: '0px 8px 6px rgba(0, 0, 0, 0.05), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)' },}} scroll="body" open={dialogOpen} fullWidth={isMobile} onClose={toggleDialog} sx={{ zIndex: 9999 }}>
+        <Box sx={{ background: 'rgba(188, 188, 188, 0.2)', backdropFilter: 'blur(50px)',  }}>
+          <Box sx={{backgroundImage: "url('/assets/images/background/Rectangle.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', mixBlendMode: 'overlay',  }}>
+          <Wrapper>
+            <LogoWithTitle />
+            <LoginPageView closeDialog={toggleDialog} />
+            <SocialButtons />
+            <LoginBottom />
+          </Wrapper>
+          </Box>
+        </Box>
       </Dialog>
 
       <Drawer open={sidenavOpen} anchor="right" onClose={toggleSidenav} sx={{
