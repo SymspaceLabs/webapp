@@ -4,8 +4,8 @@ import Button from "@mui/material/Button"; // MUI ICON COMPONENTS
 import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { Paragraph } from "components/Typography"; // ==============================================================
+import { FlexBox } from "../../../../components/flex-box";
+import { Paragraph } from "../../../../components/Typography"; // ==============================================================
 
 // ==============================================================
 export default function QuantityButtons(props) {

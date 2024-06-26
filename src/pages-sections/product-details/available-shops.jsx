@@ -6,8 +6,8 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Avatar from "@mui/material/Avatar"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3, H4 } from "components/Typography";
-import FlexRowCenter from "components/flex-box/flex-row-center";
+import { H3, H4 } from "../../components/Typography";
+import FlexRowCenter from "../../components/flex-box/flex-row-center";
 export default function AvailableShops() {
   return <Box mb={7.5}>
       <H3 mb={3}>Also Available at</H3>

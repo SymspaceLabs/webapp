@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles"; // MUI ICON COMPONENTS
 
 import ChevronRight from "@mui/icons-material/ChevronRight"; // GLOBAL CUSTOM COMPONENT
 
-import FlexBox from "components/flex-box/flex-box"; // STYLED COMPONENT
+import FlexBox from "../../components/flex-box/flex-box"; // STYLED COMPONENT
 
 const RootContainer = styled(FlexBox, {
   shouldForwardProp: prop => prop !== "open"

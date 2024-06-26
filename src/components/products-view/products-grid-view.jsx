@@ -2,9 +2,9 @@ import { Fragment } from "react";
 import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination"; // GLOBAL CUSTOM COMPONENTS
 
-import { Span } from "components/Typography";
-import { FlexBetween } from "components/flex-box";
-import ProductCard1 from "components/product-cards/product-card-1"; // CUSTOM DATA MODEL
+import { Span } from "../../components/Typography";
+import { FlexBetween } from "../../components/flex-box";
+import ProductCard1 from "../../components/product-cards/product-card-1"; // CUSTOM DATA MODEL
 
 // ========================================================
 export default function ProductsGridView({

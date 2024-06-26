@@ -1,8 +1,8 @@
 import Pagination from "@mui/material/Pagination"; // GLOBAL CUSTOM COMPONENTS
 
-import { Span } from "components/Typography";
-import FlexBetween from "components/flex-box/flex-between";
-import { ProductCard9 } from "components/product-cards/product-card-9"; // CUSTOM DATA MODEL
+import { Span } from "../../components/Typography";
+import FlexBetween from "../../components/flex-box/flex-between";
+import { ProductCard9 } from "../../components/product-cards/product-card-9"; // CUSTOM DATA MODEL
 
 // ==========================================================
 export default function ProductsListView({

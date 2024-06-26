@@ -9,8 +9,8 @@ import { useFormik } from "formik"; // Local CUSTOM COMPONENT
 
 import ProductComment from "./product-comment"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { H2, H5 } from "components/Typography";
+import { FlexBox } from "../../components/flex-box";
+import { H2, H5 } from "../../components/Typography";
 export default function ProductReview() {
   const initialValues = {
     rating: 0,

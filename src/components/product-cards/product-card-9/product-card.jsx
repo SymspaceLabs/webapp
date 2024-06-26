@@ -5,9 +5,9 @@ import Grid from "@mui/material/Grid";
 import Rating from "@mui/material/Rating";
 import styled from "@mui/material/styles/styled"; // GLOBAL CUSTOM COMPONENTS
 
-import Image from "components/BazaarImage";
-import { H5 } from "components/Typography";
-import { FlexBox } from "components/flex-box"; // LOCAL CUSTOM HOOK
+import Image from "../../../components/BazaarImage";
+import { H5 } from "../../../components/Typography";
+import { FlexBox } from "../../../components/flex-box"; // LOCAL CUSTOM HOOK
 
 import useProduct from "../use-product"; // LOCAL CUSTOM COMPONENTS
 

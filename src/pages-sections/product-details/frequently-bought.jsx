@@ -5,12 +5,12 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import styled from "@mui/material/styles/styled"; // GLOBAL CUSTOM COMPONENTS
 
-import { H2, H3, Span } from "components/Typography";
-import { FlexBox, FlexRowCenter } from "components/flex-box"; // LOCAL CUSTOM COMPONENT
+import { H2, H3, Span } from "../../components/Typography";
+import { FlexBox, FlexRowCenter } from "../../components/flex-box"; // LOCAL CUSTOM COMPONENT
 
 import FrequentlyProductCard from "./frequently-product-card"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../lib"; // CUSTOM DATA MODEL
 
 // STYLED COMPONENTS
 const WrapperBox = styled(Box)(({

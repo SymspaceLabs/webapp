@@ -11,9 +11,9 @@ import Checkbox from "@mui/material/Checkbox";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBetween, FlexBox } from "components/flex-box";
-import { H5, H6, Paragraph, Span } from "components/Typography";
-import AccordionHeader from "components/accordion/accordion-header"; // FILTER OPTIONS
+import { FlexBetween, FlexBox } from "../../components/flex-box";
+import { H5, H6, Paragraph, Span } from "../../components/Typography";
+import AccordionHeader from "../../components/accordion/accordion-header"; // FILTER OPTIONS
 
 const categoryList = [{
   title: "Bath Preparations",

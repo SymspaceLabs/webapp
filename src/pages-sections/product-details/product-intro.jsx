@@ -12,15 +12,15 @@ import Button from "@mui/material/Button"; // MUI ICON COMPONENTS
 import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove"; // GLOBAL CUSTOM HOOK
 
-import useCart from "hooks/useCart"; // GLOBAL CUSTOM COMPONENTS
+import useCart from "../../hooks/useCart"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import { H1, H2, H3, H6 } from "components/Typography";
-import { FlexBox, FlexRowCenter } from "components/flex-box"; // CUSTOM UTILS LIBRARY FUNCTION
+import LazyImage from "../../components/LazyImage";
+import { H1, H2, H3, H6 } from "../../components/Typography";
+import { FlexBox, FlexRowCenter } from "../../components/flex-box"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // DUMMY DATA
+import { currency } from "../../lib"; // DUMMY DATA
 
-import productVariants from "data/product-variants"; // CUSTOM DATA MODEL
+import productVariants from "../../data/product-variants"; // CUSTOM DATA MODEL
 
 // ================================================================
 export default function ProductIntro({

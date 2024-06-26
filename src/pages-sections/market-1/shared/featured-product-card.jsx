@@ -1,7 +1,7 @@
 // GLOBAL CUSTOM COMPONENTS
-import HoverBox from "components/HoverBox";
-import { H4 } from "components/Typography";
-import LazyImage from "components/LazyImage"; // ==========================================================
+import HoverBox from "../../../components/HoverBox";
+import { H4 } from "../../../components/Typography";
+import LazyImage from "../../../components/LazyImage"; // ==========================================================
 
 // ==========================================================
 export default function FeaturedProductCard({

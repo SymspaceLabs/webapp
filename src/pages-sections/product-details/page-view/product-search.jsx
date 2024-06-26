@@ -15,13 +15,13 @@ import FilterList from "@mui/icons-material/FilterList"; // Local CUSTOM COMPONE
 
 import ProductFilterCard from "../product-filter-card"; // GLOBAL CUSTOM COMPONENTS
 
-import FlexBox from "components/flex-box/flex-box";
-import Sidenav from "components/side-nav/side-nav";
-import { H5, Paragraph } from "components/Typography";
-import ProductsGridView from "components/products-view/products-grid-view";
-import ProductsListView from "components/products-view/products-list-view"; // PRODUCT DATA
+import FlexBox from "../../../components/flex-box/flex-box";
+import Sidenav from "../../../components/side-nav/side-nav";
+import { H5, Paragraph } from "../../../components/Typography";
+import ProductsGridView from "../../../components/products-view/products-grid-view";
+import ProductsListView from "../../../components/products-view/products-list-view"; // PRODUCT DATA
 
-import productDatabase from "data/product-database";
+import productDatabase from "../../../data/product-database";
 const SORT_OPTIONS = [{
   label: "Relevance",
   value: "Relevance"

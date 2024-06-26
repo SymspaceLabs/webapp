@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { useSnackbar } from "notistack";
-import useCart from "hooks/useCart";
+import useCart from "../../hooks/useCart";
 export default function useProduct(slug) {
   const {
     state,

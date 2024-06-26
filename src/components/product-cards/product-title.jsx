@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { H3 } from "components/Typography"; // ==============================================================
+import { H3 } from "../../components/Typography"; // ==============================================================
 
 // ==============================================================
 export default function ProductTitle({

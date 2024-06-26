@@ -3,8 +3,8 @@
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3 } from "components/Typography";
-import ProductCard1 from "components/product-cards/product-card-1"; // CUSTOM DATA MODEL
+import { H3 } from "../../components/Typography";
+import ProductCard1 from "../../components/product-cards/product-card-1"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function RelatedProducts({
