@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import { H2, Paragraph } from "components/Typography";
-import SubscribeInput from "components/subscribe-input"; //STYLED COMPONENTS
+import { H2, Paragraph } from "../../../components/Typography";
+import SubscribeInput from "../../../components/subscribe-input"; //STYLED COMPONENTS
 
 import { RootStyle } from "./styles";
 export default function Section8() {

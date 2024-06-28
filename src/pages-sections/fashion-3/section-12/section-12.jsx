@@ -1,8 +1,8 @@
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import { H3, Paragraph } from "components/Typography";
-import AppStore from "components/footer/components/app-store"; // STYLED COMPONENT
+import LazyImage from "../../../components/LazyImage";
+import { H3, Paragraph } from "../../../components/Typography";
+import AppStore from "../../../components/footer/components/app-store"; // STYLED COMPONENT
 
 import { RootStyle } from "./styles"; // IMPORT BANNER IMAGE
 

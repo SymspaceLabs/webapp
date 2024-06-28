@@ -6,7 +6,8 @@ import LazyImage from "../../../components/LazyImage"; // LOCAL CUSTOM COMPONENT
 export default function Section2() {
   return (
     <Grid sx={{background:'#EDEDED', py:10, position:'relative'}}>
-      <FloatingImage />
+      <FloatingImage1 />
+      <FloatingImage2 />
       <Container>
         <Box sx={{ textAlign: 'center', py: 8, display:'flex', flexDirection:'column', gap:5, alignItems:'center' }}>
           <Typography sx={{ fontFamily:'Helvetica', color:'#4E4E4E', fontSize: 72, fontWeight:'bold' }} >
@@ -20,7 +21,6 @@ export default function Section2() {
               Partner
             </Button>
           </Box>
-
         </Box>
       </Container>
     </Grid>
@@ -28,7 +28,7 @@ export default function Section2() {
 }
 
 
-export const FloatingImage = () => {
+export const FloatingImage1 = () => {
 
   return (
     <Box sx={{
@@ -39,12 +39,38 @@ export const FloatingImage = () => {
         zIndex: 10,
         width: '25%', // Set your desired image width
         height: 'auto',
+        display:{sm:'none', md:'block'}
+
       }}
     >
       <LazyImage
         width={250}
         height={250}
         src="/assets/images/VR_set.png"
+        alt="iphone"
+      />
+    </Box>
+  );
+};
+
+export const FloatingImage2 = () => {
+  return (
+    <Box sx={{
+      position: 'absolute',
+      top: '100%', 
+      right: 50,
+      transform: 'translateY(-50%)',
+      zIndex: 10,
+      width: '20%',     
+      height: 'auto',
+      transform: 'translateY(-50%) rotate(10deg)', 
+      display:{sm:'none', md:'block'}
+    }}
+    >
+      <LazyImage
+        width={200}
+        height={100}
+        src="/assets/images/iphone.png"
         alt="iphone"
       />
     </Box>

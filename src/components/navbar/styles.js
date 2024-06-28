@@ -7,9 +7,11 @@ import { NavLink } from "../../components/nav-link";
 import BazaarCard from "../../components/BazaarCard"; // COMMON STYLED OBJECT
 
 export const NAV_LINK_STYLES = {
-  cursor: "pointer",
-  transition: "color 150ms ease-in-out",
+  fontFamily:'Helvetica',
   color:'#4C4C4C',
+  fontWeight:'bold',
+  cursor: "pointer",
+  // transition: "color 150ms ease-in-out",
   "&:hover": {
     color: "#fff"
   },
@@ -17,8 +19,8 @@ export const NAV_LINK_STYLES = {
     marginRight: 0
   }
 };
-export const StyledNavLink = styled(NavLink)({ ...NAV_LINK_STYLES
-});
+export const StyledNavLink = styled(NavLink)({ ...NAV_LINK_STYLES });
+
 export const ParentNav = styled(Box, {
   shouldForwardProp: prop => prop !== "active"
 })(({
@@ -27,13 +29,13 @@ export const ParentNav = styled(Box, {
 }) => ({
   position: "relative",
   "&:hover": {
-    color: theme.palette.primary.main,
+    color: "#fff",
     "& > .parent-nav-item": {
       display: "block"
     }
   },
   ...(active && {
-    color: theme.palette.primary.main
+    color: "#fff",
   })
 }));
 export const ParentNavItem = styled("div", {

@@ -37,27 +37,14 @@ export default function Section3() {
   return (
     <Grid sx={{background:'#1F1F1F'}}>
       <Container>
-        <Box sx={{ display:'flex', flexDirection:'column', gap:3, textAlign: 'left', py: 8 }}>
-        <Typography
-            sx={{
-              fontFamily: 'Helvetica',
-              color: '#fff',
-              fontSize: {
-                xs: 24, // for extra small screens and up
-                sm: 32, // for small screens and up
-                md: 48, // for medium screens and up
-                lg: 60, // for large screens and up
-                xl: 72, // for extra large screens
-              },
-              fontWeight: 'bold',
-            }}
-          >
+        <Box sx={{ display:'flex', flexDirection:'column', gap:3, py: 8, alignItems:'center'  }}>
+          <Typography sx={{ width:'100%', maxWidth: 1200,  fontFamily: 'Helvetica', color: '#fff', fontSize: { xs: 24, sm: 32, md: 48, lg: 60, xl: 72 }, fontWeight: 'bold' }} >
             Application
           </Typography>
-          <Typography sx={{ fontFamily:'Helvetica', color:'#fff', fontSize: 16 }}>
+          <Typography sx={{  maxWidth: 1200, fontFamily:'Helvetica', color:'#fff', fontSize: 16, pr:5 }}>
             Optimized for user experience, our AR application allows consumers to leverage various advanced AR features to trial products like never before. Consumers are able to augment 3D products realistically in their own space, providing a virtual trial room experience for clothes, furniture, and more. The Symspace app goes beyond visualization by offering near-precise sizing recommendations, reducing returns, and increasing consumer confidence levels.
           </Typography>
-          <Box>
+          <Box sx={{  width:'100%', maxWidth: 1200 }}>
               <Button variant="outlined" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
                 Get Started
               </Button>

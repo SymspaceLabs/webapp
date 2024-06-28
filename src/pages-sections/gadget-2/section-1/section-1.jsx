@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack"; // LOCAL CUSTOM COMPONENTS
 
-import { FlexBetween } from "components/flex-box";
-import { H2, Paragraph } from "components/Typography"; // STYLED COMPONENTS
+import { FlexBetween } from "../../../components/flex-box";
+import { H2, Paragraph } from "../../../components/Typography"; // STYLED COMPONENTS
 
 import { StyledButton, ContentWrapper, StyledContainer } from "./styles"; // IMPORT IMAGES
 

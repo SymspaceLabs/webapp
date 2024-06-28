@@ -1,6 +1,6 @@
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage"; // STYLED COMPONENTS
+import LazyImage from "../../../components/LazyImage"; // STYLED COMPONENTS
 
 import { RootStyle, StyledButton } from "./styles"; // IMPORT IMAGE
 

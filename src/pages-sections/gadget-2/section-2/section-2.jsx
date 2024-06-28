@@ -3,10 +3,10 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import { H2, Paragraph } from "components/Typography";
-import ProductCard11 from "components/product-cards/product-card-11"; // API FUNCTIONS
+import { H2, Paragraph } from "../../../components/Typography";
+import ProductCard11 from "../../../components/product-cards/product-card-11"; // API FUNCTIONS
 
-import api from "utils/__api__/gadget-2";
+import api from "../../../utils/__api__/gadget-2";
 export default async function Section2() {
   const products = await api.getBestSellerProducts();
   return <Container>

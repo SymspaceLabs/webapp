@@ -17,11 +17,9 @@ export default function CategoryBasedMenu({
   const categories = menuList.reduce((prev, curr) => [...prev, curr.title], []);
   const subCategories = menuList.find(item => item.title === openList);
   return <Wrapper>
-      <FlexRowCenter alignItems="flex-end" gap={0.3}>
-        {title} <KeyboardArrowDown sx={{
-        color: "grey.500",
-        fontSize: "1.1rem"
-      }} />
+      <FlexRowCenter sx={{ fontFamily:'Helvetica', color:'#4C4C4C', fontWeight:'bold' }} alignItems="flex-end" gap={0.3}>
+        {title}
+        <KeyboardArrowDown sx={{ color: "grey.500", fontSize: "1.1rem" }} />
       </FlexRowCenter>
 
       <MenusContainer className="menu-list">

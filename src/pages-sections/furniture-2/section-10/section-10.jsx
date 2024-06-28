@@ -37,14 +37,14 @@ export default function Section3() {
   return (
     <Grid sx={{background:'#1F1F1F'}}>
       <Container>
-        <Box sx={{ display:'flex', flexDirection:'column', gap:3, textAlign: 'left', py: 8 }}>
-          <Typography sx={{ fontFamily:'Helvetica', color:'#fff', fontSize: 72, fontWeight:'bold' }} >
+        <Box sx={{ display:'flex', flexDirection:'column', gap:3, alignItems: 'center', py: 8 }}>
+          <Typography sx={{ width:'100%', maxWidth: 1200, fontFamily:'Helvetica', color:'#fff', fontSize: 72, fontWeight:'bold',  textAlign:'left'  }} >
             Our Focus
           </Typography>
-          <Typography sx={{ fontFamily:'Helvetica', color:'#fff', fontSize: 16 }}>
+          <Typography sx={{ maxWidth: 1200, fontFamily:'Helvetica', color:'#fff', fontSize: 16 }}>
             We empower individuals with Augmented Reality, while equipping brands with resources to showcase their products in unimaginable ways. Our goal is to revolutionize the end-to-end e-commerce process by creating 3D assets of retail products and enabling consumers to augment these products with enhanced AR functionalities. We offer a sustainable solution that delivers immersive, hyper-realistic, and seamless 3D models coupled with unparalleled AR experiences. Through cutting-edge technologies such as artificial intelligence and augmented reality, we are positioned to transform mere imagination into tangible simulations of reality.
           </Typography>
-          <Box>
+          <Box sx={{  width:'100%', maxWidth: 1200 }}>
             <Button variant="outlined" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
               Partner
             </Button>

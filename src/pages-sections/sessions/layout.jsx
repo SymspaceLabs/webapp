@@ -27,7 +27,7 @@ export default function AuthLayout({
         <Box>
           Already have an account? <BoxLink title="Login" href="/login" />
         </Box>
-        <Button fullWidth size="large" className="facebookButton" sx={{ background: 'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)', opacity: 0.8, boxShadow: '0px 8px 6px rgba(0, 0, 0, 0.05), inset 0px -1px 1px rgba(255, 255, 255, 0.5), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(50px)', fontSize: 12 }} >
+        <Button href="/seller.symspacelabs.com" fullWidth size="large" className="facebookButton" sx={{ background: 'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)', opacity: 0.8, boxShadow: '0px 8px 6px rgba(0, 0, 0, 0.05), inset 0px -1px 1px rgba(255, 255, 255, 0.5), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(50px)', fontSize: 12 }} >
             Create a business profile
           </Button>
         

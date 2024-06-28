@@ -1,8 +1,8 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import LazyImage from "components/LazyImage";
-import { H2, Paragraph } from "components/Typography"; // STYLED COMPONENTS
+import LazyImage from "../../../components/LazyImage";
+import { H2, Paragraph } from "../../../components/Typography"; // STYLED COMPONENTS
 
 import { BlackBox, StyledButton, YellowBox } from "./styles"; // IMPORT IMAGES
 

@@ -1,11 +1,11 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
 
-import { H2 } from "components/Typography"; // LOCAL CUSTOM COMPONENT
+import { H2 } from "../../../components/Typography"; // LOCAL CUSTOM COMPONENT
 
 import BlogCard from "./blog-card"; // API FUNCTIONS
 
-import api from "utils/__api__/gadget-2";
+import api from "../../../utils/__api__/gadget-2";
 export default async function Section6() {
   const blogs = await api.getBlogs();
   return <Container>

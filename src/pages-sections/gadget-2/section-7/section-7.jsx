@@ -1,9 +1,9 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENT
 
-import ServiceCard1 from "components/service-cards/service-card-1"; // API FUNCTIONS
+import ServiceCard1 from "../../../components/service-cards/service-card-1"; // API FUNCTIONS
 
-import api from "utils/__api__/gadget-2";
+import api from "../../../utils/__api__/gadget-2";
 export default async function Section7() {
   const services = await api.getServices();
   return <Container>
