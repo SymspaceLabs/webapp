@@ -44,8 +44,8 @@ export const FloatingImage1 = () => {
       }}
     >
       <LazyImage
-        width={250}
-        height={250}
+        width={400}
+        height={400}
         src="/assets/images/VR_set.png"
         alt="iphone"
       />
@@ -68,8 +68,8 @@ export const FloatingImage2 = () => {
     }}
     >
       <LazyImage
-        width={200}
-        height={100}
+        width={400}
+        height={400}
         src="/assets/images/iphone.png"
         alt="iphone"
       />

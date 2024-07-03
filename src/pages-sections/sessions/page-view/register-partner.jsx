@@ -110,7 +110,7 @@ const RegisterPageView = () => {
       <Box sx={{px:0, display:"flex", gap:1, pb:2}}>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
           <Typography sx={{ fontFamily: 'Helvetica', fontSize: 16, width:'100px', color:'#fff' }}>
-            First name
+            Partner name
           </Typography>
           <BazaarTextField mb={1.5} fullWidth name="firstName" size="small" label="First Name" variant="outlined" onBlur={handleBlur} value={values.firstName} onChange={handleChange} placeholder="John" error={!!touched.name && !!errors.name} helperText={touched.firstName && errors.firstName} />
         </Box>

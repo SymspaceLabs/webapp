@@ -37,7 +37,6 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import LazyImage from "../../../components/LazyImage";
-import headerImg from "../../../../public/assets/images/headers/furniture-2.jpg";
 
 export default function Section2() {
   return (
@@ -49,22 +48,9 @@ export default function Section2() {
               <Typography  sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >
                 AI Powered AR Commerce
               </Typography>
-              <Typography
-                        sx={{
-                          fontFamily: 'Elemental End',
-                          color: '#fff',
-                          fontSize: {
-                            xs: 48, // for extra small screens and up
-                            sm: 60, // for small screens and up
-                            md: 80, // for medium screens and up
-                            lg: 100, // for large screens and up
-                            xl: 120, // for extra large screens
-                          },
-                          fontWeight: 'bold',
-                        }}
-                      >
-                        SYMSPACE
-                      </Typography>
+              <Typography sx={{ fontFamily: 'Elemental End', color: '#fff', fontSize: { xs: 48, sm: 60, md: 80, lg: 100, xl: 120 }, fontWeight: 'bold', }}>
+                SYMSPACE
+              </Typography>
               <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 18, fontWeight:'bold' }} >
                 Revolutionize your shopping experience through Augmented Reality.
               </Typography>
@@ -72,14 +58,18 @@ export default function Section2() {
                 <Button variant="outlined" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
                   Get Started
                 </Button>
-                <Button variant="contained" color="primary" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
-                  Learn More
+                <Button variant="contained" color="primary" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:5, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
+                  <Typography sx={{ fontFamily: 'Helvetica', fontSize: 16, width:'100px' }}>
+                    Learn More
+                  </Typography>
+                  <Box sx={{ width: '25%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+                    <LazyImage alt="furniture shop" width={25} height={25} src="/assets/images/sparkler.png" />
+                  </Box>
                 </Button>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: 'center' }}>
-                {/* <LazyImage alt="furniture shop" src={headerImg} /> */}
                 <video
                   width="50%"
                   height="auto"

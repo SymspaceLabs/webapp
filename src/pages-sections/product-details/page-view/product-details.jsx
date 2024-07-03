@@ -9,29 +9,10 @@ import FrequentlyBought from "../frequently-bought"; // CUSTOM DATA MODEL
 // ==============================================================
 export default function ProductDetailsPageView(props) {
   return <Container className="mt-2 mb-2">
-      {
-      /* PRODUCT DETAILS INFO AREA */
-    }
       <ProductIntro product={props.product} />
-
-      {
-      /* PRODUCT DESCRIPTION AND REVIEW */
-    }
       <ProductTabs />
-
-      {
-      /* FREQUENTLY BOUGHT PRODUCTS AREA */
-    }
-      <FrequentlyBought products={props.frequentlyBought} />
-
-      {
-      /* AVAILABLE SHOPS AREA */
-    }
+      {/* <FrequentlyBought products={props.frequentlyBought} /> */}
       <AvailableShops />
-
-      {
-      /* RELATED PRODUCTS AREA */
-    }
       <RelatedProducts products={props.relatedProducts} />
     </Container>;
 }

@@ -16,7 +16,7 @@ export default function BazaarTextField({
     if (SPACE_PROPS_LIST.includes(key)) boxProps[key] = props[key];else textFieldProps[key] = props[key];
   }
 
-  return <Box {...boxProps}>
+  return <Box sx={{flex: 'auto'}} {...boxProps}>
 
       {/* {label ? <H6 mb={1} fontSize={13} color="grey.700">
           {label}
@@ -27,7 +27,8 @@ export default function BazaarTextField({
       style: { ...InputProps?.style,
         height: 44,
         color:'#fff',
-        background:'#000'
+        background:'#000',
+        
       }
     }} {...textFieldProps} />
     </Box>;

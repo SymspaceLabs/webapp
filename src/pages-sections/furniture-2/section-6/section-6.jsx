@@ -59,8 +59,8 @@ export default function Section6() {
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: 'center' }}>
                 <LazyImage
-                  width={250}
-                  height={250}
+                  width={650}
+                  height={650}
                   src="/assets/images/dashboard.png"
                   alt="iphone"
                 />

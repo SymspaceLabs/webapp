@@ -1,8 +1,9 @@
 import Icons from "../icons/duotone";
 const categoriesMegaMenu = [{
-  title: "Fashion",
+  title: "Clothing, Shoes & Accessories",
   child: [{
     title: "Men's Fashion",
+    subTitle:['New Arrivals', 'Sales'],
     child: [{
       title: "T-Shirt",
       url: "#",
@@ -232,7 +233,7 @@ const categoriesMegaMenu = [{
     }]
   }]
 }, {
-  title: "Books",
+  title: "Art",
   child: [{
     title: "Arts & Photography",
     child: [{
@@ -292,7 +293,7 @@ const categoriesMegaMenu = [{
     }]
   }]
 }, {
-  title: "Sports and Outdoors",
+  title: "Pet Supplies",
   child: [{
     title: "Outdoor Recreation",
     child: [{
@@ -349,7 +350,7 @@ const categoriesMegaMenu = [{
     }]
   }]
 }, {
-  title: "Software",
+  title: "Beauty & Health",
   child: [{
     title: "Accounting & Finance",
     child: [{
@@ -397,7 +398,7 @@ const categoriesMegaMenu = [{
     }]
   }]
 }, {
-  title: "Toys and Games",
+  title: "Toys, Kids & Baby",
   child: [{
     title: "Arts & Crafts",
     child: [{
@@ -429,5 +430,73 @@ const categoriesMegaMenu = [{
       url: "#"
     }]
   }]
-}];
+}, {
+  title: "Sports & Outdoors",
+  child: [{
+    title: "Arts & Crafts",
+    child: [{
+      title: "Adhesives",
+      url: "#"
+    }, {
+      title: "Aprons & Smocks",
+      url: "#"
+    }, {
+      title: "Clay & Dough",
+      url: "#"
+    }, {
+      title: "Craft Kits",
+      url: "#"
+    }]
+  }, {
+    title: "Baby & Toddler Toys",
+    child: [{
+      title: "Activity Centers",
+      url: "#"
+    }, {
+      title: "Balls",
+      url: "#"
+    }, {
+      title: "Bath Toys",
+      url: "#"
+    }, {
+      title: "Car Seat & Stroller Toys",
+      url: "#"
+    }]
+  }]
+}, {
+  title: "Automotive",
+  child: [{
+    title: "Arts & Crafts",
+    child: [{
+      title: "Adhesives",
+      url: "#"
+    }, {
+      title: "Aprons & Smocks",
+      url: "#"
+    }, {
+      title: "Clay & Dough",
+      url: "#"
+    }, {
+      title: "Craft Kits",
+      url: "#"
+    }]
+  }, {
+    title: "Baby & Toddler Toys",
+    child: [{
+      title: "Activity Centers",
+      url: "#"
+    }, {
+      title: "Balls",
+      url: "#"
+    }, {
+      title: "Bath Toys",
+      url: "#"
+    }, {
+      title: "Car Seat & Stroller Toys",
+      url: "#"
+    }]
+  }]
+}
+
+];
 export default categoriesMegaMenu;

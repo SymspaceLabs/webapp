@@ -24,8 +24,8 @@ export default function NavigationList() {
         } // SHOW MEGA MENU WITH SUB ITEMS
 
 
-        if (nav.megaMenuWithSub) {
-          return <CategoryBasedMenu key={nav.title} title={nav.title} menuList={nav.child} />;
+        if (nav.megaMenuWithSub && nav.url) {
+          return <CategoryBasedMenu url={nav.url} key={nav.title} title={nav.title} menuList={nav.child} />;
         }
 
         if (nav.url) {

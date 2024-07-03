@@ -7,31 +7,26 @@ import Categories from "./components/categories";
 import ChildCategories from "./components/child-categories"; // STYLED COMPONENTS
 
 import { Wrapper, StyledCard, MenusContainer } from "./styles"; // DATA TYPES
+import Link from "next/link"; // MUI
 
 // ===============================================================
 export default function CategoryBasedMenu({
   title,
-  menuList
+  menuList,
+  url
 }) {
   const [openList, setOpenList] = useState(menuList[0].title);
   const categories = menuList.reduce((prev, curr) => [...prev, curr.title], []);
   const subCategories = menuList.find(item => item.title === openList);
   return <Wrapper>
-      <FlexRowCenter sx={{ fontFamily:'Helvetica', color:'#4C4C4C', fontWeight:'bold' }} alignItems="flex-end" gap={0.3}>
-        {title}
+      <FlexRowCenter alignItems="flex-end" gap={0.3}>
+      <Link href={url} target="blank">{title}</Link>
         <KeyboardArrowDown sx={{ color: "grey.500", fontSize: "1.1rem" }} />
       </FlexRowCenter>
 
       <MenusContainer className="menu-list">
         <StyledCard>
-          {
-          /* MAIN CATEGORIES SECTION */
-        }
           <Categories openList={openList} categories={categories} handleOpen={item => setOpenList(item)} />
-
-          {
-          /* SUB / CHILD CATEGORIES SECTION */
-        }
           <ChildCategories categories={subCategories} />
         </StyledCard>
       </MenusContainer>

@@ -23,26 +23,17 @@
 
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
+import LazyImage from "../../../components/LazyImage"; // LOCAL CUSTOM COMPONENTS
 
 export default function Section2() {
   return (
-    <Grid sx={{background:'#EDEDED', py:10}}>
+    <Grid sx={{background:'#EDEDED', py:10, position:'relative'}}>
+      <FloatingImage1 />
+      <FloatingImage2 />
+
       <Container>
         <Box sx={{ textAlign: 'center', py: 8, display:'flex', flexDirection:'column', gap:5 }}>
-        <Typography
-          sx={{
-            fontFamily: 'Helvetica',
-            color: '#4E4E4E',
-            fontSize: {
-              xs: 24, // for extra small screens and up
-              sm: 32, // for small screens and up
-              md: 48, // for medium screens and up
-              lg: 60, // for large screens and up
-              xl: 72, // for extra large screens
-            },
-            fontWeight: 'bold',
-          }}
-        >
+        <Typography sx={{ fontFamily: 'Helvetica', color: '#4E4E4E', fontSize: { xs: 24, sm: 32, md: 48, lg: 60, xl: 72 }, fontWeight: 'bold', }} >
           Convenient & Comfortable
         </Typography>
           <Typography sx={{ fontFamily:'Helvetica', color:'#909090', fontSize: 16 }}>
@@ -52,9 +43,47 @@ export default function Section2() {
               Shop
             </Button>
           </Box>
-
         </Box>
       </Container>
     </Grid>
   );
 }
+
+
+export const FloatingImage1 = () => {
+
+  return (
+    <Box sx={{ position: 'absolute', top: '50%', left: 0, transform: 'translateY(-60%) rotate(10deg)', zIndex: 10, width: '40%', height: 'auto', display:{sm:'none', md:'block'} }} >
+      <LazyImage
+        width={500}
+        height={500}
+        src="/assets/images/iphone2.png"
+        alt="iphone"
+      />
+    </Box>
+  );
+};
+
+export const FloatingImage2 = () => {
+  return (
+    <Box sx={{
+      position: 'absolute',
+      top: '75%', 
+      right: 50,
+      transform: 'translateY(-50%)',
+      zIndex: 10,
+      width: '25%',     
+      height: 'auto',
+      transform: 'translateY(-50%) rotate(10deg)', 
+      display:{sm:'none', md:'block'}
+    }}
+    >
+      <LazyImage
+        width={400}
+        height={400}
+        src="/assets/images/rayBand.png"
+        alt="iphone"
+      />
+    </Box>
+  );
+};

@@ -11,15 +11,11 @@ const googleStyle = {
 export const Wrapper = styled(Card)(({
   theme
 }) => ({
-  width: 500,
+  // width: 750,
   padding: "2rem 3rem",
-  // ,
   background: 'transparent',
 
-  // ,
-  // ,
-  
-   [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("sm")]: {
     width: "100%"
   },
   ".facebookButton": {

@@ -5,7 +5,8 @@ const navbarNavigation = [
     megaMenu: false,
     megaMenuWithSub: true,
     title: "Marketplace",
-    child: categoriesMegaMenu
+    child: categoriesMegaMenu,
+    url: '/gadget-2'
   },
   {
     title: "AR for business",
@@ -29,7 +30,7 @@ const navbarNavigation = [
   }, 
   {
     title: "Partner",
-    url: '/'
+    url: '/register-partner'
   }, 
   {
     title: "Contact Us",
