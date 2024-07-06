@@ -29,10 +29,9 @@ const ThreeModel = () => {
 
     // Load 3D model
     const loader = new GLTFLoader();
-    loader.load('/test2.glb', (gltf) => {
+    loader.load('/scene2.glb', (gltf) => {
       modelRef.current = gltf.scene;
-      // Scale the model
-      modelRef.current.scale.set(1.75, 1.75, 1.75); // Adjust the scale as needed
+      modelRef.current.scale.set(1, 1, 1); // Adjust the scale as needed
       scene.add(gltf.scene);
     }, undefined, (error) => {
       console.error('Error loading model:', error);

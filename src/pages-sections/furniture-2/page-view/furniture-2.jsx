@@ -29,8 +29,8 @@ export default function FurnitureTwoPageView() {
       <Section9 />  {/* 3D Model */}
       <Section10 /> {/* Our Focus */}
       <Section11 /> {/* Statistics */}
-      <Section12 />
-      <Section13 />
+      <Section12 /> {/* Products */}
+      <Section13 /> 
       <Section14 />
       
     </div>;

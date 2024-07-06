@@ -18,11 +18,10 @@ export default function NavigationList() {
   const renderNestedNav = (list = [], isRoot = false) => {
     return list.map(nav => {
       if (isRoot) {
-        // SHOW MEGA MENU
+
         if (nav.megaMenu) {
           return <MegaMenu key={nav.title} title={nav.title} menuList={nav.child} />;
-        } // SHOW MEGA MENU WITH SUB ITEMS
-
+        }
 
         if (nav.megaMenuWithSub && nav.url) {
           return <CategoryBasedMenu url={nav.url} key={nav.title} title={nav.title} menuList={nav.child} />;
@@ -43,18 +42,11 @@ export default function NavigationList() {
             }
           }}>
               <FlexBox alignItems="flex-end" gap={0.3} sx={NAV_LINK_STYLES}>
-                {nav.title} <KeyboardArrowDown sx={{
-                color: "grey.500",
-                fontSize: "1.1rem"
-              }} />
+                {nav.title} <KeyboardArrowDown sx={{ color: "grey.500", fontSize: "1.1rem"}} />
               </FlexBox>
 
               <ChildNavListWrapper className="child-nav-item">
-                <BazaarCard elevation={3} sx={{
-                mt: 2.5,
-                py: 1,
-                minWidth: 100
-              }}>
+                <BazaarCard elevation={3} sx={{ mt: 2.5, py: 1, minWidth: 100 }}>
                   {renderNestedNav(nav.child)}
                 </BazaarCard>
               </ChildNavListWrapper>

@@ -7,6 +7,8 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingBagOutlined from "../../../icons/ShoppingBagOutlined"; // GLOBAL CUSTOM HOOK
 
 import useCart from "../../../hooks/useCart"; // ==============================================================
+import MegaMenu from "../../navbar/mega-menu";
+import categoriesMegaMenu from "../../../data/categoriesMegaMenu"; // MEGA-MENU DATA
 
 // ==============================================================
 export default function LoginCartButtons({
@@ -33,6 +35,8 @@ export default function LoginCartButtons({
       <IconButton onClick={toggleDialog}>
         <PersonOutline sx={ICON_COLOR} />
       </IconButton>
+
+      {/* <MegaMenu title="New" menuList={categoriesMegaMenu} /> */}
 
 
     </div>;

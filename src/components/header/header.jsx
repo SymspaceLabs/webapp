@@ -31,35 +31,20 @@ export default function Header({
     toggleSidenav
   } = useHeader();
   const CONTENT_FOR_LARGE_DEVICE = <Fragment>
-      {
-      /* LEFT CONTENT - LOGO AND CATEGORY */
-    }
+
       <FlexBox minWidth={100} alignItems="center">
         <Link href="/">
           <LazyImage src={require("../../../public/assets/images/logos/Logo.svg")} alt="logo" />
         </Link>
-
-        {
-        /* SHOW DROP DOWN CATEGORY BUTTON WHEN HEADER FIXED */
-      }
         {isFixed ? <CategoriesMenu /> : null}
       </FlexBox>
 
-      {
-      /* SEARCH FORM | NAVIGATION */
-    }
       {midSlot}
 
-      {
-      /* LOGIN AND CART BUTTON */
-    }
       <LoginCartButtons toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
-
-      {
-      /* LOGIN FORM DIALOG AND CART SIDE BAR  */
-    }
       <DialogDrawer dialogOpen={dialogOpen} sidenavOpen={sidenavOpen} toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
     </Fragment>;
+    
   return <HeaderWrapper className={clsx(className)}>
       <StyledContainer>{downMd ? <MobileHeader /> : CONTENT_FOR_LARGE_DEVICE}</StyledContainer>
     </HeaderWrapper>;
