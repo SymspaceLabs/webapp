@@ -5,11 +5,11 @@ import IconButton from "@mui/material/IconButton";
 import East from "@mui/icons-material/East";
 import { format } from "date-fns"; // GLOBAL CUSTOM COMPONENT
 
-import { H5, Paragraph } from "components/Typography"; // Local CUSTOM COMPONENT
+import { H5, Paragraph } from "../../../components/Typography"; // Local CUSTOM COMPONENT
 
 import TableRow from "../table-row"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../../lib"; // CUSTOM DATA MODEL
 
 // =================================================
 export default function OrderRow({

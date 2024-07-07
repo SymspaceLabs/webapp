@@ -5,10 +5,10 @@ import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENT
 
 import Delete from "@mui/icons-material/Delete"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBetween, FlexBox } from "components/flex-box";
-import { H6, Paragraph } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
+import { FlexBetween, FlexBox } from "../../../components/flex-box";
+import { H6, Paragraph } from "../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../../lib"; // CUSTOM DATA MODEL
 
 // ==============================================================
 const OrderedProduct = ({

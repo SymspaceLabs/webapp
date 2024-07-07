@@ -9,10 +9,10 @@ import CreditCard from "@mui/icons-material/CreditCard";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import ShoppingBagOutlined from "@mui/icons-material/ShoppingBagOutlined"; // GLOBAL CUSTOM COMPONENTS
 
-import FlexBox from "components/flex-box/flex-box";
-import { Paragraph, Span } from "components/Typography"; // CUSTOM ICON COMPONENT
+import FlexBox from "../../../components/flex-box/flex-box";
+import { Paragraph, Span } from "../../../components/Typography"; // CUSTOM ICON COMPONENT
 
-import CustomerService from "icons/CustomerService"; // STYLED COMPONENTS
+import CustomerService from "../../../icons/CustomerService"; // STYLED COMPONENTS
 
 import { MainContainer, StyledNavLink } from "./styles";
 export default function Navigation() {

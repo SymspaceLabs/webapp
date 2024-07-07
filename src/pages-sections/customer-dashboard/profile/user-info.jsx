@@ -2,8 +2,8 @@ import { format } from "date-fns";
 import Card from "@mui/material/Card";
 import useMediaQuery from "@mui/material/useMediaQuery"; // GLOBAL CUSTOM COMPONENTS
 
-import FlexBox from "components/flex-box/flex-box";
-import { Small, Span } from "components/Typography"; // CUSTOM DATA MODEL
+import FlexBox from "../../../components/flex-box/flex-box";
+import { Small, Span } from "../../../components/Typography"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function UserInfo({

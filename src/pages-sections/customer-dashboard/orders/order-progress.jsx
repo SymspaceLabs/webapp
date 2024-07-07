@@ -6,12 +6,12 @@ import Avatar from "@mui/material/Avatar";
 import styled from "@mui/material/styles/styled";
 import Done from "@mui/icons-material/Done"; // CUSTOM ICON COMPONENTS
 
-import Delivery from "icons/Delivery";
-import PackageBox from "icons/PackageBox";
-import TruckFilled from "icons/TruckFilled"; // GLOBAL CUSTOM COMPONENTS
+import Delivery from "../../../icons/Delivery";
+import PackageBox from "../../../icons/PackageBox";
+import TruckFilled from "../../../icons/TruckFilled"; // GLOBAL CUSTOM COMPONENTS
 
-import { Paragraph } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box"; // STYLED COMPONENTS
+import { Paragraph } from "../../../components/Typography";
+import { FlexBetween, FlexBox } from "../../../components/flex-box"; // STYLED COMPONENTS
 
 const StyledFlexbox = styled(FlexBetween)(({
   theme

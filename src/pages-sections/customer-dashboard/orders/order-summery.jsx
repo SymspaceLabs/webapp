@@ -2,10 +2,10 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBetween } from "components/flex-box";
-import { H5, H6, Paragraph } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
+import { FlexBetween } from "../../../components/flex-box";
+import { H5, H6, Paragraph } from "../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../../lib"; // CUSTOM DATA MODEL
 
 // ==============================================================
 function ListItem({

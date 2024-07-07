@@ -6,7 +6,7 @@ export const openSans = Open_Sans({
 import ThemeProvider from "../theme/theme-provider"; // PRODUCT CART PROVIDER
 
 import CartProvider from "../contexts/CartContext"; // SITE SETTINGS PROVIDER
-
+import { AuthProvider } from "../contexts/AuthContext"
 import SettingsProvider from "../contexts/SettingContext"; // GLOBAL CUSTOM COMPONENTS
 
 import RTL from "../components/rtl";
@@ -18,14 +18,16 @@ export default function RootLayout({
 }) {
   return <html lang="en" suppressHydrationWarning>
       <body className={openSans.className}>
-        <CartProvider>
-          <SettingsProvider>
-            <ThemeProvider>
-              <ProgressBar />
-              <RTL>{children}</RTL>
-            </ThemeProvider>
-          </SettingsProvider>
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            <SettingsProvider>
+              <ThemeProvider>
+                <ProgressBar />
+                <RTL>{children}</RTL>
+              </ThemeProvider>
+            </SettingsProvider>
+          </CartProvider>
+        </AuthProvider>
       </body>
     </html>;
 }

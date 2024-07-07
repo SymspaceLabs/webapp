@@ -6,8 +6,8 @@ import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENTS
 import Edit from "@mui/icons-material/Edit";
 import Delete from "@mui/icons-material/Delete"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { H5, Paragraph } from "components/Typography"; // Local CUSTOM COMPONENT
+import { FlexBox } from "../../../components/flex-box";
+import { H5, Paragraph } from "../../../components/Typography"; // Local CUSTOM COMPONENT
 
 import TableRow from "../table-row"; // ==============================================================
 

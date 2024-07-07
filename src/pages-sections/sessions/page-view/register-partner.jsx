@@ -1,10 +1,13 @@
 "use client";
 
+
+import { useState } from "react";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useFormik } from "formik";
 import * as yup from "yup"; // LOCAL CUSTOM COMPONENTS
- 
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 import EyeToggleButton from "../components/eye-toggle-button"; // LOCAL CUSTOM HOOK
 
 import BoxLink from "../components/box-link";
@@ -15,17 +18,15 @@ import { FlexBox } from "../../../components/flex-box";
 import BazaarTextField from "../../../components/BazaarTextField";
 import { Box, Typography, Button } from '@mui/material';
 
-// import { FlexRowCenter } from "../../../components/flex-box"; // ==============================================================
 
 const RegisterPageView = () => {
-  const {
-    visiblePassword,
-    togglePasswordVisible
-  } = usePasswordVisible(); // COMMON INPUT PROPS FOR TEXT FIELD
+  const { visiblePassword, togglePasswordVisible } = usePasswordVisible(); 
 
-  const inputProps = {
-    endAdornment: <EyeToggleButton show={visiblePassword} click={togglePasswordVisible} />
-  }; // REGISTER FORM FIELDS INITIAL VALUES
+  const inputProps = { endAdornment: <EyeToggleButton show={visiblePassword} click={togglePasswordVisible} /> }; 
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarSeverity, setSnackbarSeverity] = useState('success');
 
   const initialValues = {
     firstName: "",
@@ -34,7 +35,7 @@ const RegisterPageView = () => {
     password: "",
     re_password: "",
     agreement: false
-  }; // REGISTER FORM FIELD VALIDATION SCHEMA
+  };
 
   const validationSchema = yup.object().shape({
     firstName: yup.string().required("First name is required"),
@@ -48,16 +49,16 @@ const RegisterPageView = () => {
   const onSubmit = async (values) => {
     console.log(values)
 
-    const body ={
+    const body = {
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email,
       password: values.password,
+      role: "seller"
     }
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/auth/signup`,
-        // 'http://154.53.63.170:3000/auth/signup',
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/signup`,
         {
         method: 'POST',
         headers: {
@@ -65,21 +66,24 @@ const RegisterPageView = () => {
         },
         body: JSON.stringify(body),
       });
-  
+
       if (response.ok) {
-        // API call succeeded
         const data = await response.json();
-        console.log(data);
-        alert('Signup successful!');
+        setSnackbarSeverity('success');
+        setSnackbarMessage('Account created!');
+        setSnackbarOpen(true);
       } else {
-        // API call failed
         const errorData = await response.json();
         console.error('Signup failed:', errorData);
-        alert('Signup failed. Please try again.');
+        setSnackbarSeverity('error');
+        setSnackbarMessage(errorData.message || 'Signup failed. Please try again.');
+        setSnackbarOpen(true);
       }
     } catch (error) {
       console.error('Error during signup:', error);
-      alert('An error occurred. Please try again later.');
+      setSnackbarSeverity('error');
+      setSnackbarMessage('An error occurred. Please try again later.');
+      setSnackbarOpen(true);
     }
   };
 
@@ -97,7 +101,8 @@ const RegisterPageView = () => {
     onSubmit,
     validateOnMount: true,
   });
-  return <form onSubmit={handleSubmit}>
+  return <>
+    <form onSubmit={handleSubmit}>
     <Box sx={{maxWidth:'650px'}} >
       <Box sx={{display:'flex', gap:1, flexDirection:'column', pb:2}}>
         <Typography sx={{ fontFamily: 'Helvetica', fontSize: 16, width:'100px', color:'#fff' }}>
@@ -146,7 +151,19 @@ const RegisterPageView = () => {
       </Button>
     </Box>
    
-    </form>;
+    </form>
+    <Snackbar
+      open={snackbarOpen}
+      autoHideDuration={5000}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      onClose={() => setSnackbarOpen(false)}
+    >
+      <Alert onClose={() => setSnackbarOpen(false)} severity={snackbarSeverity} sx={{ width: '100%' }}>
+        {snackbarMessage}
+      </Alert>
+    </Snackbar>
+  </>
+    ;
 };
 
 export default RegisterPageView;

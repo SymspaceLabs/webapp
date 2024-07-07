@@ -4,7 +4,7 @@ import IconButton from "@mui/material/IconButton"; // MUI ICON COMPONENTS
 import Edit from "@mui/icons-material/Edit";
 import Delete from "@mui/icons-material/Delete"; // GLOBAL CUSTOM COMPONENTS
 
-import { Paragraph } from "components/Typography"; // LOCAL CUSTOM COMPONENT
+import { Paragraph } from "../../../components/Typography"; // LOCAL CUSTOM COMPONENT
 
 import TableRow from "../table-row"; // CUSTOM DATA MODEL
 

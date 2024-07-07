@@ -2,10 +2,10 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Avatar from "@mui/material/Avatar"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBetween, FlexBox } from "components/flex-box";
-import { H3, H5, Paragraph, Small } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
+import { FlexBetween, FlexBox } from "../../../components/flex-box";
+import { H3, H5, Paragraph, Small } from "../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../../lib"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function UserAnalytics({

@@ -3,10 +3,10 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import { format } from "date-fns"; // GLOBAL CUSTOM COMPONENTS
 
-import { H6, Paragraph } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box"; // CUSTOM UTILS LIBRARY FUNCTION
+import { H6, Paragraph } from "../../../components/Typography";
+import { FlexBetween, FlexBox } from "../../../components/flex-box"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // CUSTOM DATA MODEL
+import { currency } from "../../../lib"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function OrderedProducts({

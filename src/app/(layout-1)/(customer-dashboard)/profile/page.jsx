@@ -1,6 +1,6 @@
-import { ProfilePageView } from "pages-sections/customer-dashboard/profile/page-view"; // API FUNCTIONS
+import { ProfilePageView } from "../../../../pages-sections/customer-dashboard/profile/page-view"; // API FUNCTIONS
 
-import api from "utils/__api__/users";
+import api from "../../../../utils/__api__/users";
 export const metadata = {
   title: "Profile - Bazaar Next.js E-commerce Template",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
