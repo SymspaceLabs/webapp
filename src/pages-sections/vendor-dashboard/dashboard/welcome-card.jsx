@@ -4,9 +4,9 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3, H5, Paragraph } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
+import { H3, H5, Paragraph } from "../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib";
+import { currency } from "../../../lib";
 
 const WelcomeCard = () => {
   return <Card sx={{

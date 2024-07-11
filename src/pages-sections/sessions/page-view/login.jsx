@@ -8,11 +8,13 @@ import EyeToggleButton from "../components/eye-toggle-button";
 import usePasswordVisible from "../use-password-visible";
 import BazaarTextField from "../../../components/BazaarTextField";
 import { useAuth } from '../../../contexts/AuthContext'; // Adjust the path as needed
+import { useRouter } from "next/navigation";
 
 // ==============================================================
 const LoginPageView = ({ closeDialog, setSnackbarOpen }) => {
   const { login } = useAuth();
   const { visiblePassword, togglePasswordVisible } = usePasswordVisible();
+  const router = useRouter();
 
   // LOGIN FORM FIELDS INITIAL VALUES
   const initialValues = {
@@ -49,7 +51,14 @@ const LoginPageView = ({ closeDialog, setSnackbarOpen }) => {
         const data = await response.json();
         setSnackbarOpen(true);
         closeDialog?.();
-        login(); // Update the authentication state
+        login();
+
+        // Redirect based on the user role
+        if (data.user.role === 'seller') {
+          router.push('/vendor/dashboard');
+        } else {
+          router.push('/marketplace');
+        }
       } else {
         // API call failed
         const errorData = await response.json();

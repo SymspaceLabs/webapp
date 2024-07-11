@@ -3,8 +3,8 @@
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button"; // GLOBAL CUSTOM COMPONENTS
 
-import { H5 } from "components/Typography";
-import { FlexBetween } from "components/flex-box"; // Local CUSTOM COMPONENT
+import { H5 } from "../../../components/Typography";
+import { FlexBetween } from "../../../components/flex-box"; // Local CUSTOM COMPONENT
 
 import DataListTable from "./table"; // DATA TYPES
 

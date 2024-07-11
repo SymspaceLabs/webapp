@@ -70,7 +70,7 @@ const RegisterPageView = () => {
       if (response.ok) {
         const data = await response.json();
         setSnackbarSeverity('success');
-        setSnackbarMessage('Account created!');
+        setSnackbarMessage('Account created! Please verify your email.');
         setSnackbarOpen(true);
       } else {
         const errorData = await response.json();

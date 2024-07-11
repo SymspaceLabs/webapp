@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import styled from "@mui/material/styles/styled";
 import InputBase from "@mui/material/InputBase";
-import FlexRowCenter from "components/flex-box/flex-row-center";
+import FlexRowCenter from "../../../../components/flex-box/flex-row-center";
 export const DashboardNavbarRoot = styled(AppBar)(({
   theme
 }) => ({

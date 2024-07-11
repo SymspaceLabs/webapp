@@ -8,8 +8,8 @@ import TextField from "@mui/material/TextField";
 import { Formik } from "formik";
 import * as yup from "yup"; // GLOBAL CUSTOM COMPONENTS
 
-import DropZone from "components/DropZone";
-import { FlexBox } from "components/flex-box"; // STYLED COMPONENTS
+import DropZone from "../../../components/DropZone";
+import { FlexBox } from "../../../components/flex-box"; // STYLED COMPONENTS
 
 import { UploadImageBox, StyledClear } from "../styles"; // FORM FIELDS VALIDATION SCHEMA
 

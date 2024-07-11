@@ -5,7 +5,7 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableSortLabel from "@mui/material/TableSortLabel"; // CUSTOM ICON COMPONENT
 
-import UpDown from "icons/UpDown"; // STYLED COMPONENTS
+import UpDown from "../../icons/UpDown"; // STYLED COMPONENTS
 
 const StyledTableCell = styled(TableCell)(({
   theme

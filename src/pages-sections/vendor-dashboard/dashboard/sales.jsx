@@ -9,7 +9,7 @@ import Card2 from "./card-2"; // CHART OPTIONS
 
 import * as options from "./chart-options"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib";
+import { currency } from "../../../lib";
 
 const Sales = () => {
   const theme = useTheme(); // weekly chart series

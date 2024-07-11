@@ -2,11 +2,21 @@
 // YOU NEED TO BUILD YOUR OWN SERVER
 // IF YOU NEED HELP ABOUT SERVER SIDE IMPLEMENTATION
 // CONTACT US AT support@ui-lib.com
-import { ticketList, messageList } from "./data";
+import { businessDetailsList, ticketList, messageList } from "./data";
 export const TicketsEndpoints = Mock => {
   Mock.onGet("/api/tickets").reply(async () => {
     try {
       return [200, ticketList];
+    } catch (err) {
+      console.error(err);
+      return [500, {
+        message: "Internal server error"
+      }];
+    }
+  });
+  Mock.onGet("/api/business-details").reply(async () => {
+    try {
+      return [200, businessDetailsList];
     } catch (err) {
       console.error(err);
       return [500, {

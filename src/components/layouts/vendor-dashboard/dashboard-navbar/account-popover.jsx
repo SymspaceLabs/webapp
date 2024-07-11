@@ -7,7 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import styled from "@mui/material/styles/styled";
 import IconButton from "@mui/material/IconButton"; // GLOBAL CUSTOM COMPONENTS
 
-import { H6, Small } from "components/Typography"; // STYLED COMPONENT
+import { H6, Small } from "../../../../components/Typography"; // STYLED COMPONENT
 
 const Divider = styled("div")(({
   theme

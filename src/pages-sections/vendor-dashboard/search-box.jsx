@@ -3,8 +3,8 @@ import Add from "@mui/icons-material/Add";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material/useMediaQuery"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import SearchInput from "components/SearchInput"; // ===============================================================
+import { FlexBox } from "../../components/flex-box";
+import SearchInput from "../../components/SearchInput"; // ===============================================================
 
 // ===============================================================
 const SearchArea = ({

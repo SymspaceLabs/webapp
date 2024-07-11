@@ -1,6 +1,6 @@
-import { CategoriesPageView } from "pages-sections/vendor-dashboard/categories/page-view"; // API FUNCTIONS
+import { CategoriesPageView } from "../../../../pages-sections/vendor-dashboard/categories/page-view"; // API FUNCTIONS
 
-import api from "utils/__api__/dashboard";
+import api from "../../../../utils/__api__/dashboard";
 export const metadata = {
   title: "Categories - Bazaar Next.js E-commerce Template",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,

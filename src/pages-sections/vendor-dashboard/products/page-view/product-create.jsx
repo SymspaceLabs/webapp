@@ -2,7 +2,7 @@
 
 import Box from "@mui/material/Box"; // GLOBAL CUSTOM COMPONENT
 
-import { H3 } from "components/Typography"; // Local CUSTOM COMPONENT
+import { H3 } from "../../../../components/Typography"; // Local CUSTOM COMPONENT
 
 import ProductForm from "../product-form";
 

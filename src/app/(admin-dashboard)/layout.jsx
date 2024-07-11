@@ -1,4 +1,4 @@
-import VendorDashboardLayout from "components/layouts/vendor-dashboard";
+import VendorDashboardLayout from "../../components/layouts/vendor-dashboard";
 
 const Layout = ({
   children

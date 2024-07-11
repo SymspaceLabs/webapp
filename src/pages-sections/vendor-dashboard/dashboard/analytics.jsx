@@ -10,8 +10,8 @@ import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown"; // LOCAL 
 
 import ApexChart from "./apex-chart"; // GLOBAL CUSTOM COMPONENTS
 
-import { H5 } from "components/Typography";
-import { FlexBetween } from "components/flex-box"; // CHART OPTIONS
+import { H5 } from "../../../components/Typography";
+import { FlexBetween } from "../../../components/flex-box"; // CHART OPTIONS
 
 import { analyticsChartOptions } from "./chart-options";
 const categories = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]; // STYLED COMPONENT

@@ -2,8 +2,8 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { H3, H6, Paragraph } from "components/Typography"; // =========================================================
+import { FlexBox } from "../../../components/flex-box";
+import { H3, H6, Paragraph } from "../../../components/Typography"; // =========================================================
 
 // =========================================================
 const Card2 = ({

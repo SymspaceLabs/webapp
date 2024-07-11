@@ -6,7 +6,7 @@ import Edit from "@mui/icons-material/Edit";
 import Delete from "@mui/icons-material/Delete";
 import RemoveRedEye from "@mui/icons-material/RemoveRedEye"; // GLOBAL CUSTOM COMPONENT
 
-import BazaarSwitch from "components/BazaarSwitch"; // STYLED COMPONENTS
+import BazaarSwitch from "../../../components/BazaarSwitch"; // STYLED COMPONENTS
 
 import { StyledTableRow, CategoryWrapper, StyledTableCell, StyledIconButton } from "../styles"; // ========================================================================
 

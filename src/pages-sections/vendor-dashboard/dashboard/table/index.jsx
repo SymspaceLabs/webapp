@@ -6,16 +6,16 @@ import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
 import Done from "@mui/icons-material/Done"; // GLOBAL CUSTOM HOOK
 
-import useMuiTable from "hooks/useMuiTable"; // CUSTOM ICON COMPONENT
+import useMuiTable from "../../../../hooks/useMuiTable"; // CUSTOM ICON COMPONENT
 
-import Reload from "icons/Reload"; // GLOBAL CUSTOM COMPONENTS
+import Reload from "../../../../icons/Reload"; // GLOBAL CUSTOM COMPONENTS
 
-import Scrollbar from "components/scrollbar";
-import { FlexBox } from "components/flex-box"; // Local CUSTOM COMPONENT
+import Scrollbar from "../../../../components/scrollbar";
+import { FlexBox } from "../../../../components/flex-box"; // Local CUSTOM COMPONENT
 
 import TableHeader from "./table-head"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // STYLED COMPONENTS
+import { currency } from "../../../../lib"; // STYLED COMPONENTS
 
 const StyledTableCell = styled(TableCell)(({
   theme

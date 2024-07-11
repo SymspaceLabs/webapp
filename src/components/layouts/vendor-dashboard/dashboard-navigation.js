@@ -1,4 +1,4 @@
-import duotone from "icons/duotone";
+import duotone from "../../../icons/duotone";
 export const navigation = [{
   type: "label",
   label: "Admin"

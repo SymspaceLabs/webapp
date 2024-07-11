@@ -5,8 +5,8 @@ import Card from "@mui/material/Card"; // MUI ICON COMPONENTS
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDown"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3, H6, Paragraph } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box"; // ========================================================
+import { H3, H6, Paragraph } from "../../../components/Typography";
+import { FlexBetween, FlexBox } from "../../../components/flex-box"; // ========================================================
 
 // ========================================================
 const Card1 = props => {

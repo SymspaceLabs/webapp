@@ -1,7 +1,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import Box from "@mui/material/Box"; // GLOBAL CUSTOM COMPONENT
 
-import Scrollbar from "components/scrollbar"; // Local CUSTOM COMPONENT
+import Scrollbar from "../../../../components/scrollbar"; // Local CUSTOM COMPONENT
 
 import SidebarAccordion from "./sidebar-accordion"; // LOCAL CUSTOM HOOKS
 

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Fragment } from "react"; // CUSTOM ICON COMPONENTS
 
-import Globe from "icons/Globe";
-import Toggle from "icons/Toggle"; // LOCAL CUSTOM HOOKS
+import Globe from "../../../../icons/Globe";
+import Toggle from "../../../../icons/Toggle"; // LOCAL CUSTOM HOOKS
 
 import { useLayout } from "../dashboard-layout-context"; // STYLED COMPONENTS
 

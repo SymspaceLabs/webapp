@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Drawer from "@mui/material/Drawer"; // GLOBAL CUSTOM COMPONENT
 

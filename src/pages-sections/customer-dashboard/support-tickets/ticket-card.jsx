@@ -5,8 +5,8 @@ import IconButton from "@mui/material/IconButton";
 import East from "@mui/icons-material/East";
 import { format } from "date-fns"; // GLOBAL CUSTOM COMPONENTS
 
-import { Paragraph, Span } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box"; // CUSTOM DATA MODEL
+import { Paragraph, Span } from "../../../components/Typography";
+import { FlexBetween, FlexBox } from "../../../components/flex-box"; // CUSTOM DATA MODEL
 
 // ==============================================================
 export default function TicketCard({

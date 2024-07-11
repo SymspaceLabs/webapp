@@ -6,11 +6,11 @@ const navbarNavigation = [
     megaMenuWithSub: true,
     title: "Marketplace",
     child: categoriesMegaMenu,
-    url: '/gadget-2'
+    url: '/marketplace'
   },
   {
     title: "AR for business",
-    url: '/gadget-2'
+    url: '/marketplace'
   }, 
   {
     title: "Sym-AI",

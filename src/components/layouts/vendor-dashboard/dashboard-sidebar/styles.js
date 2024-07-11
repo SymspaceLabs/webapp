@@ -4,7 +4,7 @@ import { alpha, styled } from "@mui/material/styles"; // MUI ICON COMPONENTS
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
 import ChevronRight from "@mui/icons-material/ChevronRight"; // GLOBAL CUSTOM COMPONENTS
 
-import { Paragraph, Span } from "components/Typography"; // ===============================================================
+import { Paragraph, Span } from "../../../../components/Typography"; // ===============================================================
 
 // ===============================================================
 const SidebarWrapper = styled("div", {

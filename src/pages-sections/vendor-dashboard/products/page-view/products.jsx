@@ -8,11 +8,11 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3 } from "components/Typography";
-import Scrollbar from "components/scrollbar";
-import { TableHeader, TablePagination } from "components/data-table"; // GLOBAL CUSTOM HOOK
+import { H3 } from "../../../../components/Typography";
+import Scrollbar from "../../../../components/scrollbar";
+import { TableHeader, TablePagination } from "../../../../components/data-table"; // GLOBAL CUSTOM HOOK
 
-import useMuiTable from "hooks/useMuiTable"; // Local CUSTOM COMPONENT
+import useMuiTable from "../../../../hooks/useMuiTable"; // Local CUSTOM COMPONENT
 
 import ProductRow from "../product-row";
 import SearchArea from "../../search-box"; // CUSTOM DATA MODEL
