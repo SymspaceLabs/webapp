@@ -9,6 +9,8 @@ import usePasswordVisible from "../use-password-visible";
 import BazaarTextField from "../../../components/BazaarTextField";
 import { useAuth } from '../../../contexts/AuthContext'; // Adjust the path as needed
 import { useRouter } from "next/navigation";
+import { FlexBox } from "../../../components/flex-box";
+import { H3, Span } from "../../../components/Typography";
 
 // ==============================================================
 const LoginPageView = ({ closeDialog, setSnackbarOpen }) => {
@@ -121,6 +123,9 @@ const LoginPageView = ({ closeDialog, setSnackbarOpen }) => {
             endAdornment: <EyeToggleButton show={visiblePassword} click={togglePasswordVisible} />
           }}
         />
+        <FlexBox gap={1} py={2} borderRadius={1} justifyContent="end" bgcolor="transparent">
+          <Span sx={{color:'#fff'}}>Forgot your password?</Span>
+         </FlexBox>
         <Button fullWidth type="submit" color="primary" variant="contained" size="large">
           Login
         </Button>

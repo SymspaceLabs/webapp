@@ -40,36 +40,65 @@ import LazyImage from "../../../components/LazyImage";
 
 export default function Section2() {
   return (
-    <Grid sx={{background:'#1F1F1F'}}>
-      <Container>
-        <Box sx={{ flexGrow: 1, py: 8 }}>
+    <Grid sx={{ position: 'relative', background: '#1F1F1F', overflow: 'hidden' }}>
+      <Container sx={{ position: 'relative' }}>
+        {/* Blob Circles */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '10%',
+            right: '20%',
+            width: '400px',
+            height: '400px',
+            background: '#FFFFFF',
+            borderRadius: '50%',
+            zIndex: 1,
+            opacity: 0.2,
+            filter: 'blur(50px)',
+          }}
+        />
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '10%',
+            right: '5%',
+            width: '400px',
+            height: '400px',
+            background: '#0366FE',
+            borderRadius: '50%',
+            zIndex: 1,
+            opacity: 0.2,
+            filter: 'blur(50px)',
+          }}
+        />
+        <Box sx={{ flexGrow: 1, py: 8, zIndex: 2 }}>
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6} sx={{ display:'flex', flexDirection:'column' }}>
-              <Typography  sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 28, fontWeight:'bold' }} >
+            <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+              <Typography sx={{ fontFamily: 'Helvetica', color: '#797979', fontSize: 28, fontWeight: 'bold' }}>
                 AI Powered AR Commerce
               </Typography>
-              <Typography sx={{ fontFamily: 'Elemental End', color: '#fff', fontSize: { xs: 48, sm: 60, md: 80, lg: 100, xl: 120 }, fontWeight: 'bold', }}>
+              <Typography sx={{ fontFamily: 'Elemental End', color: '#fff', fontSize: { xs: 48, sm: 60, md: 80, lg: 100, xl: 120 }, fontWeight: 'bold' }}>
                 SYMSPACE
               </Typography>
-              <Typography sx={{ fontFamily:'Helvetica', color:'#797979', fontSize: 18, fontWeight:'bold' }} >
+              <Typography sx={{ fontFamily: 'Helvetica', color: '#797979', fontSize: 18, fontWeight: 'bold' }}>
                 Revolutionize your shopping experience through Augmented Reality.
               </Typography>
-              <Box sx={{ display:'flex', gap:'15px', pt:5}}>
-                <Button variant="outlined" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
+              <Box sx={{ display: 'flex', gap: '15px', pt: 5 }}>
+                <Button variant="outlined" sx={{ fontFamily: 'Helvetica', color: '#fff', borderRadius: '50px', py: 2, px: 7.5 }}>
                   Get Started
                 </Button>
-                <Button variant="contained" color="primary" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:5, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
-                  <Typography sx={{ fontFamily: 'Helvetica', fontSize: 16, width:'100px' }}>
+                <Button variant="contained" color="primary" sx={{ fontFamily: 'Helvetica', color: '#fff', borderRadius: '50px', py: 2, px: 5, background: 'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
+                  <Typography sx={{ fontFamily: 'Helvetica', fontSize: 16, width: '100px' }}>
                     Learn More
                   </Typography>
-                  <Box sx={{ width: '25%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+                  <Box sx={{ width: '25%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <LazyImage alt="furniture shop" width={25} height={25} src="/assets/images/sparkler.png" />
                   </Box>
                 </Button>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box sx={{ textAlign: 'center' }}>
+              <Box sx={{ textAlign: 'center', zIndex: 2, position: 'relative' }}>
                 <video
                   width="50%"
                   height="auto"
@@ -78,6 +107,7 @@ export default function Section2() {
                   muted
                   src="https://uploads-ssl.webflow.com/64694132a19474ee2218a9e6/648a8e1d8d146c19eb799200_Prosthetic_CMP_black_trimeed-transcode.mp4"
                   poster="https://uploads-ssl.webflow.com/64694132a19474ee2218a9e6/648a8e1d8d146c19eb799200_Prosthetic_CMP_black_trimeed-poster-00001.jpg"
+                  style={{ position: 'relative', zIndex: 2 }}
                 />
               </Box>
             </Grid>
@@ -85,6 +115,5 @@ export default function Section2() {
         </Box>
       </Container>
     </Grid>
-
   );
 }
