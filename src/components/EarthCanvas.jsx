@@ -22,6 +22,10 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <pointLight intensity={1} />
+      <directionalLight
+        position={[0, 0, 10]}
+        intensity={1}
+      />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.1 : 0.15}
