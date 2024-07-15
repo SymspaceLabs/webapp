@@ -105,7 +105,7 @@ const RegisterPageView = () => {
     <form onSubmit={handleSubmit}>
     <Box sx={{maxWidth:'650px'}} >
       <Box sx={{display:'flex', gap:1, flexDirection:'column', pb:2}}>
-        <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, width:'100px', color:'#fff' }}>
+        <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff' }}>
           Email
         </Typography>
         <BazaarTextField mb={1.5} fullWidth name="email" size="small" type="email" variant="outlined" onBlur={handleBlur} value={values.email} onChange={handleChange} label="Email" placeholder="example@mail.com" error={!!touched.email && !!errors.email} helperText={touched.email && errors.email} />
@@ -114,13 +114,13 @@ const RegisterPageView = () => {
 
       <Box sx={{px:0, display:"flex", gap:1, pb:2}}>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
-          <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, width:'100px', color:'#fff' }}>
+          <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
             Partner name
           </Typography>
           <BazaarTextField mb={1.5} fullWidth name="firstName" size="small" label="First Name" variant="outlined" onBlur={handleBlur} value={values.firstName} onChange={handleChange} placeholder="John" error={!!touched.name && !!errors.name} helperText={touched.firstName && errors.firstName} />
         </Box>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
-          <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, width:'100px', color:'#fff' }}>
+          <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
           Last name
           </Typography>
           <BazaarTextField mb={1.5} fullWidth name="lastName" size="small" label="Last Name" variant="outlined" onBlur={handleBlur} value={values.lastName} onChange={handleChange} placeholder="Doe" error={!!touched.lastName && !!errors.lastName} helperText={touched.lastName && errors.lastName} />
@@ -129,13 +129,13 @@ const RegisterPageView = () => {
 
       <Box sx={{px:0, display:"flex", gap:1, pb:2}}>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
-          <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, width:'100px', color:'#fff' }}>
+          <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
             Password
           </Typography>
           <BazaarTextField fullWidth size="small" name="password" label="Password" variant="outlined" autoComplete="on" placeholder="*********" onBlur={handleBlur} onChange={handleChange} value={values.password} type={visiblePassword ? "text" : "password"} error={!!touched.password && !!errors.password} helperText={touched.password && errors.password} InputProps={inputProps} />
         </Box>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
-          <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16,  width: '100%', color:'#fff' }}>
+          <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
             Repeat password
           </Typography>
           <BazaarTextField fullWidth size="small" autoComplete="on" name="re_password" variant="outlined" label="Retype Password" placeholder="*********" onBlur={handleBlur} onChange={handleChange} value={values.re_password} type={visiblePassword ? "text" : "password"} error={!!touched.re_password && !!errors.re_password} helperText={touched.re_password && errors.re_password} InputProps={inputProps} />

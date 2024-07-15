@@ -58,10 +58,10 @@ export default function Content({
 
       <Carousel ref={carouselRef} slidesToShow={6} responsive={responsive} arrows={false}>
         {products.map(product =>
-          <Link href={`/products/${product.slug}`} key={product.id}>
+          <Link href={`/products/search/${product.slug}`} key={product.id}>
             <FlexBox sx={{ py:5 }} bgcolor="#353535" borderRadius={3} alignItems="center" flexDirection="column" justifyContent="center" height="calc(100% - 74px)">
               <LazyImage alt={product.title} width={10} height={10} sx={{ width:'40px', height:'40px'}} src={product.thumbnail} />
-              <H6 sx={{ color:'#fff' }}>{product.title}</H6>
+              <H6 sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', color:'#fff' }}>{product.title}</H6>
             </FlexBox>
           </Link>
         )}

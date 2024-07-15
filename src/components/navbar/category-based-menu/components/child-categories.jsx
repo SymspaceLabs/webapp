@@ -11,7 +11,7 @@ import { SubCategoryListItem } from "../styles"; // DATA TYPES
 // ==============================================================
 export default function ChildCategories({ categories }) {
   return <Scrollbar autoHide={false} sx={{ width: "100%" }}>
-      <Box px={6} py={2} height="100%" sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', }}>
+      <Box px={6} py={2} height="100%" sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase' }}>
         {categories.child.map((item, key) => <div key={key}>
 
           <Box sx={{display:'flex', gap:2}}>
