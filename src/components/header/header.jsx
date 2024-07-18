@@ -13,6 +13,7 @@ import MobileHeader from "./components/mobile-header";
 import DialogDrawer from "./components/dialog-drawer";
 import CategoriesMenu from "./components/categories-menu";
 import LoginCartButtons from "./components/login-cart-buttons"; // STYLED COMPONENTS
+import { Box } from '@mui/material';
 
 import { HeaderWrapper, StyledContainer } from "./styles"; // ==============================================================
 
@@ -20,7 +21,8 @@ import { HeaderWrapper, StyledContainer } from "./styles"; // ==================
 export default function Header({
   isFixed,
   className,
-  midSlot
+  midSlot,
+  showLoginButtons = true
 }) {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down(1150));
@@ -41,7 +43,11 @@ export default function Header({
 
       {midSlot}
 
-      <LoginCartButtons toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
+      {showLoginButtons? 
+        <LoginCartButtons toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
+        :
+        <Box></Box>
+      }
       <DialogDrawer dialogOpen={dialogOpen} sidenavOpen={sidenavOpen} toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
     </Fragment>;
     

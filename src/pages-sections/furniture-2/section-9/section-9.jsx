@@ -25,7 +25,8 @@ import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import LazyImage from "../../../components/LazyImage";
 import ThreeModel from '../../../components/ThreeModel';
-import EarthCanvas  from "../../../components/EarthCanvas";
+import TShirtCanvas  from "../../../components/T-ShirtCanvas";
+import HandBagCanvas  from "../../../components/HandBagCanvas";
 
 export default function Section9() {
   return (
@@ -56,7 +57,8 @@ export default function Section9() {
             <Grid item xs={12} md={6}>
               <Box sx={{ minHeight:'750px'}}>
                 {/* <ThreeModel /> */}
-                <EarthCanvas />
+                {/* <TShirtCanvas /> */}
+                <HandBagCanvas />
               </Box>
             </Grid>
           </Grid>

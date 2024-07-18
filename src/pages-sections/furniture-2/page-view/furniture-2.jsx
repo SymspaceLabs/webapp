@@ -20,7 +20,7 @@ export default function FurnitureTwoPageView() {
 
       <Section1 /> {/* Hero section */}
       <Section2 />
-      <Section3 />
+      <Section3 />  {/* Application */}
       <Section4 />
       <Section5 />  {/* Carousal section */}
       <Section6 />

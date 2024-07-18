@@ -46,15 +46,15 @@ export default function Section2() {
         <Box
           sx={{
             position: 'absolute',
-            top: '10%',
+            top: '50%',
             right: '20%',
             width: '400px',
             height: '400px',
             background: '#FFFFFF',
             borderRadius: '50%',
             zIndex: 1,
-            opacity: 0.2,
-            filter: 'blur(50px)',
+            opacity: 0.5,
+            filter: 'blur(75px)',
           }}
         />
         <Box
@@ -67,8 +67,8 @@ export default function Section2() {
             background: '#0366FE',
             borderRadius: '50%',
             zIndex: 1,
-            opacity: 0.2,
-            filter: 'blur(50px)',
+            opacity: 0.5,
+            filter: 'blur(75px)',
           }}
         />
         <Box sx={{ flexGrow: 1, py: 8, zIndex: 2 }}>
@@ -84,14 +84,14 @@ export default function Section2() {
                 Revolutionize your shopping experience through Augmented Reality.
               </Typography>
               <Box sx={{ display: 'flex', gap: '15px', pt: 5 }}>
-                <Button variant="outlined" sx={{ fontFamily: 'Helvetica', color: '#fff', borderRadius: '50px', py: 2, px: 7.5 }}>
+                <Button variant="outlined" sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', color: '#fff', borderRadius: '50px', py: 2, px: 7.5 }}>
                   Get Started
                 </Button>
-                <Button variant="contained" color="primary" sx={{ fontFamily: 'Helvetica', color: '#fff', borderRadius: '50px', py: 2, px: 5, background: 'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
-                  <Typography sx={{ fontFamily: 'Helvetica', fontSize: 16, width: '100px' }}>
+                <Button variant="contained" color="primary" sx={{  gap:2, fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)', minWidth:'300px' }}>
+                  <Typography sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', fontSize: 16 }}>
                     Learn More
                   </Typography>
-                  <Box sx={{ width: '25%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                  <Box sx={{ width: '35px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
                     <LazyImage alt="furniture shop" width={25} height={25} src="/assets/images/sparkler.png" />
                   </Box>
                 </Button>

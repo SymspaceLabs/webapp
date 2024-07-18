@@ -22,16 +22,16 @@ export default function SocialButtons(props) {
       <Box my={3}>
         <Divider>
           <Span lineHeight={1} px={1} sx={{color:'#fff'}}>
-            or sign up with
+            or
           </Span>
         </Divider>
       </Box>
 
       <Box sx={{ display:'flex', gap:2 }}>
-        <Button onClick={()=>onLogin("apple")} fullWidth size="large" sx={{ fontSize: 12, background:'#1A1D21', color:'#fff', my:1 }}  startIcon={<Image alt="apple" src={appleLogo} />} />
-        <Button onClick={()=>onLogin("google")} fullWidth size="large"  sx={{ fontSize: 12, background:'#1A1D21', color:'#fff', my:1 }}  startIcon={<Image alt="google" src={googleLogo} />} />
-        <Button onClick={()=>onLogin("facebook")} fullWidth size="large"  sx={{ fontSize: 12, background:'#1A1D21', color:'#fff', my:1 }}  startIcon={<Image alt="facebook" src={facebookLogo} />} />
-        <Button onClick={()=>onLogin("github")} fullWidth size="large" sx={{ fontSize: 12, background:'#1A1D21', color:'#fff', my:1 }} startIcon={<Image alt="github" src={githubLogo} />} />
+        <Button onClick={()=>onLogin("apple")} fullWidth size="large" sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }}  startIcon={<Image alt="apple" src={appleLogo} />} />
+        <Button onClick={()=>onLogin("google")} fullWidth size="large"  sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }}  startIcon={<Image alt="google" src={googleLogo} />} />
+        <Button onClick={()=>onLogin("facebook")} fullWidth size="large"  sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }}  startIcon={<Image alt="facebook" src={facebookLogo} />} />
+        <Button onClick={()=>onLogin("github")} fullWidth size="large" sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }} startIcon={<Image alt="github" src={githubLogo} />} />
       </Box>
     </Fragment>;
 }

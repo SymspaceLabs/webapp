@@ -93,29 +93,29 @@ export const SocialButtons = () => {
       <Box my={3}>
         <Divider>
           <Span lineHeight={1} px={1} sx={{color:'#fff'}}>
-            or sign up with
+            or
           </Span>
         </Divider>
       </Box>
 
       <Grid container spacing={3} alignItems="center">
         <Grid item sm={6} xs={12}>
-            <Button onClick={()=>onLogin("facebook")} fullWidth size="large"  sx={{ fontSize: 12, background:'#1A1D21', color:'#686B6E', my:1 }}  startIcon={<Image alt="facebook" src={facebookLogo} />}>
+            <Button onClick={()=>onLogin("facebook")} fullWidth size="large"  sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }}  startIcon={<Image alt="facebook" src={facebookLogo} />}>
               Facebook Account
             </Button>
 
-            <Button onClick={()=>onLogin("google")} fullWidth size="large"  sx={{ fontSize: 12, background:'#1A1D21', color:'#686B6E', my:1 }}  startIcon={<Image alt="google" src={googleLogo} />}>
+            <Button onClick={()=>onLogin("google")} fullWidth size="large"  sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }}  startIcon={<Image alt="google" src={googleLogo} />}>
               Google Account
             </Button>
         </Grid>
        
 
         <Grid item sm={6} xs={12}>
-          <Button onClick={()=>onLogin("github")} fullWidth size="large" sx={{ fontSize: 12, background:'#1A1D21', color:'#686B6E', my:1 }} startIcon={<Image alt="github" src={githubLogo} />}>
+          <Button onClick={()=>onLogin("github")} fullWidth size="large" sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }} startIcon={<Image alt="github" src={githubLogo} />}>
             Github Account
           </Button>
 
-          <Button onClick={()=>onLogin("apple")} fullWidth size="large" sx={{ fontSize: 12, background:'#1A1D21', color:'#686B6E', my:1 }}  startIcon={<Image alt="apple" src={appleLogo} />}>
+          <Button onClick={()=>onLogin("apple")} fullWidth size="large" sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }}  startIcon={<Image alt="apple" src={appleLogo} />}>
             Apple Account
           </Button>
         </Grid>

@@ -35,8 +35,23 @@ import { Box, Container, Typography, Button, Grid } from '@mui/material';
 
 export default function Section3() {
   return (
-    <Grid sx={{background:'#1F1F1F'}}>
-      <Container sx={{}}>
+    <Grid sx={{ position: 'relative', background:'#1F1F1F'}}>
+      <Container sx={{ position: 'relative' }}>
+        {/* Blob Circles */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '500px',
+            height: '500px',
+            background: '#FFFFFF',
+            borderRadius: '50%',
+            zIndex: 1,
+            opacity: 0.3,
+            filter: 'blur(100px)',
+          }}
+        />
         <Box sx={{ minHeight:'600px', display:'flex', flexDirection:'column', gap:3, py: 8, alignItems:'center', justifyContent:'center'  }}>
           <Typography sx={{ width:'100%', maxWidth: 1200,  fontFamily: 'Helvetica', color: '#fff', fontSize: { xs: 24, sm: 32, md: 48, lg: 60, xl: 72 }, fontWeight: 'bold' }} >
             Application

@@ -106,7 +106,7 @@ const RegisterPageView = () => {
     <Box sx={{maxWidth:'650px'}} >
       <Box sx={{display:'flex', gap:1, flexDirection:'column', pb:2}}>
         <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff' }}>
-          Email
+          Business Email
         </Typography>
         <BazaarTextField mb={1.5} fullWidth name="email" size="small" type="email" variant="outlined" onBlur={handleBlur} value={values.email} onChange={handleChange} label="Email" placeholder="example@mail.com" error={!!touched.email && !!errors.email} helperText={touched.email && errors.email} />
       </Box>
@@ -115,15 +115,30 @@ const RegisterPageView = () => {
       <Box sx={{px:0, display:"flex", gap:1, pb:2}}>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
           <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
-            Partner name
+            First name
           </Typography>
-          <BazaarTextField mb={1.5} fullWidth name="firstName" size="small" label="First Name" variant="outlined" onBlur={handleBlur} value={values.firstName} onChange={handleChange} placeholder="John" error={!!touched.name && !!errors.name} helperText={touched.firstName && errors.firstName} />
+          <BazaarTextField mb={1.5} fullWidth name="firstName" size="small" label="First Name" variant="outlined" onBlur={handleBlur} value={values.firstName} onChange={handleChange} placeholder="John" error={!!touched.firstName && !!errors.firstName} helperText={touched.firstName && errors.firstName} />
         </Box>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
           <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
           Last name
           </Typography>
           <BazaarTextField mb={1.5} fullWidth name="lastName" size="small" label="Last Name" variant="outlined" onBlur={handleBlur} value={values.lastName} onChange={handleChange} placeholder="Doe" error={!!touched.lastName && !!errors.lastName} helperText={touched.lastName && errors.lastName} />
+        </Box>
+      </Box>
+
+      <Box sx={{px:0, display:"flex", gap:1, pb:2}}>
+        <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
+          <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
+            Business Name
+          </Typography>
+          <BazaarTextField mb={1.5} fullWidth name="businessName" size="small" label="Business Name" variant="outlined" onBlur={handleBlur} value={values.businessName} onChange={handleChange} placeholder="John" error={!!touched.businessName && !!errors.businessName} helperText={touched.businessName && errors.businessName} />
+        </Box>
+        <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
+          <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
+            Website
+          </Typography>
+          <BazaarTextField mb={1.5} fullWidth name="website" size="small" label="Website" variant="outlined" onBlur={handleBlur} value={values.lastName} onChange={handleChange} placeholder="Doe" error={!!touched.lastName && !!errors.lastName} helperText={touched.lastName && errors.lastName} />
         </Box>
       </Box>
 
@@ -142,13 +157,58 @@ const RegisterPageView = () => {
         </Box>
       </Box>
 
-        <FormControlLabel name="agreement" className="agreement" onChange={handleChange} control={<Checkbox sx={{color:'#fff'}} size="small" color="secondary" checked={values.agreement || false} />} label={<FlexBox flexWrap="wrap" alignItems="center" justifyContent="flex-start" gap={1}>
+        <FormControlLabel name="agreement" className="agreement" onChange={handleChange} control={<Checkbox 
+  size="small" 
+  color="secondary" 
+  checked={values.agreement || false} 
+  sx={{
+    color: 'white',
+    '& .MuiSvgIcon-root': {
+      backgroundColor: 'black',
+      borderRadius: '4px',
+      // Remove border when unchecked
+      border: 'none',
+    },
+    '&.Mui-checked .MuiSvgIcon-root': {
+      color: 'white',
+      backgroundColor: 'black',
+    },
+    '&:not(.Mui-checked) .MuiSvgIcon-root': {
+      color: 'white',
+      borderColor: 'black', // Ensures the border matches the background color
+    }
+  }}
+/>} label={<FlexBox flexWrap="wrap" alignItems="center" justifyContent="flex-start" gap={1}>
             <Span display={{ color:'#fff', sm: "inline-block", xs: "none"}}>By clicking Sign Up, you agree to our <BoxLink title="Terms, Privacy Policy and Cookies Policy" href="/" />. You may receive SMS Notifications from us and can opt out any time.</Span>            
           </FlexBox>} />
 
-      <Button fullWidth type="submit" color="primary" variant="contained" size="large" disabled={!isValid}>
-        Sign up
-      </Button>
+          <Button
+            sx={{
+              fontFamily: 'Helvetica',
+              fontWeight:'bold',
+              background: !isValid 
+                ? "linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(3, 102, 254, 0.1) 100%)" 
+                : "linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)",
+              boxShadow: "0px 8px 6px rgba(0, 0, 0, 0.05), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)",
+              backdropFilter: "blur(50px)",
+              borderRadius: "12px",
+              color: '#fff',
+              cursor: !isValid ? 'not-allowed' : 'pointer',
+              pointerEvents: !isValid ? 'none' : 'auto',
+              '&:hover': {
+                background: !isValid 
+                  ? "linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(3, 102, 254, 0.1) 100%)" 
+                  : "linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)",
+              },
+            }}
+            fullWidth
+            type="submit"
+            color="primary"
+            variant="contained"
+            size="large"
+          >
+            Sign up
+          </Button>
     </Box>
    
     </form>

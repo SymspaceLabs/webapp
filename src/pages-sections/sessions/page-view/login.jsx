@@ -11,6 +11,9 @@ import { useAuth } from '../../../contexts/AuthContext'; // Adjust the path as n
 import { useRouter } from "next/navigation";
 import { FlexBox } from "../../../components/flex-box";
 import { H3, Span } from "../../../components/Typography";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "next/link";
 
 // ==============================================================
 const LoginPageView = ({ closeDialog, setSnackbarOpen }) => {
@@ -123,9 +126,18 @@ const LoginPageView = ({ closeDialog, setSnackbarOpen }) => {
             endAdornment: <EyeToggleButton show={visiblePassword} click={togglePasswordVisible} />
           }}
         />
-        <FlexBox gap={1} py={2} borderRadius={1} justifyContent="end" bgcolor="transparent">
-          <Span sx={{color:'#fff'}}>Forgot your password?</Span>
-         </FlexBox>
+        <FlexBox sx={{display:'flex', justifyContent:'space-between'}} gap={1} py={2} borderRadius={1} justifyContent="space-between" bgcolor="transparent">
+          <FormControlLabel  name="agreement"  sx={{ margin:0 }} onChange={handleChange} 
+            control={<Checkbox size="small" color="secondary" 
+                      checked={values.agreement || false} 
+                      sx={{ color: 'white', '& .MuiSvgIcon-root': { backgroundColor: 'black', borderRadius: '4px', border: 'none', }, '&.Mui-checked .MuiSvgIcon-root': { color: 'white', backgroundColor: 'black', }, '&:not(.Mui-checked) .MuiSvgIcon-root': { color: 'white', borderColor: 'black', } }}/>
+                    }
+            label={<Span display={{ color:'#fff', sm: "inline-block", xs: "none"}}>Remember me</Span>}
+          />
+          <Link href="/forgot-password">
+            <Span sx={{color:'#fff'}}>Forgot your password?</Span>
+          </Link>
+        </FlexBox>
         <Button fullWidth type="submit" color="primary" variant="contained" size="large">
           Login
         </Button>

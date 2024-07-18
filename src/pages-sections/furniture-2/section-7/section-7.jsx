@@ -59,7 +59,7 @@ import { Box, Typography, Button, Grid, Container, Hidden } from '@mui/material'
 import LazyImage from "../../../components/LazyImage"; // LOCAL CUSTOM COMPONENTS
 export default function Section7() {
   return (
-<Grid sx={{ background: '#1F1F1F', py: 20, height: '100%' }}>
+<Grid sx={{ background: '#1F1F1F', pt:10, pb: 20, height: '100%' }}>
   <Container sx={{ height: '100%' }}>
       <Grid container alignItems="stretch" spacing={2} sx={{ height: '100%' }}>
         <Grid item xs={12} sm={12} md={6}>
@@ -141,7 +141,7 @@ export default function Section7() {
                   </Typography>
                 </Box>
                 <Button sx={{ width: '75%', py:1, borderRadius: 50, border: '1px black solid', justifyContent: 'center', alignItems: 'center', }}>
-                  <Typography sx={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Helvetica', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
+                  <Typography sx={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Elemental End', textTransform: 'lowercase', fontWeight: 700, lineHeight: '24px', wordWrap: 'break-word' }}>
                     Learn More
                   </Typography>
                 </Button>

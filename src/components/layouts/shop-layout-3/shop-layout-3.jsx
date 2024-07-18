@@ -32,32 +32,14 @@ export default function ShopLayout3({
       <NavigationList />
     </div>;
   return <Fragment>
-      {
-      /* TOP BAR SECTION */
-    }
-      <Topbar />
 
-      {
-      /* HEADER */
-    }
+      <Topbar />
       <Sticky fixedOn={0} onSticky={toggleIsFixed} scrollDistance={300}>
         <Header isFixed={isFixed} midSlot={HEADER_SLOT} />
         <Divider />
       </Sticky>
-
-      {
-      /* BODY CONTENT */
-    }
       {children}
-
-      {
-      /* SMALL DEVICE BOTTOM NAVIGATION */
-    }
       <MobileNavigationBar />
-
-      {
-      /* FOOTER */
-    }
       {pathname !== "/grocery-1" ? <Footer4 /> : null}
     </Fragment>;
 }

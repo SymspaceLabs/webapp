@@ -148,11 +148,52 @@ const RegisterPageView = () => {
             </Box>
           </Box>
 
-          <FormControlLabel name="agreement" className="agreement" onChange={handleChange} control={<Checkbox sx={{color:'#fff'}} size="small" color="secondary" checked={values.agreement || false} />} label={<FlexBox flexWrap="wrap" alignItems="left" justifyContent="flex-start" gap={1}>
-              <Span display={{ color:'#fff', sm: "inline-block", xs: "none"}}>By clicking Sign Up, you agree to our <BoxLink title="Terms, Privacy Policy and Cookies Policy" href="/" />. You may receive SMS Notifications from us and can opt out any time.</Span>            
-            </FlexBox>} />
+          <FormControlLabel name="agreement" className="agreement" onChange={handleChange} control={<Checkbox 
+            size="small" 
+            color="secondary" 
+            checked={values.agreement || false} 
+            sx={{
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                backgroundColor: 'black',
+                borderRadius: '4px',
+                // Remove border when unchecked
+                border: 'none',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                color: 'white',
+                backgroundColor: 'black',
+              },
+              '&:not(.Mui-checked) .MuiSvgIcon-root': {
+                color: 'white',
+                borderColor: 'black', // Ensures the border matches the background color
+              }
+            }}
+          />} label={<FlexBox flexWrap="wrap" alignItems="center" justifyContent="flex-start" gap={1}>
+                      <Span display={{ color:'#fff', sm: "inline-block", xs: "none"}}>By clicking Sign Up, you agree to our <BoxLink title="Terms, Privacy Policy and Cookies Policy" href="/" />. You may receive SMS Notifications from us and can opt out any time.</Span>            
+                    </FlexBox>} />
 
-          <Button fullWidth type="submit" color="primary" variant="contained" size="large" disabled={!isValid}>
+            <Button sx={{ fontFamily: 'Helvetica', fontWeight:'bold', background: !isValid 
+                ? "linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(3, 102, 254, 0.1) 100%)" 
+                : "linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)",
+              boxShadow: "0px 8px 6px rgba(0, 0, 0, 0.05), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)",
+              backdropFilter: "blur(50px)",
+              borderRadius: "12px",
+              color: '#fff',
+              cursor: !isValid ? 'not-allowed' : 'pointer',
+              pointerEvents: !isValid ? 'none' : 'auto',
+              '&:hover': {
+                background: !isValid 
+                  ? "linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(3, 102, 254, 0.1) 100%)" 
+                  : "linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)",
+              },
+            }}
+            fullWidth
+            type="submit"
+            color="primary"
+            variant="contained"
+            size="large"
+          >
             Sign up
           </Button>
         </Box>
