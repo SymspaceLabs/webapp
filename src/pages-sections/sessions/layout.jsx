@@ -33,7 +33,7 @@ export default function AuthLayout({children}) {
 
 
   if (pathname === "/register") {
-    BOTTOM_CONTENT = <FlexRowCenter sx={{color:'#fff', flexDirection:'column'}} gap={1} mt={3}>
+    BOTTOM_CONTENT = <Fragment >
         <Box my={3}>
           <Divider>
             <Span lineHeight={1} px={1} sx={{color:'#fff'}}>
@@ -41,13 +41,13 @@ export default function AuthLayout({children}) {
             </Span>
           </Divider>
         </Box>
-        <Button href="/register-partner" fullWidth size="large" sx={{ borderRadius:'12px', fontFamily: 'Helvetica', fontWeight: 700, fontSize: '22px', backdropFilter: 'blur(50px)', py:1.5, background: 'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)', fontSize: 22, boxShadow: "0px 8px 6px rgba(0, 0, 0, 0.05), inset 0px -1px 1px rgba(255, 255, 255, 0.5), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)" }} >
+        <Button href="/register-partner" fullWidth size="large" sx={{ color:'#fff', borderRadius:'12px', fontFamily: 'Helvetica', fontWeight: 700, fontSize: '22px', backdropFilter: 'blur(50px)', py:1.5, background: 'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)', fontSize: 22, boxShadow: "0px 8px 6px rgba(0, 0, 0, 0.05), inset 0px -1px 1px rgba(255, 255, 255, 0.5), inset 2px 3px 3px -3px rgba(255, 255, 255, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.25)" }} >
           Create a business profile
         </Button>
-        <Box sx={{pt:2, pb:5}}>
+        <Box sx={{display:"flex", alignItems:'center', justifyContent:'center', color:'#fff', gap:1, pt:2, pb:5}}>
           Already have an account? <BoxLink title="Sign in" href="/login" />
         </Box>
-      </FlexRowCenter>;
+      </Fragment>;
     TITLE = <LogoWithTitle title="Begin your Journey" subTitle="Create an account using your email" />;
     return <Fragment>
       <Sticky fixedOn={0} onSticky={toggleIsFixed} scrollDistance={300}>

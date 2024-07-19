@@ -19,26 +19,18 @@ export default function Section1() {
   return <StyledContainer>
       <Grid container spacing={3}>
         {
-        /* IPHONE 14 PRO */
+        /* Card 1 */
       }
         <Grid item lg={4} sm={6} xs={12}>
           <ContentWrapper>
             <Box padding={4} pb={0}>
-              <Paragraph mb={1} fontSize={{
-              xl: 20,
-              md: 18,
-              xs: 16
-            }}>
-                Blast Past Fast.
+              <Paragraph sx={{ fontFamily: 'Helvetica' }} mb={1} fontSize={{ xl: 20, md: 18, xs: 16 }}>
+                Enhance your everyday life
               </Paragraph>
 
-              <H2 lineHeight={1.2} mb={2} fontSize={{
-              xl: 40,
-              md: 32,
-              xs: 28
-            }}>
-                IPhone 14 Pro <br />
-                It’s A Leap Year
+              <H2 sx={{ fontFamily: 'Helvetica' }} lineHeight={1.2} mb={2} fontSize={{ xl: 30, md: 30, xs: 28 }}>
+                AR Shopping for<br />
+                Homebound Convenience 
               </H2>
 
               <StyledButton>Shop By Category</StyledButton>
@@ -53,7 +45,7 @@ export default function Section1() {
         </Grid>
 
         {
-        /* NIKON CAMERA */
+        /* Card 2 */
       }
         <Grid item lg={4} sm={6} xs={12}>
           <ContentWrapper hasGradient>
@@ -64,56 +56,35 @@ export default function Section1() {
           }} />
 
             <Box px={4} py={2}>
-              <Paragraph mb={1} fontSize={{
-              md: 20,
-              xs: 18
-            }}>
-                Enrich your everyday life.
+              <Paragraph sx={{color:'#353535'}} mb={1} fontSize={{ md: 20, xs: 18 }}>
+              Shop like never before
               </Paragraph>
 
-              <H2 lineHeight={1.2} mb={2} fontSize={{
-              xl: 55,
-              md: 42,
-              sm: 36,
-              xs: 28
-            }}>
-                Nikon DSLR <br />
-                D-8000
+              <H2 sx={{color:'#353535'}} lineHeight={1.2} mb={2} fontSize={{ xl: 30, md: 30, sm: 30, xs: 28 }}>
+                Augment Realistic 3D<br />
+                Products
               </H2>
 
-              <StyledButton>Shop By Category</StyledButton>
+              <StyledButton isWhite>Download The App</StyledButton>
             </Box>
           </ContentWrapper>
         </Grid>
 
         {
-        /* DJI MINI 3 DRONE */
+        /* Card 3 */
       }
         <Grid item lg={4} sm={6} xs={12}>
           <ContentWrapper>
-            <Box padding={4} pb={{
-            xl: 6,
-            lg: 5,
-            md: 3,
-            xs: 0
-          }}>
-              <Paragraph mb={1} fontSize={{
-              xl: 20,
-              md: 18,
-              xs: 16
-            }}>
-                Fly more time
+            <Box padding={4} pb={{ xl: 6, lg: 5, md: 3, xs: 0 }}>
+              <Paragraph mb={1} fontSize={{ xl: 20,md: 18, xs: 16 }}>
+                Pioneering AR Commerce
               </Paragraph>
 
-              <H2 lineHeight={1.2} mb={2} fontSize={{
-              xl: 40,
-              md: 32,
-              xs: 28
-            }}>
-                DJI Mini 3 Drone <br /> Fly More
+              <H2 lineHeight={1.2} mb={2} fontSize={{ xl: 30, md: 30, xs: 28 }}>
+                Positive Impacts of Mixed <br /> Reality Commerce 
               </H2>
 
-              <StyledButton>Shop By Category</StyledButton>
+              <StyledButton>Learn More</StyledButton>
             </Box>
 
             <Image src={drone} alt="Dji mini drone" style={{
@@ -127,7 +98,7 @@ export default function Section1() {
         {
         /* APPLE AIR POD PRO 2 */
       }
-        <Grid item lg={4} sm={6} xs={12}>
+        {/* <Grid item lg={4} sm={6} xs={12}>
           <ContentWrapper sx={{
           bgcolor: "grey.700"
         }}>
@@ -159,12 +130,12 @@ export default function Section1() {
             }} />
             </Box>
           </ContentWrapper>
-        </Grid>
+        </Grid> */}
 
         {
         /* BEATS & APPLE  */
       }
-        <Grid item lg={5} md={7} xs={12}>
+        {/* <Grid item lg={5} md={7} xs={12}>
           <Stack height="100%" direction="column" spacing={3}>
             <FlexBetween height="100%" borderRadius={3} bgcolor="grey.300" position="relative">
               <Box padding={4} position="relative" zIndex={1}>
@@ -235,12 +206,12 @@ export default function Section1() {
               </Box>
             </ContentWrapper>
           </Stack>
-        </Grid>
+        </Grid> */}
 
         {
         /* IPHONE 12 FOR YOU */
       }
-        <Grid item lg={3} md={5} xs={12}>
+        {/* <Grid item lg={3} md={5} xs={12}>
           <ContentWrapper sx={{
           display: "flex",
           flexDirection: "column",
@@ -272,7 +243,7 @@ export default function Section1() {
             display: "block"
           }} />
           </ContentWrapper>
-        </Grid>
+        </Grid> */}
       </Grid>
     </StyledContainer>;
 }

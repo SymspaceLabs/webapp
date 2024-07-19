@@ -7,22 +7,17 @@ import Section5 from "../section-5";
 import Section6 from "../section-6";
 import Section7 from "../section-7";
 import Section8 from "../section-8";
-export default function GadgetTwoPageView() {
+
+export default async function GadgetTwoPageView() {
+  
   return <div className="bg-white">
-      {
-      /* GRID CARD SECTION */
-    }
-      <Section1 />
+      
+      <Section1 /> {/* GRID CARD SECTION */}
+      <Section2 /> {/* Slider */}
 
-      {
-      /* BEST SELLER PRODUCTS SECTION */
-    }
-      <Section2 />
 
-      {
-      /* APPLE WATCH BANNER SECTION */
-    }
-      <Section3 />
+      
+      <Section3 /> {/* APPLE WATCH BANNER SECTION */}
 
       {
       /* NEW ARRIVAL PRODUCTS SECTION */

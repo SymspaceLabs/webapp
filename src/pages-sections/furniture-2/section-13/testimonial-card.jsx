@@ -13,7 +13,7 @@ export default function TestimonialCard({
     comment,
     user
   } = testimonial || {};
-  return <Wrapper>
+  return <Wrapper sx={{background:"rgba(255, 255, 255, 0.1)", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 25px rgba(53, 53, 53, 0.5)", borderRadius:" 10px" }}>
       <FlexBox mb={2} gap={2}>
         <ImageWrapper>
           <LazyImage src={user.avatar} width={240} height={240} alt="User" />

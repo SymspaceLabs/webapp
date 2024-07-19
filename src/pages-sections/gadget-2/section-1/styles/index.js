@@ -19,12 +19,15 @@ export const StyledButton = styled(ButtonBase, {
   theme,
   isWhite
 }) => ({
-  fontWeight: 600,
+  fontFamily: 'Elemental End',
+  textTransform: 'lowercase',
+  fontWeight: 500,
   borderRadius: 32,
   padding: ".5rem 1.5rem",
   backgroundColor: theme.palette.grey[800],
   ...(isWhite && {
-    backgroundColor: theme.palette.common.white
+    backgroundColor: theme.palette.common.white,
+    color:"#1A1A1A",
   })
 })); // ==============================================================
 
@@ -38,8 +41,8 @@ export const ContentWrapper = styled("div", {
   height: "100%",
   color: "white",
   borderRadius: 12,
-  backgroundColor: theme.palette.grey[900],
+  backgroundColor: "#353535",
   ...(hasGradient && {
-    background: "linear-gradient(214deg, #FD814D 0.04%, #FF5745 100.04%)"
+    background: "#E0F0FD"
   })
 }));

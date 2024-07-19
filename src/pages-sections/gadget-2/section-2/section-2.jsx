@@ -1,34 +1,53 @@
 import Link from "next/link";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container"; // GLOBAL CUSTOM COMPONENTS
+import { Box, Container, Typography, Button, Grid } from '@mui/material';
 
-import { H2, Paragraph } from "../../../components/Typography";
-import ProductCard11 from "../../../components/product-cards/product-card-11"; // API FUNCTIONS
+import { Carousel } from "../../../components/carousel";
+import { StyledGrid } from "./styles";
 
-import api from "../../../utils/__api__/gadget-2";
-export default async function Section2() {
-  const products = await api.getBestSellerProducts();
-  return <Container>
-      <Box textAlign="center" mt={8} mb={5}>
-        <H2 fontSize={{
-        sm: 34,
-        xs: 28
-      }}>Best Seller Products</H2>
-        <Paragraph color="grey.600" fontSize={{
-        sm: 16,
-        xs: 14
-      }}>
-          There are many variations passages
-        </Paragraph>
-      </Box>
-
-      <Grid container spacing={3}>
-        {products.map(product => <Grid item lg={3} md={4} sm={6} xs={12} key={product.id}>
-            <Link href={`/products/${product.slug}`}>
-              <ProductCard11 title={product.title} image={product.thumbnail} sale={product.discount ? true : false} />
-            </Link>
-          </Grid>)}
-      </Grid>
-    </Container>;
+export default function Section2() {
+  return (
+    <Box sx={{ py:3 }}>
+      <Container>
+        <Typography sx={{ color:'#000', py:1, fontFamily: 'Elemental End', textTransform: 'lowercase', fontSize: { xs: 30, sm: 30, md: 30, lg: 30, xl: 30 } }}>
+          Trending News
+        </Typography>
+        <Carousel dots autoplay adaptiveHeight arrows={true} spaceBetween={1} slidesToShow={2}>
+          {cardList.map((item, ind) => (
+            <div key={ind}>
+              <StyledGrid container sx={{ position: 'relative', borderRadius: 10, overflow: 'hidden' }}>
+                <Grid item xs={12} sx={{ position: 'relative', height: 300, backgroundImage: `url(${item.imgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                  <div style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+                    <Button sx={{ color:'#fff', fontFamily: 'Elemental End', textTransform: 'lowercase', background: "rgba(255, 255, 255, 0.01)", border: "0.9px solid rgba(255, 255, 255, 0.3)", backdropFilter: "blur(13.515px)", borderRadius: "37.03px" }} LinkComponent={Link} href={item.shopUrl}>
+                      {item.title}
+                    </Button>
+                  </div>
+                </Grid>
+              </StyledGrid>
+            </div>
+          ))}
+        </Carousel>
+      </Container>
+    </Box>
+  );
 }
+
+const cardList = [
+  {
+    id: 1,
+    title: "brands  supporting  d.e.i.",
+    imgUrl: `/assets/images/slider/image-1.png`,
+    shopUrl: "/",
+  },
+  {
+    id: 2,
+    title: "future  of  shopping",
+    imgUrl: `/assets/images/slider/image-2.png`,
+    shopUrl: "/",
+  },
+  {
+    id: 3,
+    title: "25% Special Off Today Only for Vegetables",
+    imgUrl: `/assets/images/slider/image-1.png`,
+    shopUrl: "/",
+  }
+];
