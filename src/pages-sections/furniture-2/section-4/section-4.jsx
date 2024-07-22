@@ -39,7 +39,7 @@ export default function Section2() {
           <Typography sx={{ fontFamily:'Helvetica', color:'#909090', fontSize: 16 }}>
           Explore products from the comfort of your home to conveniently and confidently shop through Augmented Reality          </Typography>
           <Box>
-            <Button sx={{ color:'#fff', background:'#000', borderRadius:'50px', py:2, px:7.5,}}>
+            <Button sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', color:'#fff', background:'#000', borderRadius:'50px', py:2, px:7.5,}}>
               Shop
             </Button>
           </Box>

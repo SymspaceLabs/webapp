@@ -32,6 +32,8 @@ const RegisterPageView = () => {
     firstName: "",
     lastName: "",
     email: "",
+    businessName:"",
+    website:"",
     password: "",
     re_password: "",
     agreement: false
@@ -40,6 +42,8 @@ const RegisterPageView = () => {
   const validationSchema = yup.object().shape({
     firstName: yup.string().required("First name is required"),
     lastName: yup.string().required("Last name is required"),
+    businessName: yup.string().required("Business Name is required"),
+    website: yup.string().required("Website is required"),
     email: yup.string().email("invalid email").required("Email is required"),
     password: yup.string().required("Password is required"),
     re_password: yup.string().oneOf([yup.ref("password"), null], "Passwords must match").required("Please re-type password"),
@@ -53,6 +57,8 @@ const RegisterPageView = () => {
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email,
+      businessName: values.businessName,
+      website: values.website,
       password: values.password,
       role: "seller"
     }
@@ -132,13 +138,13 @@ const RegisterPageView = () => {
           <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
             Business Name
           </Typography>
-          <BazaarTextField mb={1.5} fullWidth name="businessName" size="small" label="Business Name" variant="outlined" onBlur={handleBlur} value={values.businessName} onChange={handleChange} placeholder="John" error={!!touched.businessName && !!errors.businessName} helperText={touched.businessName && errors.businessName} />
+          <BazaarTextField mb={1.5} fullWidth name="businessName" size="small" label="Business Name" variant="outlined" onBlur={handleBlur} value={values.businessName} onChange={handleChange} placeholder="Company A" error={!!touched.businessName && !!errors.businessName} helperText={touched.businessName && errors.businessName} />
         </Box>
         <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column' }}>
           <Typography sx={{  width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff'  }}>
             Website
           </Typography>
-          <BazaarTextField mb={1.5} fullWidth name="website" size="small" label="Website" variant="outlined" onBlur={handleBlur} value={values.lastName} onChange={handleChange} placeholder="Doe" error={!!touched.lastName && !!errors.lastName} helperText={touched.lastName && errors.lastName} />
+          <BazaarTextField mb={1.5} fullWidth name="website" size="small" label="Website" variant="outlined" onBlur={handleBlur} value={values.website} onChange={handleChange} placeholder="companyA.com" error={!!touched.website && !!errors.website} helperText={touched.website && errors.website} />
         </Box>
       </Box>
 

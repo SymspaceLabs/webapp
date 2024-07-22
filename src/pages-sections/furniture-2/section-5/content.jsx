@@ -29,10 +29,9 @@ export default function Content({
   return <Container sx={{ py:10 }}>
       <FlexBetween mt={10} mb={5}>
         <div>
-          <H3 fontSize={{
-          sm: 30,
-          xs: 27
-        }}>Augmented Reality Marketplace</H3>
+          <H3 fontSize={{ fontFamily: 'Helvetica', sm: 30, xs: 27 }}>
+            Augmented Reality Marketplace
+          </H3>
           <Paragraph color="grey.600" fontSize={{
           sm: 16,
           xs: 14

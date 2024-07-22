@@ -1,48 +1,70 @@
 "use client";
 
+import ButtonBase from "@mui/material/ButtonBase";
 import styled from "@mui/material/styles/styled";
-export const RootStyle = styled("div")(({
+export const StyledButton = styled(ButtonBase)(({
   theme
 }) => ({
-  marginTop: "5rem",
-  display: "grid",
-  placeItems: "center",
-  color: "white",
-  borderRadius: 20,
-  padding: "1.5rem",
+  fontWeight: 600,
+  borderRadius: 32,
+  padding: ".7rem 1.5rem",
+  color: theme.palette.common.white,
+  backgroundColor: theme.palette.grey[800]
+}));
+export const YellowBox = styled("div")(({
+  theme
+}) => ({
+  padding: "3rem",
+  borderRadius: 24,
   position: "relative",
-  backgroundImage: "url(/assets/images/banners/banner-27.png)",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "top center",
-  ":after": {
-    top: 0,
-    left: 0,
-    opacity: 0.6,
-    content: "''",
-    width: "100%",
-    height: "100%",
-    borderRadius: 20,
+  backgroundColor: "#FEEA71",
+  ".img-wrapper": {
+    right: 0,
+    zIndex: 1,
+    bottom: 0,
+    width: 380,
+    display: "block",
     position: "absolute",
-    backgroundColor: "black"
+    img: {
+      display: "block"
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  },
+  [theme.breakpoints.down(375)]: {
+    padding: "2rem",
+    h2: {
+      fontSize: 27
+    }
+  }
+}));
+export const BlackBox = styled("div")(({
+  theme
+}) => ({
+  height: "100%",
+  color: "white",
+  display: "flex",
+  borderRadius: 24,
+  position: "relative",
+  backgroundColor: "black",
+  ".img-wrapper": {
+    width: 260,
+    display: "flex",
+    img: {
+      alignSelf: "flex-end"
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
   },
   ".content": {
-    zIndex: 1,
-    maxWidth: 600,
-    width: "100%",
-    textAlign: "center",
     paddingBlock: "3rem",
-    position: "relative",
-    ".heading": {
-      fontSize: 52,
-      lineHeight: 1.2,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: 42
-      },
-      [theme.breakpoints.down(768)]: {
-        fontSize: 32
-      },
-      [theme.breakpoints.down(375)]: {
+    [theme.breakpoints.down("sm")]: {
+      paddingInline: "3rem"
+    },
+    [theme.breakpoints.down(375)]: {
+      h2: {
         fontSize: 27
       }
     }

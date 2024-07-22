@@ -45,7 +45,7 @@ export default function Section3() {
             We empower individuals with Augmented Reality, while equipping brands with resources to showcase their products in unimaginable ways. Our goal is to revolutionize the end-to-end e-commerce process by creating 3D assets of retail products and enabling consumers to augment these products with enhanced AR functionalities. We offer a sustainable solution that delivers immersive, hyper-realistic, and seamless 3D models coupled with unparalleled AR experiences. Through cutting-edge technologies such as artificial intelligence and augmented reality, we are positioned to transform mere imagination into tangible simulations of reality.
           </Typography>
           <Box sx={{  width:'100%', maxWidth: 1200 }}>
-            <Button variant="outlined" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
+            <Button variant="outlined" sx={{  fontFamily: 'Elemental End', textTransform: 'lowercase', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
               Partner
             </Button>
           </Box>

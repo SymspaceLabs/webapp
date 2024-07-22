@@ -4,22 +4,22 @@ import LazyImage from "../../../components/LazyImage"; // STYLED COMPONENTS
 
 import { RootStyle, StyledButton } from "./styles"; // IMPORT IMAGE
 
-import shirt from "../../../../public/assets/images/background/image-1.png";
-export default function Section6() {
+import watch from "../../../../public/assets/images/products/watch-3.png";
+export default function Section3() {
   return <Container>
       <RootStyle>
         <div className="content">
-        
-          <h2>
-            Augment Products whenever.<br />  From wherever.  
-          </h2>
-          <p>Sign up today.</p>
+          <p>Apple Watch Series 9</p>
 
-          <StyledButton>Beta Access</StyledButton>
+          <h2>
+            Magic. At your <br /> fingertips.
+          </h2>
+
+          <StyledButton>Shop Now</StyledButton>
         </div>
 
         <div className="img-wrapper">
-          <LazyImage src={shirt} alt="Watch" />
+          <LazyImage src={watch} alt="Watch" />
         </div>
       </RootStyle>
     </Container>;

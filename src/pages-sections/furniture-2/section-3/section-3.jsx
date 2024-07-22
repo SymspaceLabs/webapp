@@ -60,8 +60,8 @@ export default function Section3() {
             Optimized for user experience, our AR application allows consumers to leverage various advanced AR features to trial products like never before. Consumers are able to augment 3D products realistically in their own space, providing a virtual trial room experience for clothes, furniture, and more. The Symspace app goes beyond visualization by offering near-precise sizing recommendations, reducing returns, and increasing consumer confidence levels.
           </Typography>
           <Box sx={{  width:'100%', maxWidth: 1200 }}>
-              <Button variant="outlined" sx={{  fontFamily:'Helvetica', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
-                Get Started
+              <Button variant="outlined" sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', color:'#fff', borderRadius:'50px', py:2, px:7.5 }}>
+                Learn More
               </Button>
           </Box>
         </Box>
