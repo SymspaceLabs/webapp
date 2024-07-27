@@ -6,7 +6,7 @@ export const StyledButton = styled(ButtonBase)(({
   theme
 }) => ({
   fontWeight: 600,
-  borderRadius: 32,
+  borderRadius: 50,
   padding: ".7rem 1.5rem",
   color: theme.palette.common.white,
   backgroundColor: theme.palette.grey[800]
@@ -16,9 +16,10 @@ export const YellowBox = styled("div")(({
   background
 }) => ({
   padding: "3rem",
-  borderRadius: 24,
+  borderRadius: 50,
   position: "relative",
   backgroundColor: background,
+  height:'100%',
   ".img-wrapper": {
     right: 0,
     zIndex: 1,
@@ -43,16 +44,18 @@ export const YellowBox = styled("div")(({
 export const BlackBox = styled("div")(({
   theme,
   background
-
 }) => ({
-  height: "100%",
-  color: "white",
+  maxHeight:'650px',
+  overflow:'hidden',
+  padding: "3rem",
   display: "flex",
-  borderRadius: 24,
+  flexDirection:'column',
+  color: "white",
+  borderRadius: 50,
   position: "relative",
   backgroundColor: background,
   ".img-wrapper": {
-    width: 260,
+    width: 250,
     display: "flex",
     img: {
       alignSelf: "flex-end"
@@ -62,7 +65,6 @@ export const BlackBox = styled("div")(({
     }
   },
   ".content": {
-    paddingBlock: "3rem",
     [theme.breakpoints.down("sm")]: {
       paddingInline: "3rem"
     },
