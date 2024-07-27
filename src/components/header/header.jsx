@@ -22,6 +22,7 @@ export default function Header({
   isFixed,
   className,
   midSlot,
+  position="relative",
   showLoginButtons = true
 }) {
   const theme = useTheme();
@@ -51,7 +52,7 @@ export default function Header({
       <DialogDrawer dialogOpen={dialogOpen} sidenavOpen={sidenavOpen} toggleDialog={toggleDialog} toggleSidenav={toggleSidenav} />
     </Fragment>;
     
-  return <HeaderWrapper className={clsx(className)}>
+  return <HeaderWrapper position={position} className={clsx(className)}>
       <StyledContainer>{downMd ? <MobileHeader /> : CONTENT_FOR_LARGE_DEVICE}</StyledContainer>
     </HeaderWrapper>;
 }

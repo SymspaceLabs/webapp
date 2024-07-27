@@ -3,10 +3,12 @@ import styled from "@mui/material/styles/styled"; // CONSTANT VARIABLES
 
 import { layoutConstant } from "../../../utils/constants";
 export const HeaderWrapper = styled("div")(({
-  theme
+  theme,
+  position = 'relative'
 }) => ({
   zIndex: 3,
-  position: "relative",
+  position: position,
+  width:'100%',
   height: layoutConstant.headerHeight,
   transition: "height 250ms ease-in-out",
   background: '#000',

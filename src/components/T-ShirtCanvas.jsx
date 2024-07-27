@@ -68,7 +68,7 @@ const TShirtCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <Computers isMobile={isMobile} />
-        <axesHelper args={[5]} /> {/* Add AxesHelper with size 5 */}
+        {/* <axesHelper args={[5]} /> */}
       </Suspense>
       <Preload all />
     </Canvas>

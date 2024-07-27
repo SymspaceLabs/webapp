@@ -42,9 +42,10 @@ export default function Section12() {
       console.error("Error during fetching products:", error);
     }
   };
-
+  console.log(products1)
   const getAllProducts2 = async () => {
     try {
+      
       const products1 = await api.getNewArrivalProducts();
       setProducts1(products1);
     } catch (error) {
@@ -94,14 +95,13 @@ export default function Section12() {
                     src={product.thumbnail}
                   />
                   <Box sx={{ px: 4, pb: 4 }}>
-                    <Typography
-                      sx={{ color: "#fff", fontSize: "17px", fontWeight: 700 }}
-                    >
+                    <Typography sx={{ fontFamily: 'Helvetica', color: "#fff", fontSize: "17px", fontWeight: 600 }} >
                       {product.title}
                     </Typography>
-                    <Typography
-                      sx={{ color: "#fff", fontSize: "17px", fontWeight: 700 }}
-                    >
+                    <Typography sx={{ fontFamily: 'Helvetica', color: "#BDBDBD", fontSize: "17px", fontWeight: 500 }} >
+                      {product.brand}
+                    </Typography>
+                    <Typography sx={{ fontFamily: 'Helvetica', color: "#fff", fontSize: "17px", fontWeight: 700 }} >
                       {calculateDiscount(product.price, product.discount)}
                     </Typography>
                   </Box>

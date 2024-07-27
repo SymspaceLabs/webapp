@@ -12,12 +12,13 @@ export const StyledButton = styled(ButtonBase)(({
   backgroundColor: theme.palette.grey[800]
 }));
 export const YellowBox = styled("div")(({
-  theme
+  theme,
+  background
 }) => ({
   padding: "3rem",
   borderRadius: 24,
   position: "relative",
-  backgroundColor: "#FEEA71",
+  backgroundColor: background,
   ".img-wrapper": {
     right: 0,
     zIndex: 1,
@@ -40,14 +41,16 @@ export const YellowBox = styled("div")(({
   }
 }));
 export const BlackBox = styled("div")(({
-  theme
+  theme,
+  background
+
 }) => ({
   height: "100%",
   color: "white",
   display: "flex",
   borderRadius: 24,
   position: "relative",
-  backgroundColor: "black",
+  backgroundColor: background,
   ".img-wrapper": {
     width: 260,
     display: "flex",

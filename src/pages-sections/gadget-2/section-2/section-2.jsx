@@ -1,10 +1,33 @@
+"use client"
+
 import Link from "next/link";
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
-
+import { useState, useEffect } from "react";
 import { Carousel } from "../../../components/carousel";
 import { StyledGrid } from "./styles";
 
 export default function Section2() {
+  const [blogs, setBlogs] = useState([]);
+
+  const getAllBlogs = async () => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/blogs`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setBlogs(data);
+      }
+    } catch (error) {
+      console.error("Error during fetching products:", error);
+    }
+  };
+  useEffect(() => {
+    getAllBlogs();
+  }, []);
   return (
     <Box sx={{ py:3 }}>
       <Container>
@@ -12,10 +35,10 @@ export default function Section2() {
           Trending News
         </Typography>
         <Carousel dots autoplay adaptiveHeight arrows={true} spaceBetween={1} slidesToShow={2}>
-          {cardList.map((item, ind) => (
-            <div key={ind}>
+          {blogs.map((item, index) => (
+            <Link href={`/articles/${item.slug}`} key={index}>
               <StyledGrid container sx={{ position: 'relative', borderRadius: 10, overflow: 'hidden' }}>
-                <Grid item xs={12} sx={{ position: 'relative', height: 300, backgroundImage: `url(${item.imgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <Grid item xs={12} sx={{ position: 'relative', height: 300, backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                   <div style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
                     <Button sx={{ color:'#fff', fontFamily: 'Elemental End', textTransform: 'lowercase', background: "rgba(255, 255, 255, 0.01)", border: "0.9px solid rgba(255, 255, 255, 0.3)", backdropFilter: "blur(13.515px)", borderRadius: "37.03px" }} LinkComponent={Link} href={item.shopUrl}>
                       {item.title}
@@ -23,7 +46,7 @@ export default function Section2() {
                   </div>
                 </Grid>
               </StyledGrid>
-            </div>
+            </Link>
           ))}
         </Carousel>
       </Container>
@@ -31,23 +54,4 @@ export default function Section2() {
   );
 }
 
-const cardList = [
-  {
-    id: 1,
-    title: "brands  supporting  d.e.i.",
-    imgUrl: `/assets/images/slider/image-1.png`,
-    shopUrl: "/",
-  },
-  {
-    id: 2,
-    title: "future  of  shopping",
-    imgUrl: `/assets/images/slider/image-2.png`,
-    shopUrl: "/",
-  },
-  {
-    id: 3,
-    title: "25% Special Off Today Only for Vegetables",
-    imgUrl: `/assets/images/slider/image-1.png`,
-    shopUrl: "/",
-  }
-];
+ 

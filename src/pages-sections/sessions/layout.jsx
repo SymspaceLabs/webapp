@@ -50,11 +50,11 @@ export default function AuthLayout({children}) {
       </Fragment>;
     TITLE = <LogoWithTitle title="Begin your Journey" subTitle="Create an account using your email" />;
     return <Fragment>
-      <Sticky fixedOn={0} onSticky={toggleIsFixed} scrollDistance={300}>
-        <Header isFixed={isFixed} midSlot={HEADER_SLOT} showLoginButtons={false} />
-        <Divider />
-      </Sticky>
-      <Box sx={{ position: 'relative', backgroundColor: '#3F3F3F', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '150vh', px: 2  }} flexDirection="column" minHeight="150vh" px={2}>
+         <Fragment>
+          <Header position="fixed" isFixed={true} midSlot={HEADER_SLOT} showLoginButtons={false} />
+          <Divider />
+        </Fragment>
+       <Box sx={{ position: 'relative', backgroundColor: '#3F3F3F', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '150vh', px: 2  }} flexDirection="column" minHeight="150vh" px={2}>
         <Box style={{ zIndex: 1, maxWidth:700}}>
           <Wrapper sx={{background: 'linear-gradient(0deg, rgba(140, 140, 140, 0.3), rgba(140, 140, 140, 0.3)), rgba(255, 255, 255, 0.1)', borderRadius: '50px' }}>
             {TITLE}
@@ -94,7 +94,7 @@ export default function AuthLayout({children}) {
 
     return <Fragment>
       <Sticky fixedOn={0} onSticky={toggleIsFixed} scrollDistance={300}>
-        <Header isFixed={isFixed} midSlot={HEADER_SLOT} showLoginButtons={false} />
+        <Header position="fixed" isFixed={isFixed} midSlot={HEADER_SLOT} showLoginButtons={false} />
         <Divider />
       </Sticky>
       <Box sx={{ position: 'relative', backgroundColor: '#3F3F3F', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '150vh', px: 2  }} flexDirection="column" minHeight="150vh" px={2}>
