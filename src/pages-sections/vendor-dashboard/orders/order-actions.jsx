@@ -3,8 +3,8 @@ import TextField from "@mui/material/TextField";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import { format } from "date-fns"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { Paragraph, Span } from "components/Typography"; // ==============================================================
+import { FlexBox } from "../../../components/flex-box";
+import { Paragraph, Span } from "../../../components/Typography"; // ==============================================================
 
 // ==============================================================
 const OrderActions = ({

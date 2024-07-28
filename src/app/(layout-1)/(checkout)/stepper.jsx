@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip"; // GLOBAL CUSTOM COMPONENT
 
-import { FlexRowCenter } from "components/flex-box"; // ========================================================
+import { FlexRowCenter } from "../../../components/flex-box"; // ========================================================
 
 // ========================================================
 export default function Stepper({

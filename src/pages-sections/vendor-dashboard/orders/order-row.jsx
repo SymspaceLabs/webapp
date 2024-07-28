@@ -4,7 +4,7 @@ import { format } from "date-fns"; // MUI ICON COMPONENTS
 import Delete from "@mui/icons-material/Delete";
 import RemoveRedEye from "@mui/icons-material/RemoveRedEye"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // STYLED COMPONENTS
+import { currency } from "../../../lib"; // STYLED COMPONENTS
 
 import { StatusWrapper, StyledIconButton, StyledTableCell, StyledTableRow } from "../styles"; // ========================================================================
 

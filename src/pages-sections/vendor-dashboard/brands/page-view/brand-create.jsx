@@ -2,7 +2,7 @@
 
 import Box from "@mui/material/Box"; // GLOBAL CUSTOM COMPONENT
 
-import { H3 } from "components/Typography"; // CUSTOM DATA MODEL
+import { H3 } from "../../../../components/Typography"; // CUSTOM DATA MODEL
 
 import BrandForm from "../brand-form";
 

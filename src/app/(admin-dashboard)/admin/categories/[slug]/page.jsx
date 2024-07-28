@@ -1,4 +1,4 @@
-import { EditCategoryPageView } from "pages-sections/vendor-dashboard/categories/page-view";
+import { EditCategoryPageView } from "../../../../../pages-sections/vendor-dashboard/categories/page-view";
 export const metadata = {
   title: "Edit Category - Bazaar Next.js E-commerce Template",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,

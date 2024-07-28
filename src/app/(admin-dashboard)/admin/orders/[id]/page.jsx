@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import { OrderDetailsPageView } from "pages-sections/vendor-dashboard/orders/page-view"; // API FUNCTIONS
+import { OrderDetailsPageView } from "../../../../../pages-sections/vendor-dashboard/orders/page-view"; // API FUNCTIONS
 
-import api from "utils/__api__/dashboard";
+import api from "../../../../../utils/__api__/dashboard";
 export const metadata = {
   title: "Order Details - Bazaar Next.js E-commerce Template",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,

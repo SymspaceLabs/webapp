@@ -3,10 +3,10 @@ import Avatar from "@mui/material/Avatar"; // MUI ICON COMPONENTS
 import Edit from "@mui/icons-material/Edit";
 import Delete from "@mui/icons-material/Delete"; // GLOBAL CUSTOM COMPONENTS
 
-import { FlexBox } from "components/flex-box";
-import { Paragraph } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
+import { FlexBox } from "../../../components/flex-box";
+import { Paragraph } from "../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { currency } from "lib"; // STYLED COMPONENTS
+import { currency } from "../../../lib"; // STYLED COMPONENTS
 
 import { StyledIconButton, StyledTableCell, StyledTableRow } from "../styles"; // ========================================================================
 
