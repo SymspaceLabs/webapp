@@ -13,9 +13,9 @@ export const StyledButton = styled(ButtonBase)(({
 export const RootStyle = styled("div")(({
   theme
 }) => ({
-  borderRadius: 24,
+  borderRadius: 50,
   marginTop: "6rem",
-  padding: "1.5rem",
+  padding: "1rem",
   position: "relative",
   backgroundImage: "url(/assets/images/background/banner-bg.png)",
   backgroundSize: "cover",
@@ -24,17 +24,17 @@ export const RootStyle = styled("div")(({
   ".content": {
     zIndex: 2,
     color: "white",
-    paddingLeft: "5rem",
+    paddingLeft: "2rem",
     position: "relative",
     paddingBlock: "2rem",
     p: {
       fontSize: 16,
-      marginBottom: 8
     },
     h2: {
       fontSize: 48,
       lineHeight: 1.2,
-      marginBottom: "4rem"
+      marginBottom: "1rem",
+      fontFamily:'Helvetica',
     },
     [theme.breakpoints.down("md")]: {
       paddingLeft: "3rem"
@@ -54,14 +54,15 @@ export const RootStyle = styled("div")(({
     }
   },
   ".img-wrapper": {
-    zIndex: 1,
-    right: 30,
-    bottom: 0,
-    width: 420,
-    display: "flex",
-    position: "absolute",
-    [theme.breakpoints.down(890)]: {
-      display: "none"
-    }
+  zIndex: 1,
+  right: 10,
+  top: '50%',
+  transform: 'translateY(-50%)',
+  width: "70%",
+  display: "flex",
+  position: "absolute",
+  [theme.breakpoints.down(890)]: {
+    display: "none"
   }
+}
 }));

@@ -1,6 +1,7 @@
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 
 import { H2 } from "../../../components/Typography"; // LOCAL CUSTOM COMPONENT
+import FlexBox from "../../../components/flex-box/flex-box"; // STYLED COMPONENT
 
 import BlogCard from "./blog-card"; // API FUNCTIONS
 
@@ -18,6 +19,10 @@ export default async function Section4() {
               <BlogCard date={blog.createdAt} title={blog.title} image={blog.image}/>
             </Grid>)}
         </Grid>
+
+        <FlexBox justifyContent="end" sx={{mt:5}}>
+          <Button sx={{ background:'#494949', color:'#fff', fontFamily: 'Elemental End', textTransform: 'lowercase', mt: 2, borderRadius: '50px', px: 5, py: 2, fontSize: 12 }}>Shop By Category</Button>
+        </FlexBox>
       </Container>
     </Box>;
 }
