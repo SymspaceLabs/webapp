@@ -9,7 +9,10 @@ import { H2, Paragraph } from "../../../components/Typography"; // STYLED COMPON
 import { StyledButton, ContentWrapper, StyledContainer } from "./styles"; // IMPORT IMAGES
 
 import drone from "../../../../public/assets/images/products/drone-2.png";
-import iphone14 from "../../../../public/assets/images/products/iphone-14.png";
+import card_1_bg from "../../../../public/assets/images/card/card-1-bg.png";
+import card_2_bg from "../../../../public/assets/images/card/card-2-bg.png";
+import card_3_bg from "../../../../public/assets/images/card/card-3-bg.png";
+
 import iphone12 from "../../../../public/assets/images/products/iphone-12.png";
 import nikonCamera from "../../../../public/assets/images/products/nikon-camera.png";
 import appleAirPod from "../../../../public/assets/images/products/apple-airpod.png";
@@ -36,7 +39,7 @@ export default function Section1() {
               <StyledButton>Shop By Category</StyledButton>
             </Box>
 
-            <Image alt="Iphone 14" src={iphone14} style={{
+            <Image alt="Iphone 14" src={card_1_bg} style={{
             width: "100%",
             height: "auto",
             display: "block"
@@ -49,7 +52,7 @@ export default function Section1() {
       }
         <Grid item lg={4} sm={6} xs={12}>
           <ContentWrapper hasGradient>
-            <Image alt="Nikon Camera" src={nikonCamera} style={{
+            <Image alt="Nikon Camera" src={card_2_bg} style={{
             width: "100%",
             height: "auto",
             marginTop: -70
@@ -87,7 +90,7 @@ export default function Section1() {
               <StyledButton>Learn More</StyledButton>
             </Box>
 
-            <Image src={drone} alt="Dji mini drone" style={{
+            <Image src={card_3_bg} alt="Dji mini drone" style={{
             width: "100%",
             height: "auto",
             display: "block"

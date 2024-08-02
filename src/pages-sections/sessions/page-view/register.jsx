@@ -23,11 +23,11 @@ const RegisterPageView = () => {
   const {
     visiblePassword,
     togglePasswordVisible
-  } = usePasswordVisible(); // COMMON INPUT PROPS FOR TEXT FIELD
+  } = usePasswordVisible();
 
   const inputProps = {
     endAdornment: <EyeToggleButton show={visiblePassword} click={togglePasswordVisible} />
-  }; // REGISTER FORM FIELDS INITIAL VALUES
+  };
 
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
@@ -40,7 +40,7 @@ const RegisterPageView = () => {
     password: "",
     re_password: "",
     agreement: false
-  }; // REGISTER FORM FIELD VALIDATION SCHEMA
+  };
 
   const validationSchema = yup.object().shape({
     firstName: yup.string().required("First name is required"),
@@ -52,7 +52,7 @@ const RegisterPageView = () => {
   });
 
   const onSubmit = async (values) => {
-    console.log(values)
+    console.log(values);
 
     const body = {
       firstName: values.firstName,
@@ -60,7 +60,8 @@ const RegisterPageView = () => {
       email: values.email,
       password: values.password,
       role: "buyer"
-    }
+    };
+
     try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/signup`,
@@ -198,11 +199,12 @@ const RegisterPageView = () => {
           </Button>
         </Box>
       </form>
-      <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={5000}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      <Snackbar 
+        open={snackbarOpen} 
+        autoHideDuration={6000} 
         onClose={() => setSnackbarOpen(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        style={{ zIndex: 1400 }}
       >
         <Alert onClose={() => setSnackbarOpen(false)} severity={snackbarSeverity} sx={{ width: '100%' }}>
           {snackbarMessage}

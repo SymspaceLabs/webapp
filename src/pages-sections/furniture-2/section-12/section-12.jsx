@@ -42,7 +42,7 @@ export default function Section12() {
       console.error("Error during fetching products:", error);
     }
   };
-  console.log(products1)
+
   const getAllProducts2 = async () => {
     try {
       

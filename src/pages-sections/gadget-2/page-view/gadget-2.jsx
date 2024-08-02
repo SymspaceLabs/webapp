@@ -7,7 +7,8 @@ import Section5 from "../section-5";
 import Section6 from "../section-6";
 import Section7 from "../section-7";
 import Section8 from "../section-8";
-
+import Section9 from "../section-9";
+import Section10 from "../section-10";
 export default async function GadgetTwoPageView() {
   
   return <div className="bg-white">
@@ -19,5 +20,8 @@ export default async function GadgetTwoPageView() {
       <Section6 /> {/* BANNER */}
       <Section7 /> {/* CATALOGUE */}
       <Section8 /> {/* BENTO */}
+      <Section9 /> {/* 3D Animation */}
+      {/* <Section10 />  */}
+      {/* 3D Animation */}
     </div>;
 }

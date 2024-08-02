@@ -16,9 +16,9 @@ export default function Section6() {
           </Typography>
 
 
-          <Button variant="contained" color="primary" sx={{  gap:2, color:'#fff', borderRadius:'50px', py:2, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
-            <Typography sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', fontSize: 16 }}>
-              Learn More
+          <Button variant="contained" color="primary" sx={{  gap:2, color:'#fff', borderRadius:'50px', py:2, px:2, background:'linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)' }}>
+            <Typography sx={{ fontFamily: 'Elemental End', textTransform: 'lowercase', fontSize: 12 }}>
+              Beta Access
             </Typography>
             <Box sx={{ width: '35px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
               <LazyImage alt="furniture shop" width={25} height={25} src="/assets/images/sparkler.png" />
