@@ -17,10 +17,8 @@ export default function Section2() {
           "Content-Type": "application/json",
         },
       });
-      if (response.ok) {
         const data = await response.json();
         setBlogs(data);
-      }
     } catch (error) {
       console.error("Error during fetching products:", error);
     }
