@@ -9,6 +9,7 @@ import { Footer1 } from "../../../components/footer";
 import Header from "../../../components/header/header";
 import { SearchInputWithCategory } from "../../../components/search-box";
 import { MobileNavigationBar } from "../../../components/mobile-navigation";
+import { Box } from "@mui/material";
 /**
  *  USED IN:
  *  1. MARKET-1, MARKET-2, GADGET, FASHION-1, FASHION-2, FASHION-3, FURNITURE, GROCERY-3, GIFT
@@ -21,28 +22,22 @@ export default function ShopLayout1({
 }) {
   const [isFixed, setIsFixed] = useState(false);
   const toggleIsFixed = useCallback(fixed => setIsFixed(fixed), []);
-  return <Fragment>
-      {
-      /* TOP BAR SECTION */
-    }
+  return <Box sx={{background:'#fff'}}>
+    <Fragment>
+      {/* TOP BAR SECTION */}
       <Topbar />
 
-      {
-      /* HEADER */
-    }
+      {/* HEADER */}
       <Sticky fixedOn={0} onSticky={toggleIsFixed} scrollDistance={300}>
         <Header isFixed={isFixed} midSlot={<SearchInputWithCategory />} />
       </Sticky>
 
-      {
-      /* NAVIGATION BAR */
-    }
+      {/* NAVIGATION BAR */}
       <Navbar elevation={0} border={1} />
 
-      {
-      /* BODY CONTENT */
-    }
+      {/* BODY CONTENT */}
       {children}
+      
 
       {
       /* SMALL DEVICE BOTTOM NAVIGATION */
@@ -53,5 +48,6 @@ export default function ShopLayout1({
       /* FOOTER */
     }
       <Footer1 />
-    </Fragment>;
+    </Fragment>
+    </Box>;
 }

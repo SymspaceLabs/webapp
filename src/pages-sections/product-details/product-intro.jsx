@@ -32,7 +32,8 @@ export default function ProductIntro({
     title,
     images,
     slug,
-    thumbnail
+    thumbnail,
+    brand
   } = product || {};
   const {
     state,
@@ -72,9 +73,8 @@ export default function ProductIntro({
 
   return <Box width="100%">
       <Grid container spacing={3} justifyContent="space-around">
-        {
-        /* IMAGE GALLERY AREA */
-      }
+        
+        { /* IMAGE GALLERY AREA */}
         <Grid item md={6} xs={12} alignItems="center">
           <FlexBox justifyContent="center" mb={6}>
             <LazyImage alt={title} width={300} height={300} loading="eager" src={product.images[selectedImage]} sx={{
@@ -93,35 +93,23 @@ export default function ProductIntro({
           </FlexBox>
         </Grid>
 
-        {
-        /* PRODUCT INFO AREA */
-      }
+        {/* PRODUCT INFO AREA */}
         <Grid item md={6} xs={12} alignItems="center">
-          {
-          /* PRODUCT NAME */
-        }
-          <H1 mb={1}>{title}</H1>
+          {/* PRODUCT BRAND */}
+          <H6>{brand}</H6>
+          
+          {/* PRODUCT NAME */}
+          <H1 sx={{ fontFamily: 'Elemental End', fontSize:40, textTransform: 'lowercase', }} mb={1}>
+            {title}
+          </H1>
 
-          {
-          /* PRODUCT BRAND */
-        }
-          <FlexBox alignItems="center" mb={1}>
-            <div>Brand: </div>
-            <H6>Xiaomi</H6>
-          </FlexBox>
-
-          {
-          /* PRODUCT RATING */
-        }
+          {/* PRODUCT RATING */}
           <FlexBox alignItems="center" gap={1} mb={2}>
-            <Box lineHeight="1">Rated:</Box>
             <Rating color="warn" value={4} readOnly />
             <H6 lineHeight="1">(50)</H6>
           </FlexBox>
 
-          {
-          /* PRODUCT VARIANTS */
-        }
+          {/* PRODUCT VARIANTS */}
           {productVariants.map(variant => <Box key={variant.id} mb={2}>
               <H6 mb={1}>{variant.title}</H6>
 
@@ -135,9 +123,7 @@ export default function ProductIntro({
           }} color={selectVariants[variant.title.toLowerCase()] === value ? "primary" : "default"} />)}
             </Box>)}
 
-          {
-          /* PRICE & STOCK */
-        }
+          {/* PRICE & STOCK */}
           <Box pt={1} mb={3}>
             <H2 color="primary.main" mb={0.5} lineHeight="1">
               {currency(price)}
@@ -145,9 +131,7 @@ export default function ProductIntro({
             <Box color="inherit">Stock Available</Box>
           </Box>
 
-          {
-          /* ADD TO CART BUTTON */
-        }
+          {/* ADD TO CART BUTTON */}
           {!cartItem?.qty ? <Button color="primary" variant="contained" onClick={handleCartAmountChange(1)} sx={{
           mb: 4.5,
           px: "1.75rem",
