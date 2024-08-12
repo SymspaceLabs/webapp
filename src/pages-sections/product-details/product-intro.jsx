@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import Grid from "@mui/material/Grid";
 import Avatar from "@mui/material/Avatar";
 import Rating from "@mui/material/Rating";
-import Button from "@mui/material/Button"; // MUI ICON COMPONENTS
+import { Box, Button, Select, MenuItem, FormControl, InputLabel, Typography } from '@mui/material';
 
 import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove"; // GLOBAL CUSTOM HOOK
@@ -26,6 +25,18 @@ import productVariants from "../../data/product-variants"; // CUSTOM DATA MODEL
 export default function ProductIntro({
   product
 }) {
+
+  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedSize, setSelectedSize] = useState(sizes[0]);
+
+  const handleColorSelect = (color) => {
+    setSelectedColor(color);
+  };
+
+  const handleSizeSelect = (event) => {
+    setSelectedSize(event.target.value);
+  };
+
   const {
     id,
     price,
@@ -95,77 +106,197 @@ export default function ProductIntro({
 
         {/* PRODUCT INFO AREA */}
         <Grid item md={6} xs={12} alignItems="center">
-          {/* PRODUCT BRAND */}
-          <H6>{brand}</H6>
-          
-          {/* PRODUCT NAME */}
-          <H1 sx={{ fontFamily: 'Elemental End', fontSize:40, textTransform: 'lowercase', }} mb={1}>
-            {title}
-          </H1>
+          {/* Card 1 */}
+          <Box sx={{ p:5, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
+            {/* PRODUCT BRAND */}
+            <H6 sx={{ fontFamily: 'Helvetica', fontSize: 16, textDecoration: 'underline', color: '#0366FE', fontWeight: 400}}>
+              {brand}
+            </H6>
+            
+            {/* PRODUCT NAME */}
+            <H1 sx={{ fontFamily: 'Elemental End', fontSize:40,  color: '#000', textTransform: 'lowercase', }} mb={1}>
+              {title}
+            </H1>
 
-          {/* PRODUCT RATING */}
-          <FlexBox alignItems="center" gap={1} mb={2}>
-            <Rating color="warn" value={4} readOnly />
-            <H6 lineHeight="1">(50)</H6>
-          </FlexBox>
+            {/* PRODUCT RATING */}
+            <FlexBox alignItems="center" gap={1} mb={2}>
+              <Rating color="warn" value={4} readOnly />
+              <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400 }} lineHeight="1">(50)</H6>
+            </FlexBox>
 
-          {/* PRODUCT VARIANTS */}
-          {productVariants.map(variant => <Box key={variant.id} mb={2}>
-              <H6 mb={1}>{variant.title}</H6>
+            {/* PRICE & STOCK */}
+            <FlexBox alignItems="center" gap={1} mb={2}>
+              <H2 color="primary.main" mb={0.5} lineHeight="1" sx={{ fontFamily: 'Helvetica', fontWeight: 700, fontSize: "32px", color: '#000000' }}>
+                {currency(price)}
+              </H2>
+              <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', textDecoration: 'line-through' }} lineHeight="1">
+                $50
+              </H6>
+            </FlexBox>
 
-              {variant.values.map(({
-            id,
-            value
-          }) => <Chip key={id} label={value} onClick={handleChangeVariant(variant.title, value)} sx={{
-            borderRadius: "4px",
-            mr: 1,
-            cursor: "pointer"
-          }} color={selectVariants[variant.title.toLowerCase()] === value ? "primary" : "default"} />)}
-            </Box>)}
 
-          {/* PRICE & STOCK */}
-          <Box pt={1} mb={3}>
-            <H2 color="primary.main" mb={0.5} lineHeight="1">
-              {currency(price)}
-            </H2>
-            <Box color="inherit">Stock Available</Box>
+            {/* PRODUCT VARIANTS */}
+
+            {/*Color*/}
+            <FlexBox alignItems="center" gap={1}  mb={2}>
+                <H6 mb={1} sx={{fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#353535'}}>
+                  Select Color
+                </H6>
+
+                {colors.map((color) => (
+                  <Button
+                    key={color}
+                    onClick={() => handleColorSelect(color)}
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      backgroundColor: color,
+                      border: selectedColor === color ? '3px solid black' : '1px solid grey',
+                      margin: '0 5px',
+                    }}
+                  />
+                ))}
+            </FlexBox>
+
+            {/*Size*/}
+            <FlexBox gap={1} mb={2} sx={{ alignItems: 'center' }}>
+              <H6 
+                mb={1} 
+                sx={{
+                  fontFamily: 'Helvetica', 
+                  fontWeight: 400, 
+                  fontSize: '24px', 
+                  color: '#353535',
+                }}>
+                Size
+              </H6>
+
+              <FormControl sx={{ flexGrow: 1, width:'100%' }}>
+                <InputLabel id="size-select-label">Size</InputLabel>
+                <Select
+                  labelId="size-select-label"
+                  id="size-select"
+                  value={selectedSize}
+                  label="Size"
+                  onChange={handleSizeSelect}
+                  fullWidth
+                >
+                  {sizes.map((size) => (
+                    <MenuItem key={size} value={size}>
+                      {size}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+
+              <Button
+                sx={{
+                  padding: "16px 9px",
+                  border: "1px solid #000000",
+                  borderRadius: "8px",
+                  fontFamily: 'Helvetica',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  color: '#000',
+                  flexGrow: 1,
+                  width:'100%'
+                }}>
+                Personalized Sizing
+              </Button>
+            </FlexBox>
+
+            
+
+            {/* {productVariants.map(variant => <FlexBox alignItems="center" gap={1} key={variant.id} mb={2}>
+                <H6 mb={1} sx={{fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#353535'}}>
+                  {variant.title}
+                </H6>
+
+                {variant.values.map(({id,value}) => 
+                    <Chip
+                      key={id}
+                      label={value}
+                      onClick={handleChangeVariant(variant.title, value)}
+                      sx={{borderRadius: "4px", mr: 1, cursor: "pointer"}}
+                      color={selectVariants[variant.title.toLowerCase()] === value ? "primary" : "default"}
+                    />
+                  )
+                }
+              </FlexBox>)} */}
+
+            
+
+            {/* ADD TO CART BUTTON */}
+            <FlexBox alignItems="center" gap={1}  mb={2} mt={2}>
+              <Button sx={{ padding: "16px 56px", border: "1px solid #000000", borderRadius: "50px", background:'transparent', fontFamily: 'Elemental End', color:'#000', textTransform: 'lowercase', fontWeight: 400 }} color="primary" variant="contained" onClick={handleCartAmountChange(1)}>
+                Add to Cart
+              </Button>
+
+              <Button sx={{ padding: "16px 56px", borderRadius: "50px", background:'#000', fontFamily: 'Elemental End', color:'#fff', textTransform: 'lowercase', fontWeight: 400 }} color="primary" variant="contained" onClick={handleCartAmountChange(1)}>
+                Buy now
+              </Button>
+            </FlexBox>
+
+
+
+
+            {/* {!cartItem?.qty ? <Button color="primary" variant="contained" onClick={handleCartAmountChange(1)} sx={{
+            mb: 4.5,
+            px: "1.75rem",
+            height: 40
+          }}>
+                Add to Cart
+              </Button> : <FlexBox alignItems="center" mb={4.5}>
+                <Button size="small" sx={{
+              p: 1
+            }} color="primary" variant="outlined" onClick={handleCartAmountChange(cartItem?.qty - 1)}>
+                  <Remove fontSize="small" />
+                </Button>
+
+                <H3 fontWeight="600" mx={2.5}>
+                  {cartItem?.qty.toString().padStart(2, "0")}
+                </H3>
+
+                <Button size="small" sx={{
+              p: 1
+            }} color="primary" variant="outlined" onClick={handleCartAmountChange(cartItem?.qty + 1)}>
+                  <Add fontSize="small" />
+                </Button>
+              </FlexBox>} */}
+
+ 
+
           </Box>
 
-          {/* ADD TO CART BUTTON */}
-          {!cartItem?.qty ? <Button color="primary" variant="contained" onClick={handleCartAmountChange(1)} sx={{
-          mb: 4.5,
-          px: "1.75rem",
-          height: 40
-        }}>
-              Add to Cart
-            </Button> : <FlexBox alignItems="center" mb={4.5}>
-              <Button size="small" sx={{
-            p: 1
-          }} color="primary" variant="outlined" onClick={handleCartAmountChange(cartItem?.qty - 1)}>
-                <Remove fontSize="small" />
-              </Button>
+          {/* Card 2 */}
+          <Box sx={{ mt:2, p:5, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
+            {/* PRODUCT NAME */}
+            <H1 sx={{ fontFamily: 'Elemental End', fontSize: '24px',  color: '#000', textTransform: 'lowercase', color: '#353535', fontWeight: 400, }} mb={1}>
+              Product Details
+            </H1>
+            <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+              Material:
+            </H6>
+            <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+              Care Instructions:
+            </H6>
+            <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+              Product fit:
+            </H6>
+            <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+              Origin:
+            </H6>
+ 
+ 
 
-              <H3 fontWeight="600" mx={2.5}>
-                {cartItem?.qty.toString().padStart(2, "0")}
-              </H3>
+ 
 
-              <Button size="small" sx={{
-            p: 1
-          }} color="primary" variant="outlined" onClick={handleCartAmountChange(cartItem?.qty + 1)}>
-                <Add fontSize="small" />
-              </Button>
-            </FlexBox>}
-
-          {
-          /* SHOP NAME */
-        }
-          <FlexBox alignItems="center" gap={1} mb={2}>
-            <div>Sold By:</div>
-            <Link href="/shops/scarlett-beauty">
-              <H6>Mobile Store</H6>
-            </Link>
-          </FlexBox>
+          </Box>
         </Grid>
       </Grid>
     </Box>;
 }
+
+const colors = ['#000', '#686868', '#0C3779', '#E1B000', '#E8E8E8'];
+const sizes = ['S', 'M', 'L', 'XL'];
