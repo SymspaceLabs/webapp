@@ -9,10 +9,12 @@ import { CategoryMenuButton } from "./styles";
 export default function Categories() {
   return <CategoryMenu render={handler => <CategoryMenuButton variant="text" onClick={e => handler(e)}>
           <div className="prefix">
-            <Category fontSize="small" />
-            <Paragraph fontWeight="600">Categories</Paragraph>
+            <Category fontSize="small" currentColor="#fff" />
+            <Paragraph color="#fff" fontFamily="Elemental End" fontWeight="600">
+              Categories
+            </Paragraph>
           </div>
 
-          <ChevronRight className="dropdown-icon" fontSize="small" />
+          {/* <ChevronRight className="dropdown-icon" fontSize="small" /> */}
         </CategoryMenuButton>} />;
 }
