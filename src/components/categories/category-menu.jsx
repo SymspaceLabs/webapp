@@ -37,7 +37,7 @@ export default function CategoryMenu({
   }, [handleDocumentClick]);
   return <Wrapper open={open}>
       {render(onClick)}
-      <CategoryBasedMenu title={nav.title} menuList={nav.child} />;
+      {/* <CategoryBasedMenu title={nav.title} menuList={nav.child} />; */}
       <CategoryList open={open} />
     </Wrapper>;
 }
