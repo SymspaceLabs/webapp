@@ -98,7 +98,7 @@ const GradientContainer = styled('div')({
   '.circle1': {
     background: 'radial-gradient(circle at center, rgba(18, 113, 255, 0.8) 0, rgba(18, 113, 255, 0) 50%) no-repeat',
     top: 'calc(50% - 40%)',
-    left: 'calc(50% - 40%)',
+    right: 'calc(50% - 40%)',
     animation: `${simpleAnimation} 10s infinite`,
   },
   '.circle2': {
