@@ -20,7 +20,10 @@ import { FlexBox, FlexRowCenter } from "../../components/flex-box"; // CUSTOM UT
 import { currency } from "../../lib"; // DUMMY DATA
 
 import productVariants from "../../data/product-variants"; // CUSTOM DATA MODEL
-
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // ================================================================
 export default function ProductIntro({
   product
@@ -270,8 +273,7 @@ export default function ProductIntro({
           </Box>
 
           {/* Card 2 */}
-          <Box sx={{ mt:2, p:5, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
-            {/* PRODUCT NAME */}
+          {/* <Box sx={{ mt:2, p:5, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
             <H1 sx={{ fontFamily: 'Elemental End', fontSize: '24px',  color: '#000', textTransform: 'lowercase', color: '#353535', fontWeight: 400, }} mb={1}>
               Product Details
             </H1>
@@ -287,11 +289,91 @@ export default function ProductIntro({
             <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
               Origin:
             </H6>
- 
- 
+          </Box> */}
 
- 
-
+          <Box sx={{ mt: 2, p: 2, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
+            <Accordion sx={{ background: 'transparent', boxShadow: 'none' }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <H1 sx={{ fontFamily: 'Elemental End', fontSize: '24px', color: '#353535', fontWeight: 400, textTransform: 'lowercase', }}>
+                  Product Details
+                </H1>
+              </AccordionSummary>
+              <AccordionDetails>
+                <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+                  Material:
+                </H6>
+                <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+                  Care Instructions:
+                </H6>
+                <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+                  Product fit:
+                </H6>
+                <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '24px', color: '#A0A0A0', mb:1 }} lineHeight="1">
+                  Origin:
+                </H6>
+              </AccordionDetails>
+            </Accordion>
+          </Box>
+          <Box sx={{ mt: 2, p: 2, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
+            <Accordion sx={{ background: 'transparent', boxShadow: 'none' }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <H1 sx={{ fontFamily: 'Elemental End', fontSize: '24px', color: '#353535', fontWeight: 400, textTransform: 'lowercase', }}>
+                  Composition
+                </H1>
+              </AccordionSummary>
+              <AccordionDetails>
+                <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '16px', color: '#000' }}>
+                  {/* Add the product details content here */}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </H6>
+              </AccordionDetails>
+            </Accordion>
+          </Box>
+          <Box sx={{ mt: 2, p: 2, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
+            <Accordion sx={{ background: 'transparent', boxShadow: 'none' }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <H1 sx={{ fontFamily: 'Elemental End', fontSize: '24px', color: '#353535', fontWeight: 400, textTransform: 'lowercase', }}>
+                  Brand
+                </H1>
+              </AccordionSummary>
+              <AccordionDetails>
+                <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '16px', color: '#000' }}>
+                  {/* Add the product details content here */}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </H6>
+              </AccordionDetails>
+            </Accordion>
+          </Box>
+          <Box sx={{ mt: 2, p: 2, boxSizing: 'border-box', background: 'linear-gradient(117.54deg, rgba(255, 255, 255, 0.5) -19.85%, rgba(235, 235, 235, 0.367354) 4.2%, rgba(224, 224, 224, 0.287504) 13.88%, rgba(212, 212, 212, 0.21131) 27.98%, rgba(207, 207, 207, 0.175584) 37.8%, rgba(202, 202, 202, 0.143432) 44.38%, rgba(200, 200, 200, 0.126299) 50.54%, rgba(196, 196, 196, 0.1) 60.21%)', boxShadow: '0px 1px 24px -1px rgba(0, 0, 0, 0.18)', backdropFilter: 'blur(12px)', borderRadius: "30px" }}>
+            <Accordion sx={{ background: 'transparent', boxShadow: 'none' }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <H1 sx={{ fontFamily: 'Elemental End', fontSize: '24px', color: '#353535', fontWeight: 400, textTransform: 'lowercase', }}>
+                  Size and fit
+                </H1>
+              </AccordionSummary>
+              <AccordionDetails>
+                <H6 sx={{ fontFamily: 'Helvetica', fontWeight: 400, fontSize: '16px', color: '#000' }}>
+                  {/* Add the product details content here */}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </H6>
+              </AccordionDetails>
+            </Accordion>
           </Box>
         </Grid>
       </Grid>
