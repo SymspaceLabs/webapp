@@ -24,6 +24,11 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { IconButton } from '@mui/material';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 // ================================================================
 export default function ProductIntro({
   product
@@ -31,6 +36,11 @@ export default function ProductIntro({
 
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const toggleFavorite = () => {
+    setIsFavorited(!isFavorited);
+  };
 
   const handleColorSelect = (color) => {
     setSelectedColor(color);
@@ -90,20 +100,83 @@ export default function ProductIntro({
         
         { /* IMAGE GALLERY AREA */}
         <Grid item md={6} xs={12} alignItems="center">
-          <FlexBox justifyContent="center" mb={6}>
-            <LazyImage alt={title} width={300} height={300} loading="eager" src={product.images[selectedImage]} sx={{
-            objectFit: "contain"
-          }} />
+          <FlexBox justifyContent="center" alignItems="center" position="relative" mb={6}>
+            <IconButton 
+              onClick={() => setSelectedImage((prev) => (prev > 0 ? prev - 1 : images.length - 1))}
+              style={{
+                position: "absolute",
+                left: 0,
+                zIndex: 1,
+                backgroundColor: "white",
+              }}
+            >
+              <ArrowBackIosIcon />
+            </IconButton>
+
+            {/* Image with Heart Icon */}
+            <LazyImage 
+              alt={title} 
+              width={300} 
+              height={300} 
+              loading="eager" 
+              src={product.images[selectedImage]} 
+              sx={{ objectFit: "contain" }} 
+            />
+
+            <IconButton 
+              onClick={() => setSelectedImage((prev) => (prev < images.length - 1 ? prev + 1 : 0))}
+              style={{
+                position: "absolute",
+                right: 0,
+                zIndex: 1,
+                backgroundColor: "white",
+              }}
+            >
+              <ArrowForwardIosIcon />
+            </IconButton>
+
+            {/* Heart Icon */}
+            <IconButton 
+              onClick={toggleFavorite}
+              style={{
+                position: "absolute",
+                top: 8,
+                right: 8,
+                zIndex: 2,
+              }}
+            >
+              {isFavorited ? (
+                <FavoriteIcon color="error" />
+              ) : (
+                <FavoriteBorderIcon color="action" />
+              )}
+            </IconButton>
           </FlexBox>
 
           <FlexBox overflow="auto">
-            {images.map((url, ind) => <FlexRowCenter key={ind} width={64} height={64} minWidth={64} bgcolor="white" border="1px solid" borderRadius="10px" ml={ind === 0 ? "auto" : 0} style={{
-            cursor: "pointer"
-          }} onClick={handleImageClick(ind)} mr={ind === images.length - 1 ? "auto" : "10px"} borderColor={selectedImage === ind ? "primary.main" : "grey.400"}>
-                <Avatar alt="product" src={url} variant="square" sx={{
-              height: 40
-            }} />
-              </FlexRowCenter>)}
+            {images.map((url, ind) => (
+              <FlexRowCenter 
+                key={ind} 
+                width={64} 
+                height={64} 
+                minWidth={64} 
+                bgcolor="white" 
+                border="1px solid" 
+                borderRadius="10px" 
+                ml={ind === 0 ? "auto" : 0} 
+                style={{ cursor: "pointer" }} 
+                onClick={() => setSelectedImage(ind)} 
+                mr={ind === images.length - 1 ? "auto" : "10px"} 
+                borderColor={selectedImage === ind ? "primary.main" : "grey.400"}
+              >
+                <Avatar 
+                  alt="product" 
+                  src={url} 
+                  variant="square" 
+                  sx={{ height: 40 }} 
+                />
+              </FlexRowCenter>
+            ))}
           </FlexBox>
         </Grid>
 
