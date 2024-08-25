@@ -5,7 +5,7 @@ import { ProductDetailsPageView } from "../../../../pages-sections/product-detai
 import api from "../../../../utils/__api__/products";
 import { getFrequentlyBought, getRelatedProducts } from "../../../../utils/__api__/related-products";
 export const metadata = {
-  title: "Product Details - Bazaar Next.js E-commerce Template",
+  title: "Product Details",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",
