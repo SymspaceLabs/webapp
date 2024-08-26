@@ -63,10 +63,7 @@ export default function LoginCartButtons({ toggleDialog, toggleSidenav }) {
       <IconButton onClick={handleMenuClick}>
         <PersonOutline sx={ICON_COLOR} />
       </IconButton>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleMenuClose}>
+      <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
       
           {!isAuthenticated ?
             <>
