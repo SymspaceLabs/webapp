@@ -39,7 +39,7 @@ const BlobBox = styled(Box)(({ theme }) => ({
 }));
 
 export default function ProductDetailsPageView(props) {
-  return  <Box sx={{ backgroundColor: 'fff', width: '100%', height:'100%', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', px: 16, }} >
+  return  <Box sx={{ backgroundColor: 'fff', width: '100%', height:'100%', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }} >
             <Container className="mt-2 mb-2">
               <BlobBox sx={{ top: '15rem', right: '30rem', backgroundColor: '#D8B4FE', }} />
               <BlobBox sx={{ top: '15rem', right: '40rem', backgroundColor: '#FDE68A', animationDelay: '2s', }} />

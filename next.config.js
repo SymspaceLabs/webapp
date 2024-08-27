@@ -6,7 +6,8 @@ const nextConfig = {
     remotePatterns: [{ protocol: "https", hostname: "ui-lib.com" }],
     domains: ['waveworld.io'],
     domains: ['static.vecteezy.com'],
-    domains: ['cdn-images-1.medium.com']
+    domains: ['cdn-images-1.medium.com'],
+    domains: ['i.shgcdn.com']
   }
 };
 
