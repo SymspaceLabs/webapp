@@ -34,6 +34,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import { useRouter } from "next/navigation";
+import HandBagCanvas from "../../components/HandBagCanvas";
 
 // ================================================================
 export default function ProductIntro({ product }) {
@@ -123,15 +124,18 @@ export default function ProductIntro({ product }) {
               <ArrowBackIosIcon />
             </IconButton>
 
-            {/* Image with Heart Icon */}
-            <LazyImage 
-              alt={title} 
-              width={300} 
-              height={300} 
-              loading="eager" 
-              src={product.images[selectedImage]} 
-              sx={{ objectFit: "contain" }} 
-            />
+            {selectedImage === 0 ? (
+              <HandBagCanvas />
+            ) : (
+              <LazyImage 
+                alt={title} 
+                width={300} 
+                height={300} 
+                loading="eager" 
+                src={product.images[selectedImage]} 
+                sx={{ objectFit: "contain" }} 
+              />
+            )}
 
             <IconButton 
               onClick={() => setSelectedImage((prev) => (prev < images.length - 1 ? prev + 1 : 0))}
@@ -189,6 +193,7 @@ export default function ProductIntro({ product }) {
             ))}
           </FlexBox>
         </Grid>
+
 
         {/* PRODUCT INFO AREA */}
         <Grid item md={6} xs={12} alignItems="center">
