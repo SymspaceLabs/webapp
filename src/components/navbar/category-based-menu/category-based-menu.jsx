@@ -13,7 +13,7 @@ import Link from "next/link"; // MUI
 export default function CategoryBasedMenu({
   title,
   menuList,
-  url
+  url = "/"
 }) {
   const [openList, setOpenList] = useState(menuList[0].title);
   const categories = menuList.reduce((prev, curr) => [...prev, curr.title], []);

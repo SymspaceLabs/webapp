@@ -4,6 +4,9 @@ import styled from "@mui/material/styles/styled"; // STYLED COMPONENT
 export const StyledRoot = styled(Card)(({
   theme
 }) => ({
+  background:'#3B3B3B',
+  color:'#fff',
+  borderRadius:15,
   marginLeft: "1rem",
   paddingBlock: "0.5rem",
   "& .title-link, & .child-link": {

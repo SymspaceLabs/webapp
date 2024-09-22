@@ -3,13 +3,14 @@ export const Wrapper = styled("div")(({
   theme
 }) => ({
   "& .category-dropdown-link": {
-    height: 40,
+    height: 42,
     display: "flex",
     minWidth: "278px",
     cursor: "pointer",
     whiteSpace: "pre",
     padding: "0px 1rem",
     alignItems: "center",
+    borderBottom:"0.5px solid white",
     transition: "all 300ms ease-in-out",
     ".title": {
       flexGrow: 1,
@@ -29,7 +30,7 @@ export const Wrapper = styled("div")(({
     left: "100%",
     right: "auto",
     display: "none",
-    position: "absolute"
+    position: "absolute",
   },
   ...(theme.direction === "rtl" && {
     ".caret-icon": {
