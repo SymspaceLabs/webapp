@@ -10,6 +10,7 @@
     "fix:prettier": "prettier --write . '!.next' '!.node_modules' '!tools/output/**/.next'"
   },
   "dependencies": {
+    "@auth/core": "^0.35.0",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.3",
     "@emotion/server": "^11.11.0",
@@ -18,9 +19,11 @@
     "@mui/lab": "^5.0.0-alpha.162",
     "@mui/material": "^5.15.6",
     "@mui/x-date-pickers": "^6.19.2",
+    "@react-oauth/google": "^0.12.1",
     "@react-three/drei": "^9.108.3",
     "@react-three/fiber": "^8.16.8",
     "@react-three/postprocessing": "^2.16.2",
+    "@types/google-one-tap": "^1.2.6",
     "apexcharts": "^3.45.2",
     "axios": "^1.6.7",
     "axios-mock-adapter": "^1.22.0",
@@ -35,6 +38,7 @@
     "i18next": "^23.8.1",
     "lodash": "^4.17.21",
     "next": "14.1.0",
+    "next-auth": "^4.24.7",
     "next-i18next": "^15.2.0",
     "notistack": "^3.0.1",
     "nprogress": "^0.2.0",
