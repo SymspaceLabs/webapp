@@ -28,6 +28,7 @@ export const AuthProvider = ({ children }) => {
     setUser(userData);
     setToken(userToken);
     setIsAuthenticated(true);
+    // login to redirect
     localStorage.setItem('user', JSON.stringify(userData));
     localStorage.setItem('token', userToken);
   };
