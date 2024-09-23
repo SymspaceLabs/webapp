@@ -18,7 +18,7 @@ export default function ProductComment(props) {
     date,
     comment
   } = props || {};
-  return <Box mb={4} maxWidth={600}>
+  return <Box mb={4} sx={{background:'#fff', p:3, borderRadius:3 }}>
       <FlexBox alignItems="center" mb={2} gap={2}>
         <Avatar alt={name} src={imgUrl} sx={{
         width: 48,

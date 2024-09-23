@@ -1,5 +1,5 @@
 const productVariants = [{
-  title: "Option",
+  title: "Color",
   id: "opt_01GNCQMGM2QPHYQ37FWC41HF63",
   values: [{
     value: "option 1",

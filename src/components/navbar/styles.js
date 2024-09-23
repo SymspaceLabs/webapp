@@ -8,7 +8,7 @@ import BazaarCard from "../../components/BazaarCard"; // COMMON STYLED OBJECT
 
 export const NAV_LINK_STYLES = {
   fontFamily:'Helvetica',
-  color:'#4C4C4C',
+  color:'#6A6B6B',
   fontWeight:'bold',
   cursor: "pointer",
   // transition: "color 150ms ease-in-out",
@@ -64,6 +64,7 @@ export const NavBarWrapper = styled(BazaarCard, {
   theme,
   border
 }) => ({
+  background:'#353535',
   height: "60px",
   display: "block",
   borderRadius: "0px",
@@ -84,15 +85,18 @@ export const InnerContainer = styled(Container)({
 export const CategoryMenuButton = styled(Button)(({
   theme
 }) => ({
-  width: 278,
-  borderRadius: 4,
-  backgroundColor: theme.palette.grey[100],
+  // width: 278,
+  borderRadius: '50px',
+  // backgroundColor: theme.palette.grey[100],
+  background:'#717171',
+  color:'#fff',
   ...(theme.direction === "rtl" && {
     ".dropdown-icon": {
       rotate: "180deg"
     }
   }),
   ".prefix": {
+    px:3,
     gap: 8,
     flex: 1,
     display: "flex",

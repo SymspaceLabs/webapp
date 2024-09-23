@@ -14,19 +14,19 @@ const navbarNavigation = [
   }, 
   {
     title: "Sym-AI",
-    url: '/'
+    url: '/sym-ai'
   }, 
   {
     title: "App",
-    url: '/'
+    url: '/app'
   }, 
   {
     title: "Global Impact",
-    url: '/'
+    url: '/global-impact'
   }, 
   {
     title: "AR Visuals",
-    url: '/'
+    url: '/ar-visuals'
   }, 
   {
     title: "Partner",
@@ -34,7 +34,7 @@ const navbarNavigation = [
   }, 
   {
     title: "Contact Us",
-    url: '/'
+    url: '/contact-us'
   }, 
   // {
   //   title: "Marketplace",
@@ -248,6 +248,7 @@ const navbarNavigation = [
 // }
 ];
 export default navbarNavigation;
+
 
 const megaMenus = [[{
   title: "Home",

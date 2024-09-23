@@ -42,8 +42,6 @@ export default function ProductReview() {
     }
   });
   return <div>
-      {commentList.map((item, ind) => <ProductComment {...item} key={ind} />)}
-
       <H2 fontWeight="600" mt={7} mb={2.5}>
         Write a Review for this product
       </H2>
@@ -67,10 +65,18 @@ export default function ProductReview() {
           <TextField rows={8} multiline fullWidth name="comment" variant="outlined" onBlur={handleBlur} value={values.comment} onChange={handleChange} placeholder="Write a review here..." error={!!touched.comment && !!errors.comment} helperText={touched.comment && errors.comment} />
         </Box>
 
-        <Button variant="contained" color="primary" type="submit" disabled={!(dirty && isValid)}>
-          Submit
-        </Button>
+        <FlexBox mb={1.5} gap={0.5} justifyContent="end">
+          <Button sx={{mb:5}} variant="contained" color="primary" type="submit" disabled={!(dirty && isValid)}>
+            Submit
+          </Button>
+        </FlexBox>
+
+        
       </form>
+
+      {commentList.map((item, ind) => <ProductComment {...item} key={ind} />)}
+
+      
     </div>;
 }
 const commentList = [{

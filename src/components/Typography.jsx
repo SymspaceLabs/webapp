@@ -112,7 +112,7 @@ export function Paragraph(props) {
     className,
     ...others
   } = props;
-  return <StyledBox fontSize={14} component="p" fontWeight={400} ellipsis={ellipsis ? 1 : 0} {...className && {
+  return <StyledBox   fontSize={14} component="p" fontWeight={400} ellipsis={ellipsis ? 1 : 0} {...className && {
     className: clsx({
       [className]: true
     })

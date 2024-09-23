@@ -22,8 +22,8 @@ export default function ShopLayout1({
 }) {
   const [isFixed, setIsFixed] = useState(false);
   const toggleIsFixed = useCallback(fixed => setIsFixed(fixed), []);
-  return <Box sx={{background:'#fff'}}>
-    <Fragment>
+  return <Box sx={{background:'#fff' }}>
+    <Fragment >
       {/* TOP BAR SECTION */}
       <Topbar />
 
@@ -39,14 +39,10 @@ export default function ShopLayout1({
       {children}
       
 
-      {
-      /* SMALL DEVICE BOTTOM NAVIGATION */
-    }
+      {/* SMALL DEVICE BOTTOM NAVIGATION */}
       <MobileNavigationBar />
 
-      {
-      /* FOOTER */
-    }
+      {/* FOOTER */}
       <Footer1 />
     </Fragment>
     </Box>;

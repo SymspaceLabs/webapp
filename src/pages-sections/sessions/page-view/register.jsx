@@ -16,6 +16,7 @@ import { Span } from "../../../components/Typography";
 import { FlexBox } from "../../../components/flex-box";
 import BazaarTextField from "../../../components/BazaarTextField";
 import { Box, Typography, Button } from '@mui/material';
+import SocialButtons from "../components/social-buttons";
 
 // ==============================================================
 
@@ -87,6 +88,34 @@ const RegisterPageView = () => {
       }
     } catch (error) {
       console.error('Error during signup:', error);
+      setSnackbarSeverity('error');
+      setSnackbarMessage('An error occurred. Please try again later.');
+      setSnackbarOpen(true);
+    }
+  };
+
+  const handleGoogleSignUp = async () => {
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/google-signup`,
+        {
+          method: 'GET',
+          credentials: 'include',
+        }
+      );
+
+      if (response.ok) {
+        const { url } = await response.json();
+        window.location.href = url;
+      } else {
+        const errorData = await response.json();
+        console.error('Google signup initiation failed:', errorData);
+        setSnackbarSeverity('error');
+        setSnackbarMessage(errorData.message || 'Failed to initiate Google signup. Please try again.');
+        setSnackbarOpen(true);
+      }
+    } catch (error) {
+      console.error('Error initiating Google signup:', error);
       setSnackbarSeverity('error');
       setSnackbarMessage('An error occurred. Please try again later.');
       setSnackbarOpen(true);

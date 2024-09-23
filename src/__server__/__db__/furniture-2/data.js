@@ -2,7 +2,7 @@ export const products = [
   {
     id: "8b9f5a78-0dbb-4dd3-a718-aa7342b76901",
     slug: "t-shirt",
-    brand:'Waveworld',
+    brand:'WAVE WORLD',
     title: "Spaceman T-shirt",
     shop: {
       id: "584323a3-059a-4990-8498-aa4fac9f22a7",

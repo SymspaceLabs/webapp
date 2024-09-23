@@ -1,6 +1,6 @@
 // LOCAL CUSTOM COMPONENTS
 import Categories from "./categories";
-import NavigationList from "./nav-list"; // STYLED COMPONENTS
+import NavigationList from "./nav-list/nav-list-2"; // STYLED COMPONENTS
 
 import { NavBarWrapper, InnerContainer } from "./styles"; // DATA TYPES
 // ==========================================================
@@ -12,20 +12,16 @@ export default function Navbar({
   hideCategories = false
 }) {
   return <NavBarWrapper hoverEffect={false} elevation={elevation} border={border}>
-      {hideCategories ? <InnerContainer sx={{
-      justifyContent: "center"
-    }}>
+      {hideCategories ? <InnerContainer sx={{ justifyContent: "center"}}>
           <NavigationList />
         </InnerContainer> : <InnerContainer>
-          {
-        /* CATEGORY MEGA MENU */
-      }
-          <Categories />
 
-          {
-        /* HORIZONTAL MENU */
-      }
-          <NavigationList />
+            {/* CATEGORY MEGA MENU */}
+            <Categories />
+
+            {/* HORIZONTAL MENU */}
+            <NavigationList />
+
         </InnerContainer>}
     </NavBarWrapper>;
 }
