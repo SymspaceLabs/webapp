@@ -13,11 +13,12 @@ import githubLogo from "../../../../public/assets/images/icons/github-white.svg"
 import appleLogo from "../../../../public/assets/images/icons/apple-white.svg"; // =======================================
 
 // =======================================
-export default function SocialButtons(props) {
+export default function SocialButtons(onGoogleSignUp) {
   const onLogin = async (route) => {
     window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/callback/${route}`
   };
-  return <Fragment>
+  return (
+    <Fragment>
 
       <Box my={3}>
         <Divider>
@@ -33,5 +34,6 @@ export default function SocialButtons(props) {
         <Button onClick={()=>onLogin("facebook")} fullWidth size="large"  sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }}  startIcon={<Image alt="facebook" src={facebookLogo} />} />
         <Button onClick={()=>onLogin("github")} fullWidth size="large" sx={{ fontFamily: 'Helvetica', fontSize: 12, background:'#1A1D21', color:'#fff', my:1,  '&:hover': { background: 'linear-gradient(90deg, #3084FF 0%, #1D4F99 100%)' } }} startIcon={<Image alt="github" src={githubLogo} />} />
       </Box>
-    </Fragment>;
+      </Fragment>
+  );
 }
