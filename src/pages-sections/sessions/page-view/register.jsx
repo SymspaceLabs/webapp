@@ -52,7 +52,7 @@ const RegisterPageView = () => {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/,
       "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number"
     ),
-    re_password: yup.string().oneOf([yup.ref("password"), null], "Passwords must match").required("Please re-type password"),
+    re_password: yup.string().oneOf([yup.ref("password"), null], "Passwords must match").required("Please  re-type password"),
     agreement: yup.bool().test("agreement", "You have to agree with our Terms and Conditions!", value => value === true).required("You have to agree with our Terms and Conditions!")
   });
 
