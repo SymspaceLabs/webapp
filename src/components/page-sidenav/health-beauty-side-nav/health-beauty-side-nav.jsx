@@ -16,7 +16,7 @@ export default function HealthBeautySideNav({
   return <Scrollbar>
       <NavbarRoot elevation={0}>
         <FlexBox padding="10px 18px" borderRadius="0 0 8px 8px" bgcolor="primary.200" mb={1}>
-          <H4>Categories</H4>
+          <H4>Categoriessd</H4>
         </FlexBox>
 
         {navigation.map((item, ind) => {

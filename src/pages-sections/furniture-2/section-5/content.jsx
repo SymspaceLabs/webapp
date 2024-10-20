@@ -30,7 +30,7 @@ export default function Content({
       <FlexBetween mt={10} mb={5}>
         <div>
           <H3 fontSize={{ fontFamily: 'Helvetica', sm: 30, xs: 27 }}>
-            Augmented Reality Marketplace
+            Augmented Reality Marketplaces
           </H3>
           <Paragraph color="grey.600" fontSize={{
           sm: 16,

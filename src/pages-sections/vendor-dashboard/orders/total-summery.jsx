@@ -1,11 +1,20 @@
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField"; // GLOBAL CUSTOM COMPONENTS
+// Update these import statements
+// Update these import statements
+import { FlexBetween, FlexBox } from '@/components/flex-box';
+import { H5, H6 } from '@/components/Typography';
+import { currency } from '@/lib';
+// ... rest of the code ...
+// ... rest of the code ...
+// import { FlexBetween, FlexBox } from "components/flex-box";
+// Update the import statement to use the correct relative path
+// import { FlexBetween, FlexBox } from '../../../../components/flex-box';
+// ... rest of the code ...
+// import { H5, H6, Paragraph } from "../../../../components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
 
-import { FlexBetween, FlexBox } from "components/flex-box";
-import { H5, H6, Paragraph } from "components/Typography"; // CUSTOM UTILS LIBRARY FUNCTION
-
-import { currency } from "lib"; // ==============================================================
+// import { currency } from "../../../../lib"; // ==============================================================
 
 // ==============================================================
 const TotalSummery = ({

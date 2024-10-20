@@ -37,7 +37,7 @@ export default function ProductFilterCard() {
       {
       /* CATEGORY VARIANT FILTER */
     }
-      <H6 mb={1.25}>Categories</H6>
+      <H6 mb={1.25}>Categoriesssd</H6>
 
       {categoryList.map(item => item.subCategories ? <Fragment key={item.title}>
             <AccordionHeader open={collapsed} onClick={() => setCollapsed(state => !state)} sx={{

@@ -19,7 +19,7 @@ export default function Section12() {
   const [products1, setProducts1] = useState([]);
 
   const categories = [
-    { id: 1, title: "New Arrival", slug: "newArrival" },
+    { id: 1, title: "New Arrival4", slug: "newArrival" },
     { id: 2, title: "Best Seller", slug: "bestSeller" },
     { id: 3, title: "Featured products", slug: "featured" },
   ];
@@ -36,6 +36,25 @@ export default function Section12() {
       });
       if (response.ok) {
         const data = await response.json();
+        console.log("Data => ", data);
+        setProducts(data); // Update the state with the fetched data
+      }
+    } catch (error) {
+      console.error("Error during fetching products:", error);
+    }
+  };
+
+  const getNewArrivalProducts = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/products/new-arrival", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Data => ", data);
         setProducts(data); // Update the state with the fetched data
       }
     } catch (error) {
@@ -47,6 +66,7 @@ export default function Section12() {
     try {
       
       const products1 = await api.getNewArrivalProducts();
+      console.log("Products 1 => ", products1);
       setProducts1(products1);
     } catch (error) {
       console.error("Error during fetching products:", error);
@@ -54,12 +74,19 @@ export default function Section12() {
   };
 
   useEffect(() => {
-    getAllProducts();
-    getAllProducts2();
+    // getAllProducts();
+    // getAllProducts2();
   }, []);
 
   const handleChange = (event, newValue) => {
     setActiveTab(newValue);
+    console.log("Active Tab => ", newValue);
+    if(newValue === "newArrival"){      
+      getNewArrivalProducts();
+    }
+    else{
+      getAllProducts();
+    }
   };
 
   return (
@@ -69,9 +96,9 @@ export default function Section12() {
 
           {/* Tab selector here */}
           <Box mb={4} overflow="hidden">
-            <Tabs textColor="white" indicatorColor="primary" value={activeTab} onChange={handleChange} >
+            <Tabs textColor="white" indicatorColor="primary" value={activeTab} onChange={handleChange} key={activeTab}>
               {categories.map((item) => (
-                <Tab sx={{ textTransform: 'none' }} label={item.title} value={item.slug} />
+                <Tab sx={{ textTransform: 'none' }} label={item.title} value={item.slug} key={item.slug} />
               ))}
             </Tabs>
           </Box>
@@ -79,7 +106,7 @@ export default function Section12() {
         </Box>
 
         <Grid container spacing={3}>
-          {products1.map((product) => (
+          {products.map((product) => (
             <Grid item lg={3} md={4} sm={6} xs={12} key={product.id}>
               <Link href={`/products/${product.slug}`}>
                 <FlexBox
