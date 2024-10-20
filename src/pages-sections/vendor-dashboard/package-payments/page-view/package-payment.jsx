@@ -7,8 +7,14 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer"; // GLOBAL CUSTOM COMPONENTS
 
-import { H3 } from "components/Typography";
-import Scrollbar from "components/scrollbar";
+// Update these import statements
+import { H5, H6, Paragraph } from '@/components/Typography';
+import Scrollbar from '@/components/scrollbar';
+// ... rest of the code ...
+// import { H3 } from "components/Typography";
+// Update the import statement to use the correct relative path
+// import Scrollbar from '../../../../../components/scrollbar';
+// ... rest of the code ...
 import { TableHeader, TablePagination } from "components/data-table"; // GLOBAL CUSTOM HOOK
 
 import useMuiTable from "hooks/useMuiTable"; // Local CUSTOM COMPONENT
