@@ -44,17 +44,26 @@ const RegisterPageView = () => {
   };
 
   const validationSchema = yup.object().shape({
-    firstName: yup.string().required("First name is required"),
-    lastName: yup.string().required("Last name is required"),
-    email: yup.string().email("invalid email").required("Email is required"),
-    password: yup.string().required("Password is required")
-    .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/,
-      "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number"
+  firstName: yup.string().required("First name is required"),
+  lastName: yup.string().required("Last name is required"),
+  email: yup.string().email("Invalid email").required("Email is required"),
+  password: yup.string()
+    .required("Password is required")
+    .test(
+      "is-strong-password",
+      "Password must meet the following requirements:\n- At least 8 characters long\n- At least one uppercase letter (A-Z)\n- At least one lowercase letter (a-z)\n- At least one number (0-9)\n- At least one special character (@$!%*?&#)",
+      value =>
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#]).{8,}$/.test(value)
     ),
-    re_password: yup.string().oneOf([yup.ref("password"), null], "Passwords must match").required("Please  re-type password"),
-    agreement: yup.bool().test("agreement", "You have to agree with our Terms and Conditions!", value => value === true).required("You have to agree with our Terms and Conditions!")
-  });
+  re_password: yup.string()
+    .oneOf([yup.ref("password"), null], "Passwords must match")
+    .required("Please re-type password"),
+  agreement: yup.bool()
+    .test("agreement", "You have to agree with our Terms and Conditions!", value => value === true)
+    .required("You have to agree with our Terms and Conditions!")
+});
+
+
 
   const onSubmit = async (values) => {
     console.log(values);
@@ -167,20 +176,62 @@ const RegisterPageView = () => {
             </Box>
           </Box>
 
-          <Box sx={{px:0, display:"flex", gap:1, pb:2}}>
-            <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column'}}>
-              <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff' }}>
+          <Box sx={{ px: 0, display: "flex", gap: 1, pb: 2 }}>
+            <Box sx={{ display: 'flex', flex: 'auto', gap: 1, flexDirection: 'column' }}>
+              <Typography sx={{ width: 'fit-content', fontFamily: 'Helvetica', fontSize: 16, color: '#fff' }}>
                 Password
               </Typography>
-              <BazaarTextField fullWidth size="small" name="password" label="Password" variant="outlined" autoComplete="on" placeholder="*********" onBlur={handleBlur} onChange={handleChange} value={values.password} type={visiblePassword ? "text" : "password"} error={!!touched.password && !!errors.password} helperText={touched.password && errors.password} InputProps={inputProps} />
+              <BazaarTextField
+                fullWidth
+                size="small"
+                name="password"
+                label="Password"
+                variant="outlined"
+                autoComplete="on"
+                placeholder="*********"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.password}
+                type={visiblePassword ? "text" : "password"}
+                error={!!touched.password && !!errors.password}
+                helperText={touched.password && errors.password && (
+                  <Box component="ul" sx={{ m: 0, pl: 2, color: 'error.main', fontSize: 12 }}>
+                    {errors.password.split('\n').map((line, index) => (
+                      <Typography key={index} component="li">
+                        {line}
+                      </Typography>
+                    ))}
+                  </Box>
+                )}
+                InputProps={inputProps}
+              />
             </Box>
-            <Box sx={{display:'flex', flex: 'auto', gap:1, flexDirection:'column'}}>
-              <Typography sx={{ width:'fit-content', fontFamily: 'Helvetica', fontSize: 16, color:'#fff' }}>
+
+          </Box>
+          <Box sx={{display:'flex', gap:1, flexDirection:'column', pb:2}}>
+            <Box sx={{ display: 'flex', flex: 'auto', gap: 1, flexDirection: 'column' }}>
+              <Typography sx={{ width: 'fit-content', fontFamily: 'Helvetica', fontSize: 16, color: '#fff' }}>
                 Repeat password
               </Typography>
-              <BazaarTextField fullWidth size="small" autoComplete="on" name="re_password" variant="outlined" label="Retype Password" placeholder="*********" onBlur={handleBlur} onChange={handleChange} value={values.re_password} type={visiblePassword ? "text" : "password"} error={!!touched.re_password && !!errors.re_password} helperText={touched.re_password && errors.re_password} InputProps={inputProps} />
+              <BazaarTextField
+                fullWidth
+                size="small"
+                autoComplete="on"
+                name="re_password"
+                variant="outlined"
+                label="Retype Password"
+                placeholder="*********"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.re_password}
+                type={visiblePassword ? "text" : "password"}
+                error={!!touched.re_password && !!errors.re_password}
+                helperText={touched.re_password && errors.re_password}
+                InputProps={inputProps}
+              />
             </Box>
           </Box>
+
 
           <FormControlLabel name="agreement" className="agreement" onChange={handleChange} control={<Checkbox 
             size="small" 
