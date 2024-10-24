@@ -25,6 +25,8 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (userData, userToken) => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
     setUser(userData);
     setToken(userToken);
     setIsAuthenticated(true);
@@ -39,6 +41,7 @@ export const AuthProvider = ({ children }) => {
     setIsAuthenticated(false);
     localStorage.removeItem('user');
     localStorage.removeItem('token');
+    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/logout`
   };
 
   return (
