@@ -28,8 +28,8 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1.5 : 1.5}
-        position={isMobile ? [10, 0, 0] : [0, -18, -8]} // Adjust [x, y, z] position here
+        scale={isMobile ? 1 : 1.5} // Reduce size on mobile
+        position={isMobile ? [0, -10, -8] : [0, -18, -8]} // Adjust position for mobile
         rotation={[0, 0, 0]}
       />
     </mesh>
@@ -40,11 +40,13 @@ const HandBagCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
     setIsMobile(mediaQuery.matches);
+
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
+
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
@@ -59,7 +61,7 @@ const HandBagCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [26, 25, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      style={{ width: '750px', height: '750px' }}
+      style={{ width: '100%', height: isMobile ? '400px' : '750px' }} // Responsive height
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -68,7 +70,6 @@ const HandBagCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <Computers isMobile={isMobile} />
-        {/* <axesHelper args={[5]} />  */}
       </Suspense>
       <Preload all />
     </Canvas>
