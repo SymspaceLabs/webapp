@@ -168,7 +168,7 @@ export default function ProductIntro({ product }) {
           </FlexBox>
 
           <FlexBox overflow="auto">
-            {images.map((url, ind) => (
+            {images?.length>0 && images.map((url, ind) => (
               <FlexRowCenter 
                 key={ind} 
                 width={64} 

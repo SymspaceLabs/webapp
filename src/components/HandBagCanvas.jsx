@@ -8,7 +8,7 @@ import * as THREE from 'three';
 import CanvasLoader from "./Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./handBag/scene.gltf");
+  const computer = useGLTF("/handBag/scene.gltf");
 
   return (
     <mesh>

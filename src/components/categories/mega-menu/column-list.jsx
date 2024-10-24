@@ -13,7 +13,7 @@ import { StyledRoot } from "./styles"; // DATA TYPES
 export default function ColumnList({
   list,
   children,
-  banner,
+  // banner,
   minWidth = 760
 }) {
   return <StyledRoot elevation={2} sx={{
@@ -32,11 +32,11 @@ export default function ColumnList({
           </Grid>
         </Box>
 
-        {banner?.position === "right" ? <Box mt={1.5}>
+        {/* {banner?.position === "right" ? <Box mt={1.5}>
             <Link href={banner.href}>
               <LazyImage src={banner.url} width={137} height={318} alt="banner" />
             </Link>
-          </Box> : null}
+          </Box> : null} */}
       </FlexBox>
 
       {children}
